@@ -31,6 +31,7 @@ Specific imports:
 ```typescript
 import { myFunction } from "tsafe/myFunction";
 import { myObject } from "tsafe/myObject";
+import { id } from "tsafe";
 ```
 
 ## Import from HTML, with CDN
