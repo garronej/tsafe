@@ -1,62 +1,99 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { MethodNames } from "../typeSafety/MethodNames";
 import { doExtends } from "../typeSafety/doExtends";
 
-{
-    type Api = {
-        a: number;
-        b: string;
-        method1(): number;
-        method2(arg: string): void;
-    };
-
-    type X = MethodNames<Api>; //expect type X to be <<"method1" | "method2">>
-
-    doExtends<X, "method1" | "method2">();
-
-    //@ts-expect-error
-    doExtends<X, "method" | "method2">();
-}
 
 {
-    type Api = {
+    type A = {
+        a: string;
+        b: number;
+
+        method1(): void;
+        method2?(params: {a: boolean; b: string}): number;
+    }
+
+    type Expected = "method1" | "method2";
+
+    type Got = MethodNames<A>;
+
+
+    doExtends<Expected,Got>();
+
+    doExtends<Got,Expected>();
+
+};
+
+
+{
+    type A = {
+        a: string;
+        b?: number;
+
+        method1(param: unknown): unknown;
+        method2: (params: {a: boolean; b: string;})=> string;
+        method3?: (params: {a: boolean; b: string;})=>string;
+    }
+
+    type Expected = "method1" | "method2" | "method3";
+    type Got = MethodNames<A>;
+    
+
+    doExtends<Expected,Got>();
+
+    doExtends<Got,Expected>();
+
+};
+
+
+{
+    type A = {
         a?: {
             aa: string;
             ab: number;
-            method1a?(args: { a: string }): number;
-        };
+            method1a: (params: unknown) => unknown;
+        }
 
-        b: boolean;
-        method1?(args: { a: number }): boolean;
-        method2: () => void;
-    };
+        b: unknown;
+        method1?(): void;
+        method2?(): {a: string; b:string;}
+        method3(...params: unknown[]): unknown;
+    }
 
-    type X = MethodNames<Api>; // expect type X to be <<"method1">>
+    type Expected = "method1" | "method2" | "method3";
+    type Got = MethodNames<A>;
 
-    doExtends<X, "method1" | "method2">();
+    doExtends<Expected,Got>();
 
-    //@ts-expect-error
-    doExtends<"method1" | "method2" | "method1a", X>();
+    doExtends<Got,Expected>();
+
+  
 }
 
+class Car{
+
+    public readonly foo: string;
+
+    constructor(){
+        this.foo= "caca";
+    }
+
+}
+
+
 {
-    type Api = {
-        a?: string;
-        b: boolean;
-        method1?(arg: number): void;
-        method2: () => number;
-        method3: (arg: string) => number;
-        method4?: (args: { a: number; b: boolean }) => { a: number; b: string; c: boolean };
-        method5(args: { a: number; b: boolean }): { a: number; b: string; c: boolean };
-    };
+    type A = {
+        a: unknown;
+        b: unknown;
+        method1?(): void;
+        // eslint-disable-next-line @typescript-eslint/ban-types
+        method2: Function;
+        Car: typeof Car
+    }
 
-    // expect type X to be <<"method1" | "method2" | "method3" | "method4" | "method5">>
-    type X = MethodNames<Api>;
+    type Expected = "method1";
+    type Got = MethodNames<A>;
 
-    doExtends<X, "method1" | "method2" | "method3" | "method4" | "method5">();
-
-    doExtends<X, "method1" | "method2" | "method3" | "method4" | "method5" | "method6">();
-
-    //@ts-expect-error;
-    doExtends<"method1" | "method2" | "method3" | "method4" | "method5" | "method6", X>();
+    doExtends<Expected,Got>();
+    doExtends<Got,Expected>();
+  
 }
