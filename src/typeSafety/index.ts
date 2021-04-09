@@ -5,7 +5,7 @@ export * from "./id";
 export * from "./matchVoid";
 export * from "./MethodNames";
 export * from "./objectKeys";
-export type { Optional } from "./Optional";
+export type { Optional } from "./PickOptional";
 export type { PromiseOrNot } from "./PromiseOrNot";
 export * from "./typeGuard";
 export type { UnpackPromise } from "./UnpackPromise";
