@@ -1,7 +1,7 @@
-import type { Optional, DeepOptional } from "../typeSafety/Optional";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import type { PickOptionals } from "../typeSafety/PickOptional";
 import { doExtends } from "evt/tools/typeSafety/doExtends";
-
-// gg = maj+g
 
 {
     type A = {
@@ -11,8 +11,11 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
         method2?(params: { a: string; b: number }): typeof params;
     };
 
-    type Expected = Required<Pick<A, "b" | "method2">>;
-    type Got = Optional<A>;
+    type Expected = {
+        b: number | undefined;
+        method2: ((params: { a: string; b: number }) => typeof params) | undefined;
+    };
+    type Got = PickOptionals<A>;
 
     doExtends<Expected, Got>();
     doExtends<Got, Expected>();
@@ -24,23 +27,26 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
         b?: string;
     };
 
-    type Expected = Required<Pick<A, "b">>;
-    type Got = Optional<A>;
+    type Expected = {
+        b: string | undefined;
+    };
+    type Got = PickOptionals<A>;
 
     doExtends<Expected, Got>();
     doExtends<Got, Expected>();
 }
 
 {
-    type A = {
-        a?: {
-            aa: string;
-            ab?: number;
-        };
-
+    interface A {
+        a: number;
         b: string;
-        c?: number;
-    };
+        c?: unknown;
+        method1?: () => void;
+    }
 
-    type X = DeepOptional<A>;
+    //@ts-expect-error
+    type Got = PickOptionals<A>;
 }
+
+//@ts-expect-error
+type X = PickOptionals<number>;

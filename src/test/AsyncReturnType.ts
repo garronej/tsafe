@@ -1,12 +1,13 @@
-import type { AsyncReturnType } from "../typeSafety/AsyncReturnType";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import type { ReturnType } from "../typeSafety/ReturnType";
 import { doExtends } from "evt/tools/typeSafety/doExtends";
 
 {
-    const getStringAsync = async (arg: number) => {
-        return `${arg}`;
-    };
+    const getStringAsync: () => Promise<string> = null as any;
 
-    type Got = AsyncReturnType<typeof getStringAsync>;
+    type Got = ReturnType<typeof getStringAsync>;
     type Expected = string;
 
     doExtends<Got, Expected>();
@@ -14,55 +15,62 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
 }
 
 {
-    const getObjectAsync = async (params: { a: number; b: string }) => {
-        return params;
+    const getString = (): string => {
+        return null as any;
     };
 
-    type Got = AsyncReturnType<typeof getObjectAsync>;
-    type Expected = {
-        a: number;
-        b: string;
-    };
+    type Got = ReturnType<typeof getString>;
+    type Expected = string;
 
     doExtends<Got, Expected>();
     doExtends<Expected, Got>();
 }
 
 {
-    const getNumberAsync = async (params: { a: number; b: string }) => {
-        return params.a * params.b.length;
-    };
+    const getString: () => PromiseLike<string> = null as any;
 
-    type Got = AsyncReturnType<typeof getNumberAsync>;
-    type Expected = number;
+    type Got = ReturnType<typeof getString>;
+    type Expected = string;
 
     doExtends<Got, Expected>();
     doExtends<Expected, Got>();
 }
 
 {
-    const getBooleanAsync = async (params: { a: number; b: string }) => {
-        return params.a * params.b.length === 42;
-    };
+    const getString: () => PromiseLike<string> | number = null as any;
 
-    type Got = AsyncReturnType<typeof getBooleanAsync>;
-    type Expected = boolean;
+    type Got = ReturnType<typeof getString>;
+    type Expected = string | number;
 
     doExtends<Got, Expected>();
     doExtends<Expected, Got>();
 }
 
-async function getterAsync(param: "a" | "b" | "c" | "d") {
-    if (param === "a") {
-        return;
-    }
-
-    return `returned ${param}`;
+{
+    //@ts-expect-error
+    type Got = ReturnType<number>;
 }
 
 {
-    type Got = AsyncReturnType<typeof getterAsync>;
-    type Expected = string | undefined;
+    //@ts-expect-error
+    type Got = ReturnType<Promise<void>>;
+}
+
+{
+    const getString: (() => PromiseLike<string>) | undefined = null as any;
+
+    type Got = ReturnType<typeof getString>;
+    type Expected = string;
+
+    doExtends<Got, Expected>();
+    doExtends<Expected, Got>();
+}
+
+{
+    const getString: (() => PromiseLike<string>) | null = null as any;
+
+    type Got = ReturnType<typeof getString>;
+    type Expected = string;
 
     doExtends<Got, Expected>();
     doExtends<Expected, Got>();

@@ -1,6 +1,5 @@
-
 /**
- * Usecase: 
+ * Usecase:
  * declare const pr: Promise<string[]>;
  * const x: Unpack<typeof pr>; <== x is string[]
  */
