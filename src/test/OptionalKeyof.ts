@@ -32,3 +32,35 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
 
 //@ts-expect-error
 type X = OptionalKeyof<number>;
+
+{
+    type A =
+        | {
+              a: number;
+              b?: number;
+          }
+        | undefined;
+
+    type Expected = "b";
+    //@ts-expect-error
+    type Got = OptionalKeyof<A>;
+
+    //@ts-expect-error
+    doExtends<Expected, Got>();
+    doExtends<Got, Expected>();
+}
+
+{
+    type A = {
+        a: number;
+        b?: number;
+    } | null;
+
+    type Expected = "b";
+    //@ts-expect-error
+    type Got = OptionalKeyof<A>;
+
+    //@ts-expect-error
+    doExtends<Expected, Got>();
+    doExtends<Got, Expected>();
+}
