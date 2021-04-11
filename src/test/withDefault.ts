@@ -11,9 +11,15 @@ import { assert } from "evt/tools/typeSafety/assert";
 
     const expected = `xxx 44`;
 
-    assert(got === expected);
+    //assert(got === expected );
+
+    if (!(got === expected)) {
+        throw new Error();
+    }
 
     console.log("PASS");
 }
 
 export {};
+
+//node dist/test/withDefault.js
