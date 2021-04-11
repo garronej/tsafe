@@ -4,22 +4,21 @@
 
 import { doExtends } from "../typeSafety/doExtends";
 import { withDefaults } from "../typeSafety/withDefaults";
-
-// eslint-disable-next-line @typescript-eslint/no-empty-function
-function notAny(_arg: { __notAnyBrand: unknown }): void {}
+import type { Any } from "ts-toolbelt";
 
 //function test1<T, U, V>() {
-function test1<T, U, V>() {
+function test1() {
+    type U = string;
+    type V = number;
+    type T = string[];
+
     const f: (params: { foo: T; bar: U }) => V = null as any;
 
     const got = withDefaults(f, { "bar": (null as any) as U });
 
-    const expected: (params: { foo: T; bar: U }) => V = null as any;
+    const expected: (params: { foo: T; bar?: U }) => V = null as any;
 
-    //@ts-expect-error
-    notAny(got);
-    doExtends<typeof got, typeof expected>();
-    doExtends<typeof expected, typeof got>();
+    doExtends<Any.Equals<typeof got, typeof expected>, 1>();
 }
 
 function test2<T>() {
