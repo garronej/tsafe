@@ -37,8 +37,10 @@ function test3<T, U, V>() {
 
     //@ts-expect-error
     notAny(got);
-    doExtends<typeof got, typeof expected>();
-    doExtends<typeof expected, typeof got>();
+
+    doExtends<Any.Equals<typeof got, typeof expected>, 1>();
 }
 
-export {};
+export { test1 };
+export { test2 };
+export { test3 };
