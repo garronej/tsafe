@@ -1,5 +1,6 @@
 import { withDefaults } from "../typeSafety/withDefaults";
 import { same } from "evt/tools/inDepth/same";
+import { assert } from "../typeSafety/assert";
 
 {
     const f = (params: { foo: string; bar: number }): string => {
@@ -11,9 +12,7 @@ import { same } from "evt/tools/inDepth/same";
 
     const expected = `xxx 44`;
 
-    if (!(got === expected)) {
-        throw new Error();
-    }
+    assert(got === expected);
 
     console.log("PASS TEST 1");
 }
@@ -30,9 +29,7 @@ import { same } from "evt/tools/inDepth/same";
         "b": 22,
     };
 
-    if (!same(got, expected)) {
-        throw new Error();
-    }
+    assert(same(got, expected));
 
     console.log("PASS TEST 2");
 }
@@ -48,11 +45,26 @@ import { same } from "evt/tools/inDepth/same";
         "b": undefined,
     };
 
-    if (!same(got, expected)) {
-        throw new Error();
-    }
+    assert(same(got, expected));
 
     console.log("PASS TEST 3");
+}
+
+{
+    const f = (params: { a: number; b: number }) => {
+        const { a, b } = params;
+        return `${a}${b}`;
+    };
+
+    const fWd = withDefaults(f, { "a": 44 });
+
+    const got = fWd({ "b": 33 }) + fWd({ "b": 12 });
+
+    const expected = "44334412";
+
+    assert(got === expected);
+
+    console.log("PASS TEST 4");
 }
 
 //node dist/test/withDefault.js
