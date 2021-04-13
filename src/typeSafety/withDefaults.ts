@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+/*
 export function withDefaults<
     T extends Record<string, unknown>,
     U extends keyof T,
@@ -21,6 +22,7 @@ export function withDefaults<
         return f({ ...injectedParams, ...params });
     };
 }
+*/
 
 /*export function withDefaults<
     F extends (params: any) => unknown,

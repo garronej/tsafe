@@ -6,11 +6,79 @@ import { doExtends } from "../typeSafety/doExtends";
 import { withDefaults } from "../typeSafety/withDefaults";
 import type { Any } from "ts-toolbelt";
 
-//function test1<T, U, V>() {
-function test1() {
-    type U = string;
-    type V = number;
-    type T = string[];
+const x: <T>() => T = null as any;
+
+function test1<T, U, V>() {
+    const f: (params: { foo: T | undefined; bar: U }) => V = x<any>();
+    const got = withDefaults(f, { "foo": x<T>() });
+
+    const expected: (params: {
+        bar: U;
+        defaultsOverwrite?: {
+            foo?: [T | undefined];
+        };
+    }) => V = x<any>();
+
+    /*
+    expected({  
+        "bar": x<U>(), 
+        "defaultsOverwrite": {
+            "foo": [undefined]
+        } 
+    });
+    */
+
+    doExtends<Any.Equals<typeof got, typeof expected>, 1>();
+}
+
+function test2<T, U, V>() {
+    const f: (params: { foo: T; bar: U }) => V = x<any>();
+    const got = withDefaults(f, { "foo": x<T>() });
+
+    const expected: (params: {
+        bar: U;
+        defaultsOverwrite?: {
+            foo?: [T];
+        };
+    }) => V = x<any>();
+
+    /*
+    expected({  
+        "bar": x<U>(), 
+        "defaultsOverwrite": {
+            "foo": [x<T>()]
+        } 
+    });
+    */
+
+    doExtends<Any.Equals<typeof got, typeof expected>, 1>();
+}
+
+function test3<T, U, V>() {
+    const f: (params: { foo?: T; bar: U }) => V = x<any>();
+    const got = withDefaults(f, { "foo": x<T>() });
+
+    const expected: (params: {
+        bar: U;
+        defaultsOverwrite?: {
+            foo?: [T | undefined];
+        };
+    }) => V = x<any>();
+
+    /*
+    expected({  
+        "bar": x<U>(), 
+        "defaultsOverwrite": {
+            "foo": [x<T>()]
+        } 
+    });
+    */
+
+    doExtends<Any.Equals<typeof got, typeof expected>, 1>();
+}
+
+/*
+function test1<T, U, V>() {
 
     const f: (params: { foo: T; bar: U }) => V = null as any;
 
@@ -40,7 +108,4 @@ function test3<T, U, V>() {
 
     doExtends<Any.Equals<typeof got, typeof expected>, 1>();
 }
-
-export { test1 };
-export { test2 };
-export { test3 };
+*/
