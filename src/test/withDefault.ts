@@ -67,4 +67,28 @@ import { assert } from "../typeSafety/assert";
     console.log("PASS TEST 4");
 }
 
+{
+    const f = (params: { readonly a: number; b: number }) => {
+        const { a, b } = params;
+        return `${a}${b}`;
+    };
+
+    const fWd = withDefaults(f, { "a": 44 });
+    const got = fWd({ "a": undefined, "b": 33 });
+    const expected = "4433";
+
+    assert(got === expected);
+
+    console.log("PASS TEST 5");
+}
+
+/*{
+    const f = (params: {a: number; b: number}) => {
+        return params;
+    }
+
+    const fWd = withDefaults(f, {"a": 44});
+    const got = fWd({"a": undefined, "b": 33})
+}*/
+
 //node dist/test/withDefault.js
