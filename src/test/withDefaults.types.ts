@@ -2,13 +2,15 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { doExtends } from "../typeSafety/doExtends";
-import { withDefaults } from "../typeSafety/withDefaults";
+import { doExtends } from "../doExtends";
+import { withDefaults } from "../withDefaults";
 import type { Any } from "ts-toolbelt";
 
 const x: <T>() => T = null as any;
 
+//@ts-ignore
 function test1<T, U, V>() {
+
     const f: (params: { foo: T | undefined; bar: U }) => V = x<any>();
     const got = withDefaults(f, { "foo": x<T>() });
 
@@ -19,19 +21,13 @@ function test1<T, U, V>() {
         };
     }) => V = x<any>();
 
-    /*
-    expected({  
-        "bar": x<U>(), 
-        "defaultsOverwrite": {
-            "foo": [undefined]
-        } 
-    });
-    */
 
     doExtends<Any.Equals<typeof got, typeof expected>, 1>();
 }
 
+//@ts-ignore
 function test2<T, U, V>() {
+
     const f: (params: { foo: T; bar: U }) => V = x<any>();
     const got = withDefaults(f, { "foo": x<T>() });
 
@@ -42,19 +38,13 @@ function test2<T, U, V>() {
         };
     }) => V = x<any>();
 
-    /*
-    expected({  
-        "bar": x<U>(), 
-        "defaultsOverwrite": {
-            "foo": [x<T>()]
-        } 
-    });
-    */
 
     doExtends<Any.Equals<typeof got, typeof expected>, 1>();
 }
 
+//@ts-ignore
 function test3<T, U, V>() {
+
     const f: (params: { foo?: T; bar: U }) => V = x<any>();
     const got = withDefaults(f, { "foo": x<T>() });
 
@@ -65,47 +55,34 @@ function test3<T, U, V>() {
         };
     }) => V = x<any>();
 
-    /*
-    expected({  
-        "bar": x<U>(), 
-        "defaultsOverwrite": {
-            "foo": [x<T>()]
-        } 
-    });
-    */
+    
 
     doExtends<Any.Equals<typeof got, typeof expected>, 1>();
 }
 
-/*
-function test1<T, U, V>() {
 
-    const f: (params: { foo: T; bar: U }) => V = null as any;
+//@ts-ignore
+function test4<T>() {
 
-    const got = withDefaults(f, { "bar": (null as any) as U });
-
-    const expected: (params: { foo: T; bar?: U }) => V = null as any;
-
-    doExtends<Any.Equals<typeof got, typeof expected>, 1>();
-}
-
-function test2<T>() {
     // eslint-disable-next-line @typescript-eslint/ban-types
     const f: (params: {}) => T = null as any;
 
     //@ts-expect-error
-    withDefaults(f, { "foo": null as any });
+    withDefaults(f, {"foo": null as any});
+    
 }
 
-function test3<T, U, V>() {
-    const f: (params: { foo?: T; bar: U }) => V = null as any;
+//@ts-ignore
+function test5<T, U, V>() {
 
-    const got = withDefaults(f, { "bar": (null as any) as U });
-    const expected: (params: { foo?: T; bar?: U }) => V = null as any;
+    const f: (params: {a: U; b: T}) => V = x<any>();
+
+    const fWd = withDefaults(f, {"a": x<any>()});
 
     //@ts-expect-error
-    notAny(got);
+    const got = fWd({"b": x<any>(), "defaultsOverwrite": {"a": [undefined]}});
 
-    doExtends<Any.Equals<typeof got, typeof expected>, 1>();
 }
-*/
+
+
+

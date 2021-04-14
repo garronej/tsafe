@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { Parameters } from "../typeSafety/Parameters";
+import type { Parameters } from "../Parameters";
 import { doExtends } from "evt/tools/typeSafety/doExtends";
 
 {

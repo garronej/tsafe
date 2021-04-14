@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { PickOptionals } from "../typeSafety/PickOptional";
+import type { PickOptionals } from "../PickOptional";
 import { doExtends } from "evt/tools/typeSafety/doExtends";
 
 {

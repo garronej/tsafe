@@ -1,3 +1,4 @@
+/* eslint-disable no-empty */
 
 import { overwriteReadonlyProp } from "./overwriteReadonlyProp";
 

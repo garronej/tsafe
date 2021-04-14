@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { OptionalKeyof } from "../typeSafety/OptionalKeyof";
+import type { OptionalKeyof } from "../OptionalKeyof";
 import { doExtends } from "evt/tools/typeSafety/doExtends";
 
 {

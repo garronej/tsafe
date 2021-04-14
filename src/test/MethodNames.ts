@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { MethodNames } from "../typeSafety/MethodNames";
-import { doExtends } from "../typeSafety/doExtends";
+import type { MethodNames } from "../MethodNames";
+import { doExtends } from "../doExtends";
 
 {
     type A = {

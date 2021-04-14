@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { ReturnType } from "../typeSafety/ReturnType";
+import type { ReturnType } from "../ReturnType";
 import { doExtends } from "evt/tools/typeSafety/doExtends";
 
 {

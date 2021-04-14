@@ -1,6 +1,7 @@
-import { withDefaults } from "../typeSafety/withDefaults";
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import { withDefaults } from "../withDefaults";
 import { same } from "evt/tools/inDepth/same";
-import { assert } from "../typeSafety/assert";
+import { assert } from "../assert";
 
 {
     const f = (params: { foo: string; bar: number }): string => {
@@ -22,7 +23,7 @@ import { assert } from "../typeSafety/assert";
         return params;
     };
 
-    const got = withDefaults(f, { "a": 44 })({ "a": 33, "b": 22 });
+    const got = withDefaults(f, { "a": 44 })({"defaultsOverwrite" : {"a": [33]}, "b": 22 });
 
     const expected = {
         "a": 33,
@@ -68,13 +69,13 @@ import { assert } from "../typeSafety/assert";
 }
 
 {
-    const f = (params: { readonly a: number; b: number }) => {
+    const f = (params: {a: number; b: number }) => {
         const { a, b } = params;
         return `${a}${b}`;
     };
 
     const fWd = withDefaults(f, { "a": 44 });
-    const got = fWd({ "a": undefined, "b": 33 });
+    const got = fWd({ "defaultsOverwrite": {"a": undefined}, "b": 33 });
     const expected = "4433";
 
     assert(got === expected);
@@ -82,13 +83,42 @@ import { assert } from "../typeSafety/assert";
     console.log("PASS TEST 5");
 }
 
-/*{
-    const f = (params: {a: number; b: number}) => {
+{
+    const f = (params: {a: number | undefined; b: number}) => {
         return params;
     }
 
-    const fWd = withDefaults(f, {"a": 44});
-    const got = fWd({"a": undefined, "b": 33})
-}*/
+    const fWd = withDefaults(f, {"a": 33});
 
-//node dist/test/withDefault.js
+    const got = fWd({"b": 44, "defaultsOverwrite": {"a": [undefined]}});
+    const expected = {
+        "a": undefined,
+        "b": 44
+    };
+
+    assert(same(got, expected));
+
+    console.log("PASS TEST 6");
+}
+
+{
+    const f = (params: {a?: number; b: number}) => {
+        return params;
+    }
+
+    const fWd = withDefaults(f, {"a": 33});
+
+    const got = fWd({"b": 44, "defaultsOverwrite": {"a": [undefined]}});
+    const expected = {
+        "a": undefined,
+        "b": 44
+    };
+
+
+    assert(same(got, expected));
+
+    console.log("PASS TEST 7");
+}
+
+
+
