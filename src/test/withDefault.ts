@@ -3,8 +3,6 @@ import { withDefaults } from "../withDefaults";
 import { same } from "evt/tools/inDepth/same";
 import { assert } from "../assert";
 
-console.log("wesh");
-
 {
     const f = (params: { foo: string; bar: number }): string => {
         const { foo, bar } = params;

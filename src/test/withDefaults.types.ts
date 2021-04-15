@@ -9,18 +9,10 @@ import type { Any } from "ts-toolbelt";
 const x: <T>() => T = null as any;
 
 //@ts-ignore
-function test1<T, U, V>() {
+function test<T, U, V>() {
     const f: (params: { foo: T | undefined; bar: U }) => V = x<any>();
     const got = withDefaults(f, { "foo": x<T>() });
 
-    /*
-    const expected: (params: {
-        bar: U;
-        defaultsOverwrite?: {
-            foo?: [T | undefined];
-        };
-    }) => V = x<any>();
-    */
     const expected: (
         params: {
             bar: U;
@@ -35,18 +27,10 @@ function test1<T, U, V>() {
 }
 
 //@ts-ignore
-function test2<T, U, V>() {
+function test<T, U, V>() {
     const f: (params: { foo: T; bar: U }) => V = x<any>();
     const got = withDefaults(f, { "foo": x<T>() });
 
-    /*
-    const expected: (params: {
-        bar: U;
-        defaultsOverwrite?: {
-            foo?: [T];
-        };
-    }) => V = x<any>();
-    */
     const expected: (
         params: {
             bar: U;
@@ -61,18 +45,10 @@ function test2<T, U, V>() {
 }
 
 //@ts-ignore
-function test3<T, U, V>() {
+function test<T, U, V>() {
     const f: (params: { foo?: T; bar: U }) => V = x<any>();
     const got = withDefaults(f, { "foo": x<T>() });
 
-    /*
-    const expected: (params: {
-        bar: U;
-        defaultsOverwrite?: {
-            foo?: [T | undefined];
-        };
-    }) => V = x<any>();
-    */
     const expected: (
         params: {
             bar: U;
@@ -87,7 +63,7 @@ function test3<T, U, V>() {
 }
 
 //@ts-ignore
-function _<T>() {
+function test<T>() {
     // eslint-disable-next-line @typescript-eslint/ban-types
     const f: (params: {}) => T = null as any;
 
@@ -96,7 +72,7 @@ function _<T>() {
 }
 
 //@ts-ignore
-function test4<T>() {
+function test<T>() {
     // eslint-disable-next-line @typescript-eslint/ban-types
     const f: (params: { bar: number }) => T = null as any;
 
@@ -105,7 +81,7 @@ function test4<T>() {
 }
 
 //@ts-ignore
-function test4<T>() {
+function test<T>() {
     // eslint-disable-next-line @typescript-eslint/ban-types
     const f: (params: {}) => T = null as any;
 
@@ -113,7 +89,7 @@ function test4<T>() {
 }
 
 //@ts-ignore
-function test4<T>() {
+function test<T>() {
     // eslint-disable-next-line @typescript-eslint/ban-types
     const f: (params: { foo: number; bar: string }) => T = null as any;
 
@@ -122,7 +98,7 @@ function test4<T>() {
 }
 
 //@ts-ignore
-function test5<T, U, V>() {
+function test<T, U, V>() {
     const f: (params: { a: U; b: T }) => V = x<any>();
 
     const fWd = withDefaults(f, { "a": x<any>() });
