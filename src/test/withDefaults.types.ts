@@ -87,7 +87,7 @@ function test3<T, U, V>() {
 }
 
 //@ts-ignore
-function test4<T>() {
+function _<T>() {
     // eslint-disable-next-line @typescript-eslint/ban-types
     const f: (params: {}) => T = null as any;
 

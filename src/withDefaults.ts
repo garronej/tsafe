@@ -1,4 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
+import "./tools/Object.fromEntries";
+
 /*
 export function withDefaults<
     T extends Record<string, unknown>,
@@ -122,6 +125,7 @@ export function withDefaults<Params extends Record<string, unknown>, DefaultKey 
     defaultParams: keyof Params extends never
         ? Record<string, never>
         : { [Key in DefaultKey]: Params[Key] },
+    //defaultParams: { [Key in DefaultKey]: Params[Key] },
 ): (
     params: { [Key in keyof Omit<Params, DefaultKey>]: Params[Key] } & {
         defaultsOverwrite?: { [Key in DefaultKey]?: [Params[Key]] };
@@ -129,6 +133,12 @@ export function withDefaults<Params extends Record<string, unknown>, DefaultKey 
 ) => R {
     return params => {
         const { defaultsOverwrite = {}, ...actualParams } = params;
+
+        // { "foo": ["ok"], "bar": [44], "baz": undefined } =
+        // Object.entries(x) =>                                 [ [ "foo", ["ok"] ], [ "bar", [44] ], [ "baz", undefined ] ];
+        // .filter(([, value]) => value !== undefined) =>       [ [ "foo", ["ok"] ], [ "bar", [44] ] ];
+        // .map(([key, value]) => [key, value[0]]) =>           [ [ "foo", "ok" ], [ "bar", 44 ] ];
+        // Object.fromEntries() =>                              { "foo": "ok", "bar": 44 }
 
         return f({
             ...defaultParams,
