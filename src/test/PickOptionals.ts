@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { PickOptionals } from "../PickOptional";
 import { doExtends } from "evt/tools/typeSafety/doExtends";
+import type { Any } from "ts-toolbelt";
 
 {
     type A = {
@@ -17,8 +18,7 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
     };
     type Got = PickOptionals<A>;
 
-    doExtends<Expected, Got>();
-    doExtends<Got, Expected>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
 {
@@ -32,8 +32,7 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
     };
     type Got = PickOptionals<A>;
 
-    doExtends<Expected, Got>();
-    doExtends<Got, Expected>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
 {

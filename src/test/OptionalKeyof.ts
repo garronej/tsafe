@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { OptionalKeyof } from "../OptionalKeyof";
 import { doExtends } from "evt/tools/typeSafety/doExtends";
+import type { Any } from "ts-toolbelt";
 
 {
     type A = {
@@ -14,8 +15,20 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
     type Expected = "c" | "method1";
     type Got = OptionalKeyof<A>;
 
-    doExtends<Expected, Got>();
-    doExtends<Got, Expected>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
+}
+
+{
+    type A = {
+        a: number;
+        b?: number;
+        c: number | undefined;
+    };
+
+    type Expected = "b";
+    type Got = OptionalKeyof<A>;
+
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
 {
@@ -42,12 +55,12 @@ type X = OptionalKeyof<number>;
         | undefined;
 
     type Expected = "b";
+
     //@ts-expect-error
     type Got = OptionalKeyof<A>;
 
     //@ts-expect-error
-    doExtends<Expected, Got>();
-    doExtends<Got, Expected>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
 {
@@ -61,6 +74,5 @@ type X = OptionalKeyof<number>;
     type Got = OptionalKeyof<A>;
 
     //@ts-expect-error
-    doExtends<Expected, Got>();
-    doExtends<Got, Expected>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }

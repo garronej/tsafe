@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { MethodNames } from "../MethodNames";
 import { doExtends } from "../doExtends";
+import type { Any } from "ts-toolbelt";
 
 {
     type A = {
@@ -15,9 +16,7 @@ import { doExtends } from "../doExtends";
 
     type Got = MethodNames<A>;
 
-    doExtends<Expected, Got>();
-
-    doExtends<Got, Expected>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
 class Car {
@@ -42,8 +41,7 @@ class Car {
     type Expected = "method1" | "method3";
     type Got = MethodNames<A>;
 
-    doExtends<Expected, Got>();
-    doExtends<Got, Expected>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
 {
@@ -58,6 +56,5 @@ class Car {
     type Expected = "method1" | "method2";
     type Got = MethodNames<A>;
 
-    doExtends<Expected, Got>();
-    doExtends<Got, Expected>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }

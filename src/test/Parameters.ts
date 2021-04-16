@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { Parameters } from "../Parameters";
 import { doExtends } from "evt/tools/typeSafety/doExtends";
+import type { Any } from "ts-toolbelt";
 
 {
     const myFunction = (arg1: unknown, arg2: string, extraParams: { a: number; b: number }) => {
@@ -15,8 +16,7 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
     type Expected = [arg1: unknown, arg2: string, extraParams: { a: number; b: number }];
     type Got = Parameters<typeof myFunction>;
 
-    doExtends<Expected, Got>();
-    doExtends<Got, Expected>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
 {
@@ -28,20 +28,29 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
     type Expected = [arg1: number, arg2?: string | undefined]; // [number] | [number, string | undefined]
     type Got = Parameters<A["method"]>;
 
-    doExtends<Expected, Got>();
-    doExtends<Got, Expected>();
-
-    //@ts-expect-error
-    type X = Parameters<A>;
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
-//@ts-expect-error
-type X = Parameters<string>;
+{
+    //@ts-expect-error
+    type X = Parameters<string>;
+}
 
 {
     type Expected = [searchString: string, position?: number | undefined];
     type Got = Parameters<string["indexOf"]>;
 
-    doExtends<Expected, Got>();
-    doExtends<Got, Expected>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
+}
+
+{
+    class A {
+        a: string;
+        constructor(a: string) {
+            this.a = a;
+        }
+    }
+
+    //@ts-expect-error
+    type Got = Parameters<A>;
 }
