@@ -1,11 +1,9 @@
 /* eslint-disable no-empty */
 
-import { overwriteReadonlyProp } from "./overwriteReadonlyProp";
+import { overwriteReadonlyProp } from "./lab/overwriteReadonlyProp";
 
 export class AssertionError extends Error {
-
     constructor(msg: string | undefined) {
-
         super(`Wrong assertion encountered` + (!msg ? "" : `: "${msg}"`));
 
         Object.setPrototypeOf(this, new.target.prototype);
@@ -15,21 +13,16 @@ export class AssertionError extends Error {
         }
 
         try {
-
             overwriteReadonlyProp(
                 this,
                 "stack",
                 this.stack
                     .split("\n")
                     .filter((...[, i]) => i !== 1 && i !== 2)
-                    .join("\n")
+                    .join("\n"),
             );
-
-        } catch {
-        }
-
+        } catch {}
     }
-
 }
 
 export function assert(condition: any, msg?: string): asserts condition {
@@ -37,5 +30,3 @@ export function assert(condition: any, msg?: string): asserts condition {
         throw new AssertionError(msg);
     }
 }
-
-
