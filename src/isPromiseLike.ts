@@ -1,8 +1,6 @@
-
 export function isPromiseLike<T = void>(o: any): o is PromiseLike<T> {
     return typeof o?.then === "function";
 }
-
 
 /*
 function myFun(): number | Promise<number> {
@@ -12,7 +10,7 @@ function myFun(): number | Promise<number> {
 
 const x: unknown = null as any;
 
-//import { assert } from "./assert";
+//import { assert }from "./assert";
 
 (async () => {
 

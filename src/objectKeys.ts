@@ -11,4 +11,10 @@ WARNING
 const o = { "p": 33, "k": "ok", "r": null }
 
 const x= objectKeys<{ p: number; k: string; }>(o);
+
+x is of type ("p" | "k")[] wear as its value is ["p", "k", "r"];
+
+only to use with the upmost circumspection.
+
+
 */

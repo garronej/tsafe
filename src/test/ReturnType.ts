@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { ReturnType } from "../ReturnType";
 import { doExtends } from "evt/tools/typeSafety/doExtends";
+import { Any } from "ts-toolbelt";
 
 {
     const getStringAsync: () => Promise<string> = null as any;
@@ -10,8 +11,7 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
     type Got = ReturnType<typeof getStringAsync>;
     type Expected = string;
 
-    doExtends<Got, Expected>();
-    doExtends<Expected, Got>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
 {
@@ -22,8 +22,7 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
     type Got = ReturnType<typeof getString>;
     type Expected = string;
 
-    doExtends<Got, Expected>();
-    doExtends<Expected, Got>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
 {
@@ -32,8 +31,7 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
     type Got = ReturnType<typeof getString>;
     type Expected = string;
 
-    doExtends<Got, Expected>();
-    doExtends<Expected, Got>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
 {
@@ -42,8 +40,7 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
     type Got = ReturnType<typeof getString>;
     type Expected = string | number;
 
-    doExtends<Got, Expected>();
-    doExtends<Expected, Got>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
 {
@@ -62,8 +59,7 @@ import { doExtends } from "evt/tools/typeSafety/doExtends";
     type Got = ReturnType<typeof getString>;
     type Expected = string;
 
-    doExtends<Got, Expected>();
-    doExtends<Expected, Got>();
+    doExtends<Any.Equals<Got, Expected>, 1>();
 }
 
 {

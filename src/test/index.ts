@@ -5,7 +5,7 @@ import * as path from "path";
 import { Deferred } from "evt/tools/Deferred";
 
 //const names = ["myFunction", "myObject", "getProjectRoot"];
-const names = ["withDefault", "flip"];
+const names = ["withDefault", "flip", "objectKeys", "isPromiseLike"];
 
 (async () => {
     if (!!process.env.FORK) {
