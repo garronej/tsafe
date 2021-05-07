@@ -1,5 +1,3 @@
-/* eslint-disable no-empty */
-
 import { overwriteReadonlyProp } from "./lab/overwriteReadonlyProp";
 
 export class AssertionError extends Error {
@@ -21,10 +19,12 @@ export class AssertionError extends Error {
                     .filter((...[, i]) => i !== 1 && i !== 2)
                     .join("\n"),
             );
+            // eslint-disable-next-line no-empty
         } catch {}
     }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function assert(condition: any, msg?: string): asserts condition {
     if (!condition) {
         throw new AssertionError(msg);

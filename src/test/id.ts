@@ -1,20 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import {id} from "../id";
-import type {Id} from "../id";
-
+import { id } from "../id";
 
 {
-
     type Square = {
         type: "SQUARE";
         side: number;
-    }
+    };
 
     type Circle = {
         type: "CIRCLE";
         radius: number;
-    }
+    };
 
     type Shape = Circle | Square;
 
@@ -22,46 +19,17 @@ import type {Id} from "../id";
         return shape;
     };
 
-    f(id<Square>({"type": "SQUARE", "side": 12}));
+    f(
+        id<Square>({ "type": "SQUARE", "side": 12 }),
+    );
 
     //@ts-expect-error
-    f(id<Circle>({"type": "SQUARE", "side": 12}));
-
+    f(
+        id<Circle>({ "type": "SQUARE", "side": 12 }),
+    );
 }
 
 {
     //@ts-expect-error
-    id<{foo: string; bar: string}>({"bar": "ok", "foo": "ok", "baz": "ok"});
+    id<{ foo: string; bar: string }>({ "bar": "ok", "foo": "ok", "baz": "ok" });
 }
-
-{
-    type X = {
-
-    }
-
-    id<X>({ "foo": null as any });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
