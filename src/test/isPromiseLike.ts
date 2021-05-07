@@ -3,25 +3,22 @@ import { isPromiseLike } from "../isPromiseLike";
 import { assert } from "../assert";
 
 {
-
-    const x = new Promise<void>(resolve => setTimeout(()=> resolve, 1000));
+    const x = new Promise<void>(resolve => setTimeout(() => resolve, 1000));
 
     const got = isPromiseLike(x);
-    
+
     assert(got === true);
 
     console.log("PASS TEST 1");
-
 }
 
 {
     const x = {
-        "then": ()=> null,
+        "then": () => null,
         "a": 1,
         "b": "foo",
-        "c": null
-    }
-
+        "c": null,
+    };
 
     assert(isPromiseLike(x));
 
@@ -29,10 +26,9 @@ import { assert } from "../assert";
 }
 
 {
-    const x = async ()=> {
+    const x = async () => {
         return 1;
-    }
-
+    };
 
     assert(isPromiseLike(x()));
 
@@ -40,9 +36,9 @@ import { assert } from "../assert";
 }
 
 {
-    const x = async ()=> {
+    const x = async () => {
         return 1;
-    }
+    };
 
     assert(!isPromiseLike(x));
 
@@ -50,12 +46,12 @@ import { assert } from "../assert";
 }
 
 {
-    const x:PromiseLike<number> = {
-        "then": ()=> null as any,
-    }
+    const x: PromiseLike<number> = {
+        "then": () => null as any,
+    };
 
     assert(isPromiseLike(x));
-    
+
     console.log("PASS TEST 5");
 }
 
@@ -65,19 +61,18 @@ import { assert } from "../assert";
     assert(!isPromiseLike(x));
 
     console.log("PASS TEST 6");
-
 }
 
 {
-    class X{
-        then: ()=> void;
+    class X {
+        then: () => void;
 
-        constructor(then: ()=> void){
+        constructor(then: () => void) {
             this.then = then;
         }
     }
 
-    const x = new X(()=> null);
+    const x = new X(() => null);
 
     assert(isPromiseLike(x));
 
@@ -85,13 +80,13 @@ import { assert } from "../assert";
 }
 
 {
-    interface X{
-        then: ()=> void;
+    interface X {
+        then: () => void;
     }
 
     const x: X = {
-        "then": ()=> null
-    }
+        "then": () => null,
+    };
 
     assert(isPromiseLike(x));
 
