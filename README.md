@@ -23,42 +23,18 @@ $ npm install --save tsafe
 ```
 
 ```typescript
-import { myFunction, myObject } from "tsafe";
-```
+import { id } from "tsafe/assert";
+import { typeGuard } from "tsafe/typeGuard";
 
-Specific imports:
+type Circle = { radius: number };
+type Square = { sideLength: number };
+type Shape = Circle | Square;
 
-```typescript
-import { myFunction } from "tsafe/myFunction";
-import { myObject } from "tsafe/myObject";
-import { id } from "tsafe";
-```
+const shape: Shape = { "radius": 100 };
 
-## Import from HTML, with CDN
+//You: Trust me TypeScript, I know that shape is a Circle.
+assert(typeGuard<Circle>(shape));
 
-Import it via a bundle that creates a global ( wider browser support ):
-
-```html
-<script src="//unpkg.com/tsafe/bundle.min.js"></script>
-<script>
-    const { myFunction, myObject } = tsafe;
-</script>
-```
-
-Or import it as an ES module:
-
-```html
-<script type="module">
-    import { myFunction, myObject } from "//unpkg.com/tsafe/zz_esm/index.js";
-</script>
-```
-
-_You can specify the version you wish to import:_ [unpkg.com](https://unpkg.com)
-
-## Contribute
-
-```bash
-npm install
-npm run build
-npm test
+//TypeScript: Ok if you say so...it must have a radius then.
+shape.radius;
 ```
