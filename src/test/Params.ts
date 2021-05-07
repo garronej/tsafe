@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { Params } from "../Params";
+import type { Params } from "../Params0";
 import { doExtends } from "../doExtends";
 import type { Any } from "ts-toolbelt";
 
