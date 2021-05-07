@@ -13,23 +13,8 @@ import { id } from "../id";
         radius: number;
     };
 
-    type Shape = Circle | Square;
-
-    const f = (shape: Shape) => {
-        return shape;
-    };
-
-    f(
-        id<Square>({ "type": "SQUARE", "side": 12 }),
-    );
+    id<Square>({ "type": "SQUARE", "side": 12 });
 
     //@ts-expect-error
-    f(
-        id<Circle>({ "type": "SQUARE", "side": 12 }),
-    );
-}
-
-{
-    //@ts-expect-error
-    id<{ foo: string; bar: string }>({ "bar": "ok", "foo": "ok", "baz": "ok" });
+    id<Circle>({ "type": "SQUARE", "side": 12 });
 }
