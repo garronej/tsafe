@@ -16,5 +16,6 @@
         "jsx": "react-jsx",
         "noFallthroughCasesInSwitch": true
     },
-    "include": ["src"]
+    "include": ["src"],
+    "exclude": ["node_modules", "dist/", "deno_dist/", "src/**/*.deno.ts", "src/**/*.deno.tsx"]
 }

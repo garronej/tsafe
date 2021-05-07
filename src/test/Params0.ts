@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { Params } from "../Params0";
+import type { Param0 } from "../Param0";
 import { doExtends } from "../doExtends";
 import type { Any } from "ts-toolbelt";
 
@@ -15,7 +15,7 @@ function test<T, U>() {
         bar: U;
     };
 
-    type Got = Params<typeof f>;
+    type Got = Param0<typeof f>;
 
     doExtends<Any.Equals<Got, Expected>, 1>();
 }
@@ -35,7 +35,7 @@ function test<T, U>() {
         bar: U;
     };
 
-    type Got = Params<typeof f>;
+    type Got = Param0<typeof f>;
 
     doExtends<Any.Equals<Got, Expected>, 1>();
 }
@@ -59,7 +59,7 @@ function test<T, U>() {
 }
 
 {
-    type Got = Params<undefined | null | false | "">;
+    type Got = Param0<undefined | null | false | "">;
     type Expected = never;
 
     doExtends<Any.Equals<Got, Expected>, 1>();

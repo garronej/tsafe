@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { ReturnType } from "../ReturnType";
-import { doExtends } from "evt/tools/typeSafety/doExtends";
+import { doExtends } from "../doExtends";
 import { Any } from "ts-toolbelt";
 
 {
