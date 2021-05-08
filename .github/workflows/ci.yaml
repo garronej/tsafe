@@ -118,79 +118,6 @@ jobs:
         action_name: update_changelog
         branch: ${{ github.ref }}
 
-  create_github_release:
-    runs-on: ubuntu-latest
-    needs: 
-      - update_changelog
-      - check_if_version_upgraded
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: ${{ github.ref }}
-    - name: Build GitHub release body
-      id: step1
-      run: |
-        if [ "$FROM_VERSION" = "0.0.0" ]; then
-            echo "::set-output name=body::🚀"
-        else
-            echo "::set-output name=body::📋 [CHANGELOG](https://github.com/$GITHUB_REPOSITORY/blob/v$TO_VERSION/CHANGELOG.md)"
-        fi
-      env: 
-        FROM_VERSION: ${{ needs.check_if_version_upgraded.outputs.from_version }}
-        TO_VERSION: ${{ needs.check_if_version_upgraded.outputs.to_version }}
-    - uses: garronej/action-gh-release@v0.2.0
-      with:
-        name: Release v${{ needs.check_if_version_upgraded.outputs.to_version }}
-        tag_name: v${{ needs.check_if_version_upgraded.outputs.to_version }}
-        target_commitish: ${{ github.ref }}
-        body: ${{ steps.step1.outputs.body }}
-        draft: false
-        prerelease: false
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-
-  publish_on_npm:
-    runs-on: ubuntu-latest
-    needs: 
-      - update_changelog
-      - check_if_version_upgraded
-    steps:
-    - uses: actions/checkout@v2.3.4
-      with:
-        ref: ${{ github.ref }}
-    - uses: actions/setup-node@v2.1.3
-      with:
-        node-version: '15'
-    - run: |
-        PACKAGE_MANAGER=npm
-        if [ -f "./yarn.lock" ]; then
-            PACKAGE_MANAGER=yarn
-        fi
-        if [ "$PACKAGE_MANAGER" = "yarn" ]; then
-            yarn install --frozen-lockfile                                                                                                                                                                                        
-        else
-            npm ci
-        fi
-        $PACKAGE_MANAGER run build
-    - run: yarn run build
-    - run: npx -y -p denoify@0.6.5 denoify_enable_short_npm_import_path
-      env:
-        DRY_RUN: "0"
-    - name: Publishing on NPM
-      run: |
-        if [ "$(npm show . version)" = "$VERSION" ]; then
-          echo "This version is already published"
-          exit 0
-        fi
-        if [ "$NODE_AUTH_TOKEN" = "" ]; then
-          echo "Can't publish on NPM, You must first create a secret called NPM_TOKEN that contains your NPM auth token. https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets"
-          false
-        fi
-        npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-        VERSION: ${{ needs.check_if_version_upgraded.outputs.to_version }}
-
   publish:
     runs-on: ubuntu-latest
     needs: 
@@ -211,17 +138,22 @@ jobs:
     - uses: actions/setup-node@v2.1.3
       with:
         node-version: '15'
+        registry-url: https://registry.npmjs.org/
     - run: |
+        PACKAGE_MANAGER=npm
         if [ -f "./yarn.lock" ]; then
+            PACKAGE_MANAGER=yarn
+        fi
+        if [ "$PACKAGE_MANAGER" = "yarn" ]; then
             yarn install --frozen-lockfile                                                                                                                                                                                        
         else
             npm ci
         fi
+        $PACKAGE_MANAGER run build
     - run: npx -y -p denoify@0.6.5 denoify_enable_short_npm_import_path
       env:
         DRY_RUN: "0"
-    - name: Publishing on NPM
-      run: |
+    - run: |
         if [ "$(npm show . version)" = "$VERSION" ]; then
           echo "This version is already published"
           exit 0
