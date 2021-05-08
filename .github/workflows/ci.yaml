@@ -167,7 +167,7 @@ jobs:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         VERSION: ${{ needs.check_if_version_upgraded.outputs.to_version }}
     - run: |
-        git config --local user.email "actions@github.com"
+        git config --global user.name "actions"
         git add -A
         git commit -am "Enabling shorter import paths"
         git push origin latest
