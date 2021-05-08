@@ -166,11 +166,12 @@ jobs:
         if [ -f "./yarn.lock" ]; then
             PACKAGE_MANAGER=yarn
         fi
-
         if [ "$PACKAGE_MANAGER" = "yarn" ]; then
             yarn install --frozen-lockfile                                                                                                                                                                                        
+            $PACKAGE_MANAGER run build
         else
             npm ci
+            $PACKAGE_MANAGER run build
         fi
         $PACKAGE_MANAGER run build
     - run: npx -y -p denoify@0.6.5 denoify_enable_short_npm_import_path
