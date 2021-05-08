@@ -168,12 +168,11 @@ jobs:
         fi
         if [ "$PACKAGE_MANAGER" = "yarn" ]; then
             yarn install --frozen-lockfile                                                                                                                                                                                        
-            $PACKAGE_MANAGER run build
         else
             npm ci
-            $PACKAGE_MANAGER run build
         fi
         $PACKAGE_MANAGER run build
+    - run: yarn run build
     - run: npx -y -p denoify@0.6.5 denoify_enable_short_npm_import_path
       env:
         DRY_RUN: "0"
@@ -183,15 +182,13 @@ jobs:
           echo "This version is already published"
           exit 0
         fi
-        if [ "$NPM_TOKEN" = "" ]; then
+        if [ "$NODE_AUTH_TOKEN" = "" ]; then
           echo "Can't publish on NPM, You must first create a secret called NPM_TOKEN that contains your NPM auth token. https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets"
           false
         fi
-        echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
         npm publish
-        rm .npmrc
       env:
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         VERSION: ${{ needs.check_if_version_upgraded.outputs.to_version }}
 
   publish:
