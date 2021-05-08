@@ -11,7 +11,7 @@ jobs:
 
   test_lint:
     runs-on: ubuntu-latest
-    if: ${{ !github.event.created && github.repository != 'garronej/ts_ci' }}
+    if: ${{ !github.event.created && github.repository != 'garronej/denoify_ci' }}
     steps:
     - uses: actions/checkout@v2.3.4
     - uses: actions/setup-node@v2.1.3
@@ -21,7 +21,6 @@ jobs:
         if [ -f "./yarn.lock" ]; then
             PACKAGE_MANAGER=yarn
         fi
-
         if [ "$PACKAGE_MANAGER" = "yarn" ]; then
             yarn install --frozen-lockfile                                                                                                                                                                                        
         else
@@ -79,9 +78,18 @@ jobs:
       with:
         deno-version: v1.x
     - run: deno --version
-    - run: npm ci
-    - run: npm run build
-    - run: npm run test:deno
+    - run: |
+        PACKAGE_MANAGER=npm
+        if [ -f "./yarn.lock" ]; then
+            PACKAGE_MANAGER=yarn
+        fi
+        if [ "$PACKAGE_MANAGER" = "yarn" ]; then
+            yarn install --frozen-lockfile                                                                                                                                                                                        
+        else
+            npm ci
+        fi
+        $PACKAGE_MANAGER run build
+        $PACKAGE_MANAGER run test:deno
 
   check_if_version_upgraded:
     name: Check if version upgrade
