@@ -129,10 +129,10 @@ jobs:
         fetch-depth: 0
         ref: ${{ github.ref }}
     - run: rm -r .github
-    - continue-on-error: true
-      run: |
+    - run: |
         git branch -d latest || true
-        git push origin :latest
+        git push origin :latest || true
+    - run: |
         git branch latest
         git checkout latest
     - uses: actions/setup-node@v2.1.3
