@@ -16,14 +16,18 @@
   <a href="https://github.com/garronej/tsafe">Documentation</a>
 </p>
 
-# Install / Import
+This module is both an [NPM module](https://www.npmjs.com/package/tsafe) and a [Deno module](https://deno.land/x/tsafe)
 
-```bash
-$ npm install --save tsafe
-```
+Import in deno:
 
 ```typescript
 import { assert, typeGuard, ... } from "https://deno.land/x/tsafe/mod.ts";
+```
+
+Install elsewhere:
+
+```bash
+$ npm install --save tsafe
 ```
 
 ```typescript

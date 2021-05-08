@@ -183,10 +183,6 @@ jobs:
       env: 
         FROM_VERSION: ${{ needs.check_if_version_upgraded.outputs.from_version }}
         TO_VERSION: ${{ needs.check_if_version_upgraded.outputs.to_version }}
-    - uses: garronej/github_actions_toolkit@v2.4
-      with:
-        action_name: setup_repo_webhook_for_deno_land_publishing
-        should_webhook_be_enabled: true
     - uses: garronej/action-gh-release@v0.2.0
       with:
         name: Release v${{ needs.check_if_version_upgraded.outputs.to_version }}
