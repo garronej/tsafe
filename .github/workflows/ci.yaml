@@ -52,7 +52,7 @@ jobs:
       run: |
         yarn install --frozen-lockfile                                                                                                                                                                                        
         yarn build
-        yarn test
+        yarn test:node
     - if: steps.step1.outputs.npm_or_yarn == 'npm'
       run: |
         npm ci                                                                                                                                                                                        
