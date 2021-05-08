@@ -23,7 +23,11 @@ $ npm install --save tsafe
 ```
 
 ```typescript
-import { id } from "tsafe/assert";
+import { assert, typeGuard, ... } from "https://deno.land/x/tsafe/mod.ts";
+```
+
+```typescript
+import { assert } from "tsafe/assert";
 import { typeGuard } from "tsafe/typeGuard";
 
 type Circle = { radius: number };
