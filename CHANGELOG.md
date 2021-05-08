@@ -1,3 +1,11 @@
+### **0.1.1** (2021-05-08)  
+  
+- update workflow  
+- Fix CI  
+- Fix build  
+- Setup denoify  
+- Add index    
+  
 ## **0.1.0** (2021-05-07)  
   
 - Fix formating  
