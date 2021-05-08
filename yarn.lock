@@ -695,20 +695,20 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
+evt@^1.9.14:
+  version "1.9.14"
+  resolved "https://registry.yarnpkg.com/evt/-/evt-1.9.14.tgz#9072392c91cf38863357ddd6f7b6731b24d5575f"
+  integrity sha512-4/KDGBNZsbyqiZ0OqQVbuFKQxYvJ8g/VENehxkR0yd1xEtmzql/NP5uTQBH+VCfc0vmtHV6wARCWLfit8WlTZA==
+  dependencies:
+    minimal-polyfills "^2.1.5"
+    run-exclusive "^2.2.14"
+
 evt@^1.9.2:
   version "1.9.13"
   resolved "https://registry.yarnpkg.com/evt/-/evt-1.9.13.tgz#674f8678975494c7e2c58f694c74d8c84fe7a896"
   integrity sha512-nn99KJO2FHU/340q7/GXkRz7V6sPaXYgKJcN50DVQAJNvMuJyKJfdu5cYwJ0kUAwXxOJ/Cu9x4iTc/XFeDtBXg==
   dependencies:
     minimal-polyfills "^2.1.5"
-    run-exclusive "^2.2.14"
-
-evt@^2.0.0-beta.15:
-  version "2.0.0-beta.16"
-  resolved "https://registry.yarnpkg.com/evt/-/evt-2.0.0-beta.16.tgz#8e2ef630267e70ea50f8337332fef6a3287ff00e"
-  integrity sha512-0hgg+npKYzBnULuAOBrsq/l/oSHNdl4RBHStrW1XHT/VI2KZaCTd9kKrglPQwZUAwJ5gHd6Z7uOD6St4aw92jA==
-  dependencies:
-    minimal-polyfills "^2.1.6"
     run-exclusive "^2.2.14"
 
 execa@^4.1.0:
@@ -1175,7 +1175,7 @@ mimic-fn@^2.1.0:
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
   integrity sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==
 
-minimal-polyfills@^2.1.5, minimal-polyfills@^2.1.6:
+minimal-polyfills@^2.1.5:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/minimal-polyfills/-/minimal-polyfills-2.1.6.tgz#eab50832add31afd40a22b38fb76d1fdcd2a51e4"
   integrity sha512-vqoxj7eMzsqX0M6/dkgoNFPw6Mztgn5qjSl0bWGboQeU7Y4UPLeyoqQw6JI+0qmBcJYdkr3nK7dqY8u/fgRp5g==
