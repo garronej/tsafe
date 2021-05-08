@@ -168,6 +168,7 @@ jobs:
         VERSION: ${{ needs.check_if_version_upgraded.outputs.to_version }}
     - run: |
         git config --global user.name "actions"
+        git config --global user.email actions@example.com
         git add -A
         git commit -am "Enabling shorter import paths"
         git push origin latest
