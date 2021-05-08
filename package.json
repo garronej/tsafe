@@ -1,6 +1,6 @@
 {
     "name": "tsafe",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "Leverage the more advanced features of TypeScript",
     "repository": {
         "type": "git",
