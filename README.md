@@ -4,6 +4,8 @@
 <p align="center">
     <i>Leverage the more advanced features of TypeScript</i>
     <br>
+    <i>A collection of helper that makes your TS code cleaner and safer.</i>
+    <br>
     <br>
     <img src="https://github.com/garronej/tsafe/workflows/ci/badge.svg?branch=main">
     <img src="https://img.shields.io/bundlephobia/minzip/tsafe">
