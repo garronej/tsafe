@@ -3,6 +3,7 @@
 </p>
 <p align="center">
     <i>Leverage the more advanced features of TypeScript</i>
+    <i>A collection of helper that makes your TS code cleaner and safer.</i>
     <br>
     <br>
     <img src="https://github.com/garronej/tsafe/workflows/ci/badge.svg?branch=main">
@@ -15,8 +16,6 @@
   -
   <a href="https://docs.tsafe.dev">Documentation</a>
 </p>
-
-A collection of helper that makes your TS code cleaner and safer.  
 
 This module is both an [NPM module](https://www.npmjs.com/package/tsafe) and a [Deno module](https://deno.land/x/tsafe)
 
