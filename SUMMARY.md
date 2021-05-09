@@ -5,5 +5,6 @@
 * [typeGuard](typeguard.md)
 * [id](id.md)
 * [ReturnType](returntype.md)
+* [Parameters](parameters.md)
 * [How to import](import.md)
 
