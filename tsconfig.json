@@ -1,21 +1,26 @@
 {
-    "compilerOptions": {
-        "module": "CommonJS",
-        "target": "es5",
-        "lib": ["es2015", "DOM", "ES2019.Object"],
-        "esModuleInterop": true,
-        "declaration": true,
-        "outDir": "./dist",
-        "sourceMap": true,
-        "newLine": "LF",
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "incremental": true,
-        "strict": true,
-        "downlevelIteration": true,
-        "jsx": "react-jsx",
-        "noFallthroughCasesInSwitch": true
-    },
-    "include": ["src"],
-    "exclude": ["node_modules", "dist/", "deno_dist/", "src/**/*.deno.ts", "src/**/*.deno.tsx"]
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src"
+  ]
 }

@@ -1,48 +1,46 @@
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/6702424/117557564-572a0a80-b074-11eb-9d54-4ecfb5fb208f.png">  
-</p>
-<p align="center">
-    <i>Leverage the more advanced features of TypeScript</i>
-    <br>
-    <br>
-    <img src="https://github.com/garronej/tsafe/workflows/ci/badge.svg?branch=main">
-    <img src="https://img.shields.io/bundlephobia/minzip/tsafe">
-    <img src="https://img.shields.io/npm/dw/tsafe">
-    <img src="https://img.shields.io/npm/l/tsafe">
-</p>
-<p align="center">
-  <a href="https://www.tsafe.dev">Home</a>
-  -
-  <a href="https://docs.tsafe.dev">Documentation</a>
-</p>
+# Getting Started with Create React App
 
-This module is both an [NPM module](https://www.npmjs.com/package/tsafe) and a [Deno module](https://deno.land/x/tsafe)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Import in deno:
+## Available Scripts
 
-```typescript
-import { assert, typeGuard, ... } from "https://deno.land/x/tsafe/mod.ts";
-```
+In the project directory, you can run:
 
-Install elsewhere:
+### `yarn start`
 
-```bash
-$ npm install --save tsafe
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```typescript
-import { assert } from "tsafe/assert";
-import { typeGuard } from "tsafe/typeGuard";
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-type Circle = { radius: number };
-type Square = { sideLength: number };
-type Shape = Circle | Square;
+### `yarn test`
 
-const shape: Shape = { "radius": 100 };
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-//You: Trust me TypeScript, I know that shape is a Circle.
-assert(typeGuard<Circle>(shape));
+### `yarn build`
 
-//TypeScript: Ok if you say so...it must have a radius then.
-shape.radius;
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
