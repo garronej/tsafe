@@ -1,5 +1,7 @@
 import { overwriteReadonlyProp } from "./lab/overwriteReadonlyProp";
 
+
+/** https://docs.tsafe.dev/assert#error-thrown */
 export class AssertionError extends Error {
     constructor(msg: string | undefined) {
         super(`Wrong assertion encountered` + (!msg ? "" : `: "${msg}"`));
@@ -25,6 +27,7 @@ export class AssertionError extends Error {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+/** https://docs.tsafe.dev/assert */
 export function assert(condition: any, msg?: string): asserts condition {
     if (!condition) {
         throw new AssertionError(msg);
