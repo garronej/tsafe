@@ -3,6 +3,7 @@
 </p>
 <p align="center">
     <i>Leverage the more advanced features of TypeScript</i>
+    <br>
     <i>A collection of helper that makes your TS code cleaner and safer.</i>
     <br>
     <br>
