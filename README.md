@@ -11,9 +11,9 @@
     <img src="https://img.shields.io/npm/l/tsafe">
 </p>
 <p align="center">
-  <a href="https://github.com/garronej/tsafe">Home</a>
+  <a href="https://www.tsafe.dev">Home</a>
   -
-  <a href="https://github.com/garronej/tsafe">Documentation</a>
+  <a href="https://docs.tsafe.dev">Documentation</a>
 </p>
 
 This module is both an [NPM module](https://www.npmjs.com/package/tsafe) and a [Deno module](https://deno.land/x/tsafe)
