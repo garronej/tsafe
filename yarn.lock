@@ -5741,10 +5741,10 @@ hoist-non-react-statics@^3.3.2:
   dependencies:
     react-is "^16.7.0"
 
-homepage-template@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/homepage-template/-/homepage-template-0.0.1.tgz#7cff2f5ee576e72e527928d54f9dc4feece63fb5"
-  integrity sha512-QKsPauiUmscWpu/vrjhu4rOa9FJqrQ+/3lUa1KtqhAuaNMm1BmkHZUMpq1b3UF2ROff7IAzMnx+dwk7EH8A5Kg==
+homepage-template@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/homepage-template/-/homepage-template-0.0.2.tgz#7acb01c330a4251df8dd39561970c116a17a0763"
+  integrity sha512-ooje+w8V3943SvkyULKB3Kx4qnhHO1FB3hcrdGgxzYs9VB+gbAxrh8byPNOfFqzYcaUyNEk+bzrPMHv9U8p9Dw==
   dependencies:
     "@material-ui/core" "^4.11.3"
     "@material-ui/icons" "^4.11.2"
