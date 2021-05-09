@@ -56,7 +56,7 @@ Let's say you have this function:
 function getArea(shape: Shape): number;
 ```
 
-And let's say a shape object is defined as follow:
+And let's say a shape object is defined as follows:
 
 ```typescript
 type Circle = { type: "circle"; radius: number; };
@@ -64,20 +64,20 @@ type Square = { type: "square"; sideLength: number; };
 type Shape = Circle | Square;
 ```
 
-We want to instanciate a `Circle` and pass it to `getArea` we can do:
+We want to instantiate a `Circle` and pass it to `getArea` we can do:
 
 ```typescript
 const circle: Circle = { "type": "circle", "radius": 33 };
 getArea(circle);
 ```
 
-If we want to avoid to declare a variable we can do: 
+If we want to avoid declaring a variable, we can do 
 
 ```typescript
 getArea({ "type": "circle", "radius": 33 });
 ```
 
-The probem, however, is that this `Circle` was not as easy to instanciate because TypeScript dosen't know what kind of shape we are trying to instantiate:
+The problem, however, is that this `Circle` was not as easy to instantiate because TypeScript doesn’t know what kind of shape we are trying to instantiate:
 
 ![Every possible properties are listed](.gitbook/assets/image%20%281%29.png)
 
@@ -89,5 +89,5 @@ import { id } from "tsafe/id";
 getArea(id<Circle>({ "type": "circle", "radius": 33 }));
 ```
 
-![TypeScript know we are instantiating a Circle](.gitbook/assets/image%20%282%29.png)
+![TypeScript knows we are instantiating a Circle](.gitbook/assets/image%20%282%29.png)
 
