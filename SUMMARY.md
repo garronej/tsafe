@@ -2,4 +2,5 @@
 
 * [What is tsafe?](README.md)
 * [id](id.md)
+* [assert](assert.md)
 
