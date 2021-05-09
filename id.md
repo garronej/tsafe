@@ -15,7 +15,7 @@ It directly returns the parameter it was given as input.
 ## Example 1: Simultaneously declaring a type and instantiating a default value for this type
 
 ```typescript
-import { id } from "tsafe/id";
+import { id } from "tsafe/id";
 
 const defaultCat = {
     "name": "Felix",
@@ -31,7 +31,7 @@ If we don't use `id` `Cat["gender"]` is of type `string`
 
 ![Cat\[&quot;gender&quot;\] is string](.gitbook/assets/image%20%284%29.png)
 
-We could ave used `"male" as "male" | "female"`
+We could ave used `"male" as "male" | "female"` 
 
 ```typescript
 const defaultCat = {
@@ -42,7 +42,7 @@ const defaultCat = {
 type Cat = typeof defaultCat;
 ```
 
-But this is less type safe because we do not validate that the value that we gives to gender is acutally assignable to "male" \| "female".
+But this is less type safe because we do not validate that the value that we gives to gender is acutally assignable to "male" \| "female". 
 
 This error for example slip through:
 
@@ -50,7 +50,7 @@ This error for example slip through:
 
 ## Example 2: Instantiating an object of type T
 
-Let's say you have this function:
+Let's say you have this function: 
 
 ```typescript
 function getArea(shape: Shape): number;
@@ -71,7 +71,7 @@ const circle: Circle = { "type": "circle", "radius": 33 };
 getArea(circle);
 ```
 
-If we want to avoid declaring a variable, we can do
+If we want to avoid declaring a variable, we can do 
 
 ```typescript
 getArea({ "type": "circle", "radius": 33 });
