@@ -1,5 +1,6 @@
 /node_modules/
 /dist/
+/deno_dist/
 /.eslintrc.js
 /docs/
 /CHANGELOG.md
