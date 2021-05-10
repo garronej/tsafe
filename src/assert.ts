@@ -1,6 +1,5 @@
 import { overwriteReadonlyProp } from "./lab/overwriteReadonlyProp";
 
-
 /** https://docs.tsafe.dev/assert#error-thrown */
 export class AssertionError extends Error {
     constructor(msg: string | undefined) {

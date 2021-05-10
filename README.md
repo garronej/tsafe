@@ -22,7 +22,6 @@ Powerful features like [assertion functions](https://www.typescriptlang.org/docs
 
 `tsafe` also tries to make TypeScript more practical by patching frustrating aspect of to the built-in types helper see [`RetunType`](returntype.md) for example.
 
-
 This module is both an [NPM module](https://www.npmjs.com/package/tsafe) and a [Deno module](https://deno.land/x/tsafe)
 
 Import in deno:
