@@ -26,13 +26,13 @@ TypeScript, however, only exports type helpers \(e.g. `Record`, `ReturnType`, et
 
 This module is both an [NPM module](https://www.npmjs.com/package/tsafe) and a [Deno module](https://deno.land/x/tsafe)
 
-Import in deno:
+## Import in deno:
 
 ```typescript
 import { assert, typeGuard, ... } from "https://deno.land/x/tsafe/mod.ts";
 ```
 
-Install elsewhere:
+## Install elsewhere:
 
 ```bash
 $ npm install --save tsafe
