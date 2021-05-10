@@ -1,0 +1,9 @@
+/**
+ * Flip the value of a boolean without having to reference it twice
+ * after running flip(x.y, "z") x.y.z !== x.y.z
+ */
+declare type KeyOfType<T extends Record<string, unknown>, U> = NonNullable<{
+    [Key in keyof T]: T[Key] extends U | undefined ? Key : never;
+}[keyof T]>;
+export declare function flip<T extends Record<string, any>>(object: T, prop: KeyOfType<T, boolean>): any;
+export {};
