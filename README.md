@@ -20,7 +20,8 @@
 # Motivation
 
 Powerful TypeScript features like [assertion functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions) or [user-defined type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards) are only useful if paired with utility functions.  
-TypeScript, however, only exports type helpers \(e.g. `Record`, `ReturnType`, etc.\). `tsafe` is here to export _«the missing builtins»_ such as [the assert function](https://docs.tsafe.dev/assert.md).
+TypeScript, however, only exports type helpers \(e.g. `Record`, `ReturnType`, etc.\).  
+`tsafe` is here to provide _«the missing builtins»_ such as [the assert function](https://docs.tsafe.dev/assert.md).
 
 `tsafe` also tries to make TypeScript more practical by patching frustrating aspect of to the built-in types see
 [`ReturnType`](https://docs.tsafe.dev/returntype.md) for example.
