@@ -40,4 +40,8 @@ $ npm install --save tsafe
 $ yarn add tsafe
 ```
 
+<p align="center">
+    <img src="https://www.tsafe.dev/static/media/tsafe.acf78d34.gif">
+</p>
+
 [Learn more](https://www.tsafe.dev)
