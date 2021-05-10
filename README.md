@@ -41,7 +41,7 @@ $ yarn add tsafe
 ```
 
 <p align="center">
-    <img src="https://www.tsafe.dev/static/media/tsafe.acf78d34.gif">
+    <img src="https://user-images.githubusercontent.com/6702424/117598098-51e9c000-b147-11eb-9140-98155ffc32d8.gif">
 </p>
 
 [Learn more](https://www.tsafe.dev)
