@@ -22,9 +22,9 @@ Powerful features like [assertion functions](https://www.typescriptlang.org/docs
 
 TypeScript, however, only exports type helpers \(e.g. `Record`, `ReturnType`, etc.\).
 
-This module provides _«the missing builtins»_ such as [the assert function](https://docs.tsafe.dev/assert.md).
+This module provides _«the missing builtins»_ such as [the assert function](https://docs.tsafe.dev/assert).
 
-`tsafe` also corrects frustrating aspect of default utility type see [`ReturnType`](https://docs.tsafe.dev/returntype.md) for example.
+`tsafe` also corrects frustrating aspect of default utility type see [`ReturnType`](https://docs.tsafe.dev/returntype) for example.
 
 ## Import in deno:
 
