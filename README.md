@@ -2,7 +2,7 @@
     <img src="https://user-images.githubusercontent.com/6702424/117557564-572a0a80-b074-11eb-9d54-4ecfb5fb208f.png">  
 </p>
 <p align="center">
-    <i>A collection of utilities that makes your TS code cleaner and safer</i>
+    <i>A collection of utilities that makes your TS code safer and cleaner</i>
     <br>
     <br>
     <img src="https://github.com/garronej/tsafe/workflows/ci/badge.svg?branch=main">
