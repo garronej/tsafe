@@ -15,7 +15,7 @@ This module provides _«the missing builtins»_ such as [the assert function](as
 `tsafe` also corects frustrating aspect of default utility type see [`ReturnType`](returntype.md) for example.
 
 {% hint style="info" %}
-`tsafe` is both a [NPM](https://www.npmjs.com/package/tsafe) and a [Deno](https://deno.land/x/tsafe) module. \(Acheived with [denoify](https://denoify.land)\)
+`tsafe` is both a [NPM](https://www.npmjs.com/package/tsafe) and a [Deno](https://deno.land/x/tsafe) module. _\(Acheived with_ [_denoify_](https://denoify.land)_\)_
 {% endhint %}
 
 ### How is this different from [`ts-toolbelt`](https://github.com/millsp/ts-toolbelt)
