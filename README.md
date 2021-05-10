@@ -18,9 +18,11 @@
   <a href="https://docs.tsafe.dev">Documentation</a>
 </p>
 
-Powerful features like [assertion functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions) or [user-defined type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards) are only useful if paired with utility functions. TypeScript, however, only exports type helpers \(e.g. `Record`, `RetunType`, etc.\). `tsafe` is here to export _«the missing builtins»_ such as [the assert function](assert.md).
+Powerful TypeScript features like [assertion functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions) or [user-defined type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards) are only useful if paired with utility functions.  
+TypeScript, however, only exports type helpers \(e.g. `Record`, `ReturnType`, etc.\). `tsafe` is here to export _«the missing builtins»_ such as [the assert function](https://docs.tsafe.dev/assert.md).
 
-`tsafe` also tries to make TypeScript more practical by patching frustrating aspect of to the built-in types helper see [`RetunType`](returntype.md) for example.
+`tsafe` also tries to make TypeScript more practical by patching frustrating aspect of to the built-in types see
+[`ReturnType`](https://docs.tsafe.dev/returntype.md) for example.
 
 This module is both an [NPM module](https://www.npmjs.com/package/tsafe) and a [Deno module](https://deno.land/x/tsafe)
 
@@ -34,23 +36,8 @@ Install elsewhere:
 
 ```bash
 $ npm install --save tsafe
-```
-
-```typescript
-import { assert } from "tsafe/assert";
-import { typeGuard } from "tsafe/typeGuard";
-
-type Circle = { radius: number };
-type Square = { sideLength: number };
-type Shape = Circle | Square;
-
-const shape: Shape = { "radius": 100 };
-
-//You: Trust me TypeScript, I know that shape is a Circle.
-assert(typeGuard<Circle>(shape));
-
-//TypeScript: Ok if you say so...it must have a radius then.
-shape.radius;
+#OR
+$ yarn add tsafe
 ```
 
 [Learn more](https://www.tsafe.dev)
