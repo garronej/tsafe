@@ -2,8 +2,6 @@
     <img src="https://user-images.githubusercontent.com/6702424/117557564-572a0a80-b074-11eb-9d54-4ecfb5fb208f.png">  
 </p>
 <p align="center">
-    <i>Leverage the more advanced features of TypeScript</i>
-    <br>
     <i>A collection of utilities that makes your TS code cleaner and safer</i>
     <br>
     <br>
