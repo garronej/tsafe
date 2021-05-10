@@ -17,6 +17,7 @@
   -
   <a href="https://docs.tsafe.dev">Documentation</a>
 </p>
+
 # Motivation
 
 Powerful TypeScript features like [assertion functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions) or [user-defined type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards) are only useful if paired with utility functions.  
