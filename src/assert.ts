@@ -25,8 +25,8 @@ export class AssertionError extends Error {
     }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 /** https://docs.tsafe.dev/assert */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function assert(condition: any, msg?: string): asserts condition {
     if (!condition) {
         throw new AssertionError(msg);
