@@ -13,7 +13,7 @@ function f(params: {x: number; y: number}){
 };
 ```
 
-Suppose we want to give a value to **x** for example.
+Suppose we want to set the value of **x** for example.
 
 ```typescript
 const fWd = withDefaults(f, {"x": 33});
