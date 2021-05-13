@@ -1,3 +1,7 @@
+### **0.2.1** (2021-05-13)  
+  
+- ref doc for withDefaults    
+  
 ## **0.2.0** (2021-05-13)  
   
 - Add the 'is' function    
