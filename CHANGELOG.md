@@ -1,3 +1,7 @@
+### **0.2.2** (2021-05-13)  
+  
+- Add 'is' to index    
+  
 ### **0.2.1** (2021-05-13)  
   
 - ref doc for withDefaults    
