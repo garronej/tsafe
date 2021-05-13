@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 import { HomepageTemplate } from "homepage-template";
-import gifUrl from "assets/img/tsafe.gif";
+import gifUrl from "assets/img/tsafe_assertis.gif";
 
 ReactDOM.render(
 	<HomepageTemplate
