@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import "./tools/Object.fromEntries";
 
+/** https://docs.tsafe.dev/withdefaults */
 export function withDefaults<Params extends Record<string, unknown>, DefaultKey extends keyof Params, R>(
     f: (params: Params) => R,
     defaultParams: keyof Params extends never
