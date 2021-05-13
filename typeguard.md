@@ -5,18 +5,12 @@ Aims at making the most of the [`value is T`](https://www.typescriptlang.org/doc
 Imlementation:
 
 ```typescript
-export function typeGuard<T>(value: any, isMatched = true): value is T {
+export function typeGuard<T>(value: any, isMatched: boolean): value is T {
     return isMatched;
 }
 ```
 
-## Usecase 1: Used with assert
-
-See [assert](assert.md#assert-typeguard)
-
-## Usecase 2: Tell the compiler what assertion can be made on a given variable if a given test returns true.
-
-Example
+## Usecase 1: Tell the compiler what assertion can be made on a given variable if a given test returns true.
 
 ```typescript
 type Circle = { type: "CIRCLE"; radius: number; };
@@ -35,20 +29,16 @@ type Circle = { type: "CIRCLE"; radius: number; };
  
 ```
 
-## Usecase 3: Helper for safely build other type guards
-
-Example
+## Usecase 2: Helper for safely build other type guards
 
 ```typescript
  export function matchSetLike<T>(set: any): set is SetLike<T> {
       return (
           set instanceof Object &&
-          typeGuard<SetLike<T>>(set) &&
+          typeGuard<SetLike<T>>(set, true) &&
           typeof set.values === "function" &&
           /Set/.test(Object.getPrototypeOf(set).constructor.name)
       );
   }
 ```
-
-
 

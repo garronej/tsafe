@@ -22,40 +22,11 @@ assert(typeof x === "number");
 x.toLowerCase(); //<= Here TypeScript knows that x is a string
 ```
 
-### assert + typeGuard
+### assert + is
 
-The `assert` function can be used in conjunction with the [`typeGuard`](typeguard.md) util, it enables you to write things like:
+{% page-ref page="is.md" %}
 
-```typescript
-import { assert } from "tsafe/assert";
-import { typeGuard } from "tsafe/typeGuard";
 
-type Circle = { radius: number };
-type Square = { sideLength: number };
-type Shape = Circle | Square;
-
-const shape: Shape = { "radius": 100 };
-
-//You: Trust me TypeScript, I know that shape is a Circle.
-assert(typeGuard<Circle>(shape));
-
-//TypeScript: Ok if you say so...it has a radius then.
-shape.radius;
-```
-
-{% hint style="warning" %}
-It is important to understand that here that when you run the instruction `assert(typeGuard<Circle>(shape))` if the shape happens not to be a Circle you won't get an error at runtime.
-{% endhint %}
-
-Equally useful you can tell TypeScript that your shape is not a `Square`, it will infer that, it is then a `Circle`.
-
-```typescript
-//You: Trust me TypeScript, I know that shape is not a Square.
-assert(!typeGuard<Square>(shape,false));
-
-//TypeScript: Ok so by elimination it should be a Circle!
-shape.radius;
-```
 
 ### Error thrown
 

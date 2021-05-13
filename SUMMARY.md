@@ -2,6 +2,7 @@
 
 * [What is tsafe?](README.md)
 * [assert](assert.md)
+* [is](is.md)
 * [typeGuard](typeguard.md)
 * [id](id.md)
 * [ReturnType](returntype.md)
