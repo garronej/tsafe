@@ -23,6 +23,16 @@ import { Any } from "ts-toolbelt";
 }
 
 {
+    const x = [3, "a", false].filter(exclude([3]));
+
+    type Got = typeof x;
+
+    type Expected = (number | string | boolean)[];
+
+    doExtends<Any.Equals<Got, Expected>, 1>();
+}
+
+{
     //@ts-expect-error
     const x = (["a", "b", "c", "d"] as const).filter(exclude("a", "b"));
 }

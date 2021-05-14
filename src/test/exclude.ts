@@ -3,9 +3,7 @@ import { assert } from "../assert";
 import { same } from "evt/tools/inDepth/same";
 
 {
-    const x = ["a", "b", "c"];
-
-    const got = x.filter(exclude("a"));
+    const got = ["a", "b", "c"].filter(exclude("a"));
 
     const expected = ["b", "c"];
 
@@ -15,9 +13,7 @@ import { same } from "evt/tools/inDepth/same";
 }
 
 {
-    const x = ["a", "b", "c"];
-
-    const got = x.filter(exclude(["a"]));
+    const got = ["a", "b", "c"].filter(exclude(["a"]));
 
     const expected = ["b", "c"];
 
@@ -27,9 +23,7 @@ import { same } from "evt/tools/inDepth/same";
 }
 
 {
-    const x = [1, 2, 3];
-
-    const got = x.filter(exclude("foo"));
+    const got = [1, 2, 3].filter(exclude("foo"));
 
     const expected = [1, 2, 3];
 
@@ -39,9 +33,7 @@ import { same } from "evt/tools/inDepth/same";
 }
 
 {
-    const x = ["a", "b", "c", "d"] as const;
-
-    const got = x.filter(exclude(["a", "b"]));
+    const got = ["a", "b", "c", "d"].filter(exclude(["a", "b"]));
 
     const expected = ["c", "d"];
 
