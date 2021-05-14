@@ -6,9 +6,24 @@ description: >-
 
 # exclude
 
-## Example:
+## Practical example
 
+```typescript
 
+declare const arr: (string | undefined | null )[];
+
+arr
+    .filter(exclude([undefined, null]))
+    .forEach(x => {
+        //Here x is of type string
+        //if we had used .filter(x=> x !== undefined && x!== null)
+        //it would be functionnaly the same but x would be of type
+        //string | undefined | null
+    });
+
+```
+
+## Basic examples
 
 ```typescript
 import { exclude } from "tsafe/exclude";
