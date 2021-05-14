@@ -8,7 +8,23 @@ description: >-
 
 ## Example:
 
+
+
 ```typescript
+import { exclude } from "tsafe/exclude";
+
+const arr = ["a", "b", "c", "d"] as const;
+const newArr = arr.filter(exclude("a"));
+
+//type of newArr is ("b" | "c" | "d")[]
+//value of newArr is ["b", "c", "d"]
+```
+
+You can also exclude more than on element: 
+
+```typescript
+import { exclude } from "tsafe/exclude";
+
 const arr = ["a", "b", "c", "d"] as const;
 const newArr = arr.filter(exclude(["a", "b"]));
 

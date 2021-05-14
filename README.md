@@ -10,9 +10,9 @@ Powerful features like [assertion functions](https://www.typescriptlang.org/docs
 
 TypeScript, however, only exports type helpers \(e.g. `Record`, `ReturnType`, etc.\).
 
-This module provides _«the missing builtins»_ such as [the assert function](assert.md).
+This module provides _«the missing builtins»_ such as [the assert function](main/assert.md).
 
-`tsafe` also corrects frustrating aspect of default utility type see [`ReturnType`](returntype.md) for example.
+`tsafe` also corrects frustrating aspect of default utility type see [`ReturnType`](main/returntype.md) for example.
 
 {% hint style="info" %}
 `tsafe` is both an [NPM](https://www.npmjs.com/package/tsafe) and a [Deno](https://deno.land/x/tsafe) module. _\(Achieved with_ [_denoify_](https://denoify.land)_\)_
