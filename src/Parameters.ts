@@ -1,10 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-/**
- * Obtain the parameters of a function type in a tuple
- * ...(event if the function type can be nullish).
- * Better that the default because prevent from having to do Parameters<NonNullable<typeof f>>
- */
+/** https://docs.tsafe.dev/parameters */
 export type Parameters<
     T extends ((...args: any[]) => unknown) | null | undefined | false | ""
 > = T extends (...args: infer P) => any ? P : never;

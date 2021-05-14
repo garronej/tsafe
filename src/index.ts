@@ -13,3 +13,4 @@ export type { ReturnType } from "./ReturnType";
 export * from "./typeGuard";
 export type { UnpackPromise } from "./UnpackPromise";
 export * from "./withDefaults";
+export * from "./is";

@@ -1,3 +1,103 @@
+### **0.2.2** (2021-05-13)  
+  
+- Add 'is' to index    
+  
+### **0.2.1** (2021-05-13)  
+  
+- ref doc for withDefaults    
+  
+## **0.2.0** (2021-05-13)  
+  
+- Add the 'is' function    
+  
+### **0.1.15** (2021-05-10)  
+  
+- Update readme  
+- Update README.md    
+  
+### **0.1.14** (2021-05-10)  
+  
+  
+  
+### **0.1.13** (2021-05-10)  
+  
+- Update  
+- add gif  
+- Update Readme  
+- update  
+- update  
+- update  
+- update  
+- Update readme  
+- Update  
+- Updat readme  
+- Update README    
+  
+### **0.1.11** (2021-05-10)  
+  
+- Fmt  
+- Fmt  
+- Format  
+- Update docs  
+- Update package.json  
+- Update README.md  
+- Document id    
+  
+### **0.1.10** (2021-05-09)  
+  
+- Update package.json  
+- Update README.md  
+- Update README.md  
+- Update README.md  
+- Update README.md  
+- Update README.md    
+  
+### **0.1.9** (2021-05-08)  
+  
+- Update README.md    
+  
+### **0.1.8** (2021-05-08)  
+  
+- update workflow    
+  
+### **0.1.7** (2021-05-08)  
+  
+- update workflow  
+- update workflow  
+- update ci  
+- update workflow    
+  
+### **0.1.6** (2021-05-08)  
+  
+- update workflow  
+- update ci  
+- update workflow    
+  
+### **0.1.5** (2021-05-08)  
+  
+- update ci  
+- update workflow    
+  
+### **0.1.4** (2021-05-08)  
+  
+- update workflow    
+  
+### **0.1.3** (2021-05-08)  
+  
+- Update workflow    
+  
+### **0.1.2** (2021-05-08)  
+  
+- Update CI    
+  
+### **0.1.1** (2021-05-08)  
+  
+- update workflow  
+- Fix CI  
+- Fix build  
+- Setup denoify  
+- Add index    
+  
 ## **0.1.0** (2021-05-07)  
   
 - Fix formating  
