@@ -8,6 +8,7 @@
 * [ReturnType](returntype.md)
 * [Parameters](parameters.md)
 * [exclude](exclude.md)
+* [MethodNames](methodnames.md)
 * [flip](flip.md)
 * [How to import](import.md)
 * [withDefaults](withdefaults.md)
