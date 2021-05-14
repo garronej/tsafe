@@ -1,7 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import "./tools/Object.fromEntries";
-
+/**
+ * Like Function.prototype.bind() but for a function that
+ * receives their parameters wrapped in an object.
+ * See documentation for more details:
+ * https://docs.tsafe.dev/withdefaults
+ */
 export function withDefaults<Params extends Record<string, unknown>, DefaultKey extends keyof Params, R>(
     f: (params: Params) => R,
     defaultParams: keyof Params extends never
