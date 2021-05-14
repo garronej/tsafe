@@ -1,11 +1,7 @@
 # Table of contents
 
 * [What is tsafe?](README.md)
-* [exclude](exclude.md)
-* [MethodNames](methodnames.md)
-* [flip](flip.md)
 * [How to import](import.md)
-* [Param0](param0.md)
 
 ## main
 
@@ -17,7 +13,11 @@
 * [Parameters](main/parameters.md)
 * [withDefaults](main/withdefaults.md)
 
-## secondary
+## anégdotal
 
-* [Untitled](secondary/untitled.md)
+* [MethodNames](anegdotal/methodnames.md)
+* [flip](anegdotal/flip.md)
+* [exclude](anegdotal/exclude.md)
+* [Param0](anegdotal/param0.md)
+* [Untitled](anegdotal/untitled.md)
 
