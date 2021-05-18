@@ -11,6 +11,7 @@
 * [id](main/id.md)
 * [ReturnType](main/returntype.md)
 * [Parameters](main/parameters.md)
+* [UnpackPromise](main/unpackpromise.md)
 * [withDefaults](main/withdefaults.md)
 * [exclude](main/exclude.md)
 
