@@ -6,9 +6,9 @@
 ## main
 
 * [assert](main/assert.md)
+* [id](main/id.md)
 * [is](main/is.md)
 * [typeGuard](main/typeguard.md)
-* [id](main/id.md)
 * [ReturnType](main/returntype.md)
 * [Parameters](main/parameters.md)
 * [UnpackPromise](main/unpackpromise.md)
