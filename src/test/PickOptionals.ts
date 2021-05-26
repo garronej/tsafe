@@ -13,8 +13,8 @@ import type { Any } from "ts-toolbelt";
     };
 
     type Expected = {
-        b: number | undefined;
-        method2: ((params: { a: string; b: number }) => typeof params) | undefined;
+        b: number;
+        method2(params: { a: string; b: number }): typeof params;
     };
     type Got = PickOptionals<A>;
 
@@ -28,7 +28,7 @@ import type { Any } from "ts-toolbelt";
     };
 
     type Expected = {
-        b: string | undefined;
+        b: string;
     };
     type Got = PickOptionals<A>;
 
