@@ -8,7 +8,7 @@ export type { MethodNames } from "./MethodNames";
 export * from "./objectKeys";
 export type { Parameters } from "./Parameters";
 export type { Param0 } from "./Param0";
-export type { PickOptionals } from "./PickOptional";
+export type { PickOptionals } from "./PickOptionals";
 export type { ReturnType } from "./ReturnType";
 export * from "./typeGuard";
 export type { UnpackPromise } from "./UnpackPromise";
