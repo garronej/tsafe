@@ -1,3 +1,14 @@
+### **0.2.3** (2021-05-26)  
+  
+- PickOptional do not include undefined  
+- Update MethodNames.ts  
+- Update flip.ts  
+- Fix build  
+- update exclude tests  
+- update  
+- doc links for withDefaults and flip, plus testing exclude  
+- Update README.md    
+  
 ### **0.2.2** (2021-05-13)  
   
 - Add 'is' to index    
