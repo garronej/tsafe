@@ -12,6 +12,7 @@
 * [typeGuard](main/typeguard.md)
 * [ReturnType](main/returntype.md)
 * [Parameters](main/parameters.md)
+* [capitalize](main/capitalize.md)
 * [doExtends](main/doextends.md)
 * [isPromiseLike](main/ispromiselike.md)
 * [UnpackPromise](main/unpackpromise.md)
