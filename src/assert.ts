@@ -1,7 +1,7 @@
 import { overwriteReadonlyProp } from "./lab/overwriteReadonlyProp";
 import { assertIsRefWrapper } from "./zz_internal/assertIsRefWrapper";
 
-/** https://docs.tsafe.dev/assert#error-thrown */
+/** @see <https://docs.tsafe.dev/assert#error-thrown> */
 export class AssertionError extends Error {
     constructor(msg: string | undefined) {
         super(`Wrong assertion encountered` + (!msg ? "" : `: "${msg}"`));

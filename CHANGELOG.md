@@ -1,3 +1,7 @@
+### **0.2.4** (2021-05-26)  
+  
+- Rename PickOptional to PickOptionals    
+  
 ### **0.2.3** (2021-05-26)  
   
 - PickOptional do not include undefined  
