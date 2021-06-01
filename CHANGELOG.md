@@ -1,3 +1,8 @@
+## **0.3.0** (2021-06-01)  
+  
+- Add symToStr  
+- Update assert.ts    
+  
 ### **0.2.4** (2021-05-26)  
   
 - Rename PickOptional to PickOptionals    
