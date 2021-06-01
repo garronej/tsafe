@@ -1,3 +1,8 @@
+## **0.4.0** (2021-06-01)  
+  
+- Add captitalize  
+- Add documentation for symToStr    
+  
 ## **0.3.0** (2021-06-01)  
   
 - Add symToStr  
