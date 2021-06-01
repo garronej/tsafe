@@ -8,6 +8,7 @@
 * [assert](main/assert.md)
 * [id](main/id.md)
 * [is](main/is.md)
+* [symToStr](main/symtostr.md)
 * [typeGuard](main/typeguard.md)
 * [ReturnType](main/returntype.md)
 * [Parameters](main/parameters.md)
