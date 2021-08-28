@@ -17,7 +17,7 @@ import { assert } from "tsafe/assert";
 
 declare const x: number | string;
 
-assert(typeof x === "number");
+assert(typeof x === "string");
 
 x.toLowerCase(); //<= Here TypeScript knows that x is a string
 ```
