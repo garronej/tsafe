@@ -18,7 +18,7 @@ And you are trying to extract `Shape`, when you use the default return type:
 
 ```typescript
 const shape: ReturnType<typeof getShape>= ...
-//    ^ x is of type Promise<Shape> 😤
+//    ^ shape is of type Promise<Shape> 😤
 ```
 
 With `tsafe`'s ReturnType
@@ -27,7 +27,7 @@ With `tsafe`'s ReturnType
 import type { ReturnType } from "tsafe";
 
 const shape: ReturnType<typeof getShape>= ...
-//    ^ x is of type Shape 😊
+//    ^ shape is of type Shape 😊
 ```
 
 ### Used with function that can be `undefined`
