@@ -9,16 +9,30 @@ description: >-
 ## Practical example
 
 ```typescript
+type Circle = {
+    type: "circle";
+    radius: number;
+};
 
-declare const arr: (string | undefined | null )[];
+type Square = {
+    type: "square";
+    sideLength: number;
+};
+
+type Shape = Circle | Square;
+
+declare const shapes: Shape[];
+
+//Assumes we want to do something for every Circle
 
 arr
-    .filter(exclude([undefined, null]))
-    .forEach(x => {
-        //Here x is of type string
-        //if we had used .filter(x=> x !== undefined && x!== null)
-        //it would be functionnaly the same but x would be of type
-        //string | undefined | null
+    .map(shape => shape.type === "circle" ? shape : null)
+    .filter(exclude(null))
+    .forEach(circle => {
+        //Here circle is of type Circle
+        //if we had used .filter(shape=> shape.type === "circle")
+        //it would be functionnaly the same but circle would be of type
+        //Shape
     });
 
 ```

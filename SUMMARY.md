@@ -8,6 +8,7 @@
 * [assert](main/assert.md)
 * [id](main/id.md)
 * [is](main/is.md)
+* [exclude](main/exclude.md)
 * [symToStr](main/symtostr.md)
 * [typeGuard](main/typeguard.md)
 * [ReturnType](main/returntype.md)
@@ -16,8 +17,6 @@
 * [doExtends](main/doextends.md)
 * [isPromiseLike](main/ispromiselike.md)
 * [UnpackPromise](main/unpackpromise.md)
-* [withDefaults](main/withdefaults.md)
-* [exclude](main/exclude.md)
 
 ## anégdotal
 
@@ -25,4 +24,5 @@
 * [flip](anegdotal/flip.md)
 * [Param0](anegdotal/param0.md)
 * [Untitled](anegdotal/untitled.md)
+* [withDefaults](anegdotal/withdefaults.md)
 
