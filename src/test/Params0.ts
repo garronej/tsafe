@@ -64,3 +64,17 @@ function test<T, U>() {
 
     doExtends<Any.Equals<Got, Expected>, 1>();
 }
+
+{
+    type Got = Param0<((params: { foo: string }) => void) | undefined | null | false | "">;
+    type Expected = { foo: string };
+
+    doExtends<Any.Equals<Got, Expected>, 1>();
+}
+
+{
+    type Got = Param0<(() => void) | undefined | null | false | "">;
+    type Expected = void;
+
+    doExtends<Any.Equals<Got, Expected>, 1>();
+}
