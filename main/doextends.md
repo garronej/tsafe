@@ -1,10 +1,10 @@
 ---
-description: >-
-  This is a noOp with two type parameters. It enables us to statically ensure
-  that the first parameter argument extends the second parameter argument.
+description: Asserts some type do extends a given other.
 ---
 
 # doExtends
+
+This is a noOp with two type parameters. It enables us to statically ensure that the first parameter argument extends the second parameter argument.
 
 ## Implementation
 

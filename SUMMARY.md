@@ -8,6 +8,7 @@
 * [assert](main/assert.md)
 * [id](main/id.md)
 * [is](main/is.md)
+* [Equals](main/equals.md)
 * [exclude](main/exclude.md)
 * [symToStr](main/symtostr.md)
 * [typeGuard](main/typeguard.md)
