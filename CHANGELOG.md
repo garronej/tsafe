@@ -1,3 +1,10 @@
+## **0.6.1** (2021-09-26)  
+  
+- Fmt  
+- Fix build  
+- Remove ts-toolbelt from devDependencies  
+- Add Equals (stolen from ts-toolbelt)    
+  
 ## **0.5.0** (2021-09-23)  
   
 - Params0: Quality of life improvements    
