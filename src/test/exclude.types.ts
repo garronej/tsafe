@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { exclude } from "../exclude";
 import { doExtends } from "../doExtends";
-import { Any } from "ts-toolbelt";
+import type { Equals } from "../Equals";
 
 {
     const x = (["a", "b", "c"] as const).filter(exclude(["a"]));
@@ -10,7 +10,7 @@ import { Any } from "ts-toolbelt";
     type Got = typeof x;
     type Expected = ("b" | "c")[];
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
 
 {
@@ -19,7 +19,7 @@ import { Any } from "ts-toolbelt";
     type Got = typeof x;
     type Expected = ("c" | "d")[];
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
 
 {
@@ -29,7 +29,7 @@ import { Any } from "ts-toolbelt";
 
     type Expected = (number | string | boolean)[];
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
 
 {

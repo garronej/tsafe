@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { objectKeys } from "../objectKeys";
 import { doExtends } from "../doExtends";
-import { Any } from "ts-toolbelt";
+import type { Equals } from "../Equals";
 
 {
     const obj = {
@@ -17,7 +17,7 @@ import { Any } from "ts-toolbelt";
 
     type Got = typeof x;
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
 
 {
@@ -38,7 +38,7 @@ import { Any } from "ts-toolbelt";
 
     type Got = typeof x;
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
 
 {
@@ -86,7 +86,7 @@ import { Any } from "ts-toolbelt";
 
     type Got = typeof x;
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
 
 {

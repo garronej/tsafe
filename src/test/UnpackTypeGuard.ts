@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { UnpackTypeGuard } from "../lab/UnpackTypeGuard";
 import { doExtends } from "../doExtends";
-import type { Any } from "ts-toolbelt";
+import type { Equals } from "../Equals";
 
 {
     const isFoo = (_o: any): _o is "foo" => {
@@ -12,5 +12,5 @@ import type { Any } from "ts-toolbelt";
     type Expected = "foo";
     type Got = UnpackTypeGuard<typeof isFoo>;
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
