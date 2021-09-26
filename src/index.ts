@@ -14,3 +14,4 @@ export * from "./typeGuard";
 export type { UnpackPromise } from "./UnpackPromise";
 export * from "./withDefaults";
 export * from "./is";
+export type { Equals } from "./Equals";

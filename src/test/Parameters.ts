@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { Parameters } from "../Parameters";
 import { doExtends } from "../doExtends";
-import type { Any } from "ts-toolbelt";
+import type { Equals } from "../Equals";
 
 {
     const myFunction = (arg1: unknown, arg2: string, extraParams: { a: number; b: number }) => {
@@ -16,7 +16,7 @@ import type { Any } from "ts-toolbelt";
     type Expected = [arg1: unknown, arg2: string, extraParams: { a: number; b: number }];
     type Got = Parameters<typeof myFunction>;
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
 
 {
@@ -28,7 +28,7 @@ import type { Any } from "ts-toolbelt";
     type Expected = [arg1: number, arg2?: string | undefined]; // [number] | [number, string | undefined]
     type Got = Parameters<A["method"]>;
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
 
 {
@@ -40,7 +40,7 @@ import type { Any } from "ts-toolbelt";
     type Expected = [searchString: string, position?: number | undefined];
     type Got = Parameters<string["indexOf"]>;
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
 
 {

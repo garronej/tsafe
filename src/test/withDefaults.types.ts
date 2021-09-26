@@ -4,7 +4,7 @@
 
 import { doExtends } from "../doExtends";
 import { withDefaults } from "../withDefaults";
-import type { Any } from "ts-toolbelt";
+import type { Equals } from "../Equals";
 
 const x: <T>() => T = null as any;
 
@@ -23,7 +23,7 @@ function test<T, U, V>() {
         },
     ) => V = x<any>();
 
-    doExtends<Any.Equals<typeof got, typeof expected>, 1>();
+    doExtends<Equals<typeof got, typeof expected>, 1>();
 }
 
 //@ts-ignore
@@ -41,7 +41,7 @@ function test<T, U, V>() {
         },
     ) => V = x<any>();
 
-    doExtends<Any.Equals<typeof got, typeof expected>, 1>();
+    doExtends<Equals<typeof got, typeof expected>, 1>();
 }
 
 //@ts-ignore
@@ -59,7 +59,7 @@ function test<T, U, V>() {
         },
     ) => V = x<any>();
 
-    doExtends<Any.Equals<typeof got, typeof expected>, 1>();
+    doExtends<Equals<typeof got, typeof expected>, 1>();
 }
 
 //@ts-ignore

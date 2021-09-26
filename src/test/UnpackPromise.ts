@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { UnpackPromise } from "../UnpackPromise";
 import { doExtends } from "../doExtends";
-import type { Any } from "ts-toolbelt";
+import type { Equals } from "../Equals";
 
 //@ts-ignore
 function test<T>() {
@@ -12,7 +12,7 @@ function test<T>() {
     type Expected = T;
     type Got = UnpackPromise<typeof prT>;
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
 
 //@ts-ignore
@@ -27,14 +27,14 @@ function test<T>() {
     type Expected = T;
     type Got = UnpackPromise<typeof prT>;
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
 
 {
     type Got = UnpackPromise<undefined | null | false | "">;
     type Expected = never;
 
-    doExtends<Any.Equals<Got, Expected>, 1>();
+    doExtends<Equals<Got, Expected>, 1>();
 }
 
 {

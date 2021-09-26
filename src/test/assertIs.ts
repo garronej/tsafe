@@ -2,15 +2,15 @@
 
 import { assert } from "../assert";
 import { is } from "../is";
-import { Any } from "ts-toolbelt";
 import { doExtends } from "../doExtends";
+import type { Equals } from "../Equals";
 
 {
     const x: string | number | boolean = null as any;
 
     assert(is<string>(x));
 
-    doExtends<Any.Equals<typeof x, string>, 1>();
+    doExtends<Equals<typeof x, string>, 1>();
 
     console.log("PASS");
 }
@@ -20,7 +20,7 @@ import { doExtends } from "../doExtends";
 
     assert(!is<string>(x));
 
-    doExtends<Any.Equals<typeof x, number | boolean>, 1>();
+    doExtends<Equals<typeof x, number | boolean>, 1>();
 
     console.log("PASS");
 }
