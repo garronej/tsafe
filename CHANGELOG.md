@@ -1,3 +1,7 @@
+### **0.7.1** (2021-09-27)  
+  
+- Make Equals more consilient    
+  
 ## **0.7.0** (2021-09-27)  
   
 - Integrate Equals to assert, get rid of doExtends    
