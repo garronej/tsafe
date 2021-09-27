@@ -4,6 +4,8 @@ is is meant to be used in conjonction with assert and enable you to tell the com
 
 "_Trust me this `valule` is of type `T`"_ or "_Trust me this `value` is not of type `T`_"
 
+![](https://user-images.githubusercontent.com/6702424/118082020-c2e5dd80-b3bc-11eb-9ea9-71fa8206f704.gif)
+
 ```typescript
 import { assert } from "tsafe/assert";
 import { id } from "tsafe/is";
