@@ -43,7 +43,11 @@ If you are writing test for your type, you definitely want to checkout [`//@ts-e
 #### Making sure you have deconstructed all the params
 
 ```typescript
-export function myFunction(
+import type { Equals } from "tsafe";
+import { assert } from "tsafe/assert";
+
+
+function myFunction(
 	params: {
 		foo: string;
 		bar: string;
@@ -56,7 +60,7 @@ export function myFunction(
 	//We check that whe have deconstructed all the parameters.
 	assert<Equals<typeof rest, {}>>();
 
-	console.log(foo, bar, baz);
+	//...
 
 }
 ```
