@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { withDefaults } from "../withDefaults";
+import { withDefaults } from "../lab/withDefaults";
 import { same } from "evt/tools/inDepth/same";
 import { assert } from "../assert";
 

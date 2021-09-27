@@ -27,13 +27,13 @@
     <i>Test the type definitions of your APIs:</i>
     <br>
     <br>
-    <img src="https://user-images.githubusercontent.com/6702424/134991678-bfbeff07-0d17-4eab-8009-46e35ca950d9.gif">
+    <img src="https://user-images.githubusercontent.com/6702424/134994250-29f1b5c3-2193-49ba-ad75-e3c981723724.gif">
 </p>
 <p align="center">
     <i>Make TypeScript believe whatever you say:</i>
     <br>
     <br>
-    <img src="https://user-images.githubusercontent.com/6702424/118082020-c2e5dd80-b3bc-11eb-9ea9-71fa8206f704.gif">
+    <img src="https://user-images.githubusercontent.com/6702424/134994590-f01b8aee-a94a-4b4c-8f43-ee5ce8911443.gif">
 </p>
 
 ## Motivation

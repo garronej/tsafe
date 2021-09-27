@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { assert } from "../assert";
-import { withDefaults } from "../withDefaults";
+import { withDefaults } from "../lab/withDefaults";
 import type { Equals } from "../Equals";
 
 const x: <T>() => T = null as any;
