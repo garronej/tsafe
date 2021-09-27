@@ -31,8 +31,8 @@ import type { ReturnType } from "tsafe";
 `/deps.ts`
 
 ```typescript
-export { assert, typeGuard } from "https://deno.land/x/tsafe@v0.1.10/mod.ts";
-export type { ReturnType } from "https://deno.land/x/tsafe@v0.1.10/mod.ts";
+export { assert, typeGuard } from "https://deno.land/x/tsafe@v0.7.3/mod.ts";
+export type { ReturnType } from "https://deno.land/x/tsafe@v0.7.3/mod.ts";
 ```
 
 ```typescript

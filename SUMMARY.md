@@ -15,15 +15,15 @@
 * [typeGuard](main/typeguard.md)
 * [ReturnType](main/returntype.md)
 * [Parameters](main/parameters.md)
+* [Param0](main/param0.md)
 * [capitalize](main/capitalize.md)
-* [isPromiseLike](main/ispromiselike.md)
 * [UnpackPromise](main/unpackpromise.md)
 
 ## anégdotal
 
 * [MethodNames](anegdotal/methodnames.md)
+* [isPromiseLike](anegdotal/ispromiselike.md)
 * [flip](anegdotal/flip.md)
-* [Param0](anegdotal/param0.md)
 * [Untitled](anegdotal/untitled.md)
 * [withDefaults](anegdotal/withdefaults.md)
 

@@ -9,6 +9,8 @@ description: >-
 ## Quick example
 
 ```typescript
+import { withDefaults } from "tsafe/lab/withDefaults"
+
 function sum(
     params: {
         x: number;

@@ -18,12 +18,5 @@ This module provides _«the missing builtins»_ such as [the assert function](ma
 `tsafe` is both an [NPM](https://www.npmjs.com/package/tsafe) and a [Deno](https://deno.land/x/tsafe) module. _\(Achieved with_ [_denoify_](https://denoify.land)_\)_
 {% endhint %}
 
-## How is this different from [`ts-toolbelt`](https://github.com/millsp/ts-toolbelt)
 
-There are two main differences:
-
-* `tsafe` export utility types and functions, `ts-toolbelt` only export types.
-* `tsafe` only provides utilities that are of practical use in common use cases. 
-
-The two modules can, however, be used together, one is not meant to replace the other.
 
