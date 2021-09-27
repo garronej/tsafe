@@ -1,3 +1,7 @@
+### **0.7.2** (2021-09-27)  
+  
+- Updat README    
+  
 ### **0.7.1** (2021-09-27)  
   
 - Make Equals more consilient    
