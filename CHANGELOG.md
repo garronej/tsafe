@@ -1,3 +1,7 @@
+## **0.7.0** (2021-09-27)  
+  
+- Integrate Equals to assert, get rid of doExtends    
+  
 ## **0.6.1** (2021-09-26)  
   
 - Fmt  
