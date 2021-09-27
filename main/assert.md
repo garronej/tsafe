@@ -1,5 +1,15 @@
 # assert
 
+```typescript
+import { assert } from "tsafe/assert";
+
+declare const x: number | string;
+
+assert(typeof x === "string");
+
+x.toLowerCase(); //<= Here TypeScript knows that x is a string
+```
+
 The classic assert function, it takes a value as input, if the value is falsy it throws or else it does nothing. Functionally it can be summed up to this:
 
 ```typescript
@@ -10,17 +20,27 @@ function assert(condition){
 }
 ```
 
-Typewise however, it takes advantage of the asserts condition statement. If you pass a [type guard](https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types) as value TypeScript can make inference on what happens after the `assert` instruction. Example:
+Typewise however, it takes advantage of the asserts condition statement. If you pass a [type guard](https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types) as value TypeScript can make inference on what happens after the `assert` instruction.
+
+## Assertion on types
+
+Assert can also be used to confirm assertion on types.
+
+You can for example test if a type extends another by doing:
 
 ```typescript
-import { assert } from "tsafe/assert";
+import { assert } from "tsafe/assert";
 
-declare const x: number | string;
+type A = "foo" | "bar";
+type B = "foo" | "bar" | "baz";
 
-assert(typeof x === "string");
-
-x.toLowerCase(); //<= Here TypeScript knows that x is a string
+//You will get red squigly lines if A do not extends B
+assert<A extends B ? true : false>();
 ```
+
+You can also test the equality of two types with:
+
+{% page-ref page="equals.md" %}
 
 ## assert + is
 
