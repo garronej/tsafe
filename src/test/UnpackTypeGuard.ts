@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { UnpackTypeGuard } from "../lab/UnpackTypeGuard";
-import { doExtends } from "../doExtends";
+import { assert } from "../assert";
 import type { Equals } from "../Equals";
 
 {
@@ -12,5 +11,5 @@ import type { Equals } from "../Equals";
     type Expected = "foo";
     type Got = UnpackTypeGuard<typeof isFoo>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }

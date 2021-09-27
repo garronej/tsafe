@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { doExtends } from "../doExtends";
+import { assert } from "../assert";
 import { withDefaults } from "../withDefaults";
 import type { Equals } from "../Equals";
 
@@ -23,7 +23,7 @@ function test<T, U, V>() {
         },
     ) => V = x<any>();
 
-    doExtends<Equals<typeof got, typeof expected>, 1>();
+    assert<Equals<typeof got, typeof expected>>();
 }
 
 //@ts-ignore
@@ -41,7 +41,7 @@ function test<T, U, V>() {
         },
     ) => V = x<any>();
 
-    doExtends<Equals<typeof got, typeof expected>, 1>();
+    assert<Equals<typeof got, typeof expected>>();
 }
 
 //@ts-ignore
@@ -59,7 +59,7 @@ function test<T, U, V>() {
         },
     ) => V = x<any>();
 
-    doExtends<Equals<typeof got, typeof expected>, 1>();
+    assert<Equals<typeof got, typeof expected>>();
 }
 
 //@ts-ignore

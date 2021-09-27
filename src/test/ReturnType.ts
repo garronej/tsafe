@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { ReturnType } from "../ReturnType";
-import { doExtends } from "../doExtends";
+import { assert } from "../assert";
 import type { Equals } from "../Equals";
 
 {
@@ -11,7 +11,7 @@ import type { Equals } from "../Equals";
     type Got = ReturnType<typeof getStringAsync>;
     type Expected = string;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -22,7 +22,7 @@ import type { Equals } from "../Equals";
     type Got = ReturnType<typeof getString>;
     type Expected = string;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -31,7 +31,7 @@ import type { Equals } from "../Equals";
     type Got = ReturnType<typeof getString>;
     type Expected = string;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -40,7 +40,7 @@ import type { Equals } from "../Equals";
     type Got = ReturnType<typeof getString>;
     type Expected = string | number;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -59,7 +59,7 @@ import type { Equals } from "../Equals";
     type Got = ReturnType<typeof getString>;
     type Expected = string;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -68,6 +68,5 @@ import type { Equals } from "../Equals";
     type Got = ReturnType<typeof getString>;
     type Expected = string;
 
-    doExtends<Got, Expected>();
-    doExtends<Expected, Got>();
+    assert<Equals<Got, Expected>>();
 }

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { MethodNames } from "../MethodNames";
-import { doExtends } from "../doExtends";
+import { assert } from "../assert";
 import type { Equals } from "../Equals";
 
 {
@@ -16,7 +16,7 @@ import type { Equals } from "../Equals";
 
     type Got = MethodNames<A>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 class Car {
@@ -41,7 +41,7 @@ class Car {
     type Expected = "method1" | "method3";
     type Got = MethodNames<A>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -56,5 +56,5 @@ class Car {
     type Expected = "method1" | "method2";
     type Got = MethodNames<A>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }

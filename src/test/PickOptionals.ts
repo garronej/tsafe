@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { PickOptionals } from "../PickOptionals";
-import { doExtends } from "../doExtends";
+import { assert } from "../assert";
 import type { Equals } from "../Equals";
 
 {
@@ -18,7 +18,7 @@ import type { Equals } from "../Equals";
     };
     type Got = PickOptionals<A>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -32,7 +32,7 @@ import type { Equals } from "../Equals";
     };
     type Got = PickOptionals<A>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {

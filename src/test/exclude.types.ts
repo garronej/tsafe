@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { exclude } from "../exclude";
-import { doExtends } from "../doExtends";
+import { assert } from "../assert";
 import type { Equals } from "../Equals";
 
 {
@@ -10,7 +10,7 @@ import type { Equals } from "../Equals";
     type Got = typeof x;
     type Expected = ("b" | "c")[];
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -19,7 +19,7 @@ import type { Equals } from "../Equals";
     type Got = typeof x;
     type Expected = ("c" | "d")[];
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -29,7 +29,7 @@ import type { Equals } from "../Equals";
 
     type Expected = (number | string | boolean)[];
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {

@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { UnpackPromise } from "../UnpackPromise";
-import { doExtends } from "../doExtends";
+import { assert } from "../assert";
 import type { Equals } from "../Equals";
 
 //@ts-ignore
@@ -12,7 +12,7 @@ function test<T>() {
     type Expected = T;
     type Got = UnpackPromise<typeof prT>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 //@ts-ignore
@@ -27,14 +27,14 @@ function test<T>() {
     type Expected = T;
     type Got = UnpackPromise<typeof prT>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
     type Got = UnpackPromise<undefined | null | false | "">;
     type Expected = never;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {

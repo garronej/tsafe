@@ -2,7 +2,6 @@
 
 import { assert } from "../assert";
 import { is } from "../is";
-import { doExtends } from "../doExtends";
 import type { Equals } from "../Equals";
 
 {
@@ -10,7 +9,7 @@ import type { Equals } from "../Equals";
 
     assert(is<string>(x));
 
-    doExtends<Equals<typeof x, string>, 1>();
+    assert<Equals<typeof x, string>>();
 
     console.log("PASS");
 }
@@ -20,7 +19,7 @@ import type { Equals } from "../Equals";
 
     assert(!is<string>(x));
 
-    doExtends<Equals<typeof x, number | boolean>, 1>();
+    assert<Equals<typeof x, number | boolean>>();
 
     console.log("PASS");
 }

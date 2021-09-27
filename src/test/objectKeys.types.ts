@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { objectKeys } from "../objectKeys";
-import { doExtends } from "../doExtends";
+import { assert } from "../assert";
 import type { Equals } from "../Equals";
 
 {
@@ -17,7 +17,7 @@ import type { Equals } from "../Equals";
 
     type Got = typeof x;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -38,7 +38,7 @@ import type { Equals } from "../Equals";
 
     type Got = typeof x;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -86,7 +86,7 @@ import type { Equals } from "../Equals";
 
     type Got = typeof x;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {

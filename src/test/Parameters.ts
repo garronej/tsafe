@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { Parameters } from "../Parameters";
-import { doExtends } from "../doExtends";
+import { assert } from "../assert";
 import type { Equals } from "../Equals";
 
 {
@@ -16,7 +16,7 @@ import type { Equals } from "../Equals";
     type Expected = [arg1: unknown, arg2: string, extraParams: { a: number; b: number }];
     type Got = Parameters<typeof myFunction>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -28,7 +28,7 @@ import type { Equals } from "../Equals";
     type Expected = [arg1: number, arg2?: string | undefined]; // [number] | [number, string | undefined]
     type Got = Parameters<A["method"]>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -40,7 +40,7 @@ import type { Equals } from "../Equals";
     type Expected = [searchString: string, position?: number | undefined];
     type Got = Parameters<string["indexOf"]>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {

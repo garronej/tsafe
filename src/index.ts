@@ -1,5 +1,4 @@
 export * from "./assert";
-export * from "./doExtends";
 export * from "./exclude";
 export * from "./flip";
 export * from "./id";
@@ -15,3 +14,4 @@ export type { UnpackPromise } from "./UnpackPromise";
 export * from "./withDefaults";
 export * from "./is";
 export type { Equals } from "./Equals";
+export type { Not } from "./Not";

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { Param0 } from "../Param0";
-import { doExtends } from "../doExtends";
+import { assert } from "../assert";
 import type { Equals } from "../Equals";
 
 //@ts-ignore
@@ -17,7 +17,7 @@ function test<T, U>() {
 
     type Got = Param0<typeof f>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 //@ts-ignore
@@ -37,7 +37,7 @@ function test<T, U>() {
 
     type Got = Param0<typeof f>;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
@@ -62,19 +62,19 @@ function test<T, U>() {
     type Got = Param0<undefined | null | false | "">;
     type Expected = never;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
     type Got = Param0<((params: { foo: string }) => void) | undefined | null | false | "">;
     type Expected = { foo: string };
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
 
 {
     type Got = Param0<(() => void) | undefined | null | false | "">;
     type Expected = void;
 
-    doExtends<Equals<Got, Expected>, 1>();
+    assert<Equals<Got, Expected>>();
 }
