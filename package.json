@@ -1,7 +1,7 @@
 {
     "name": "tsafe",
     "version": "0.7.1",
-    "description": "Leverage the more advanced features of TypeScript",
+    "description": "A collection of utilities to step up your TypeScript game",
     "repository": {
         "type": "git",
         "url": "git://github.com/garronej/tsafe.git"
