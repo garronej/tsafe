@@ -51,6 +51,6 @@ With the ReturnType of `tsafe` you don't need `NonNullable`
 ```typescript
 import type { ReturnType } from "tsafe";
 
-const shape: ReturnType<Api["getShape"]> = ...j
+const shape: ReturnType<Api["getShape"]> = ...
 ```
 
