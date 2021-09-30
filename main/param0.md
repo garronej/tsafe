@@ -26,3 +26,5 @@ Instead of
 const props: Parameters<typeof MyComponent>[0]= ...;
 ```
 
+Also if the function takes no parameter it evaluate to `void` instead of `undefined`.
+
