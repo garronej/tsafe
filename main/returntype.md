@@ -1,5 +1,5 @@
 ---
-description: Like the building helper but more convenient to use.
+description: Like the builtin helper but more convenient to use.
 ---
 
 # ReturnType
