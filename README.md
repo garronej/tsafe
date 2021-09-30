@@ -2,7 +2,7 @@
     <img src="https://user-images.githubusercontent.com/6702424/117557564-572a0a80-b074-11eb-9d54-4ecfb5fb208f.png">  
 </p>
 <p align="center">
-    <i>A collection of utilities to step up your TypeScript game</i>
+    <i>A collection of utilities for stepping up your TypeScript game</i>
     <br>
     <br>
     <img src="https://github.com/garronej/tsafe/workflows/ci/badge.svg?branch=main">
@@ -18,7 +18,7 @@
 
 <p align="center">
     <br>
-    <i>Assert thing you know are true, get runtime error if you where wrong:</i>
+    <i>Assert things you know are true, get runtime errors where you were wrong::</i>
     <br>
     <br>
     <img src="https://user-images.githubusercontent.com/6702424/134988258-9d3d4097-628b-4b8f-b00b-d256f7c2361c.gif">
@@ -36,14 +36,14 @@
     <img src="https://user-images.githubusercontent.com/6702424/134994590-f01b8aee-a94a-4b4c-8f43-ee5ce8911443.gif">
 </p>
 
-## Motivation
+## Motivations
 
 Powerful TypeScript features like [assertion functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions) or [user-defined type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards) are only useful if paired with utility functions.
 
 TypeScript, however, only exports type helpers \(e.g. `Record`, `ReturnType`, etc.\).
 
 This module provides _«the missing builtins»_ such as [the assert function](https://docs.tsafe.dev/assert)
-and corrects frustrating aspects of default utility type such as [`ReturnType`](https://docs.tsafe.dev/returntype).
+and corrects frustrating aspects of default utility types such as [`ReturnType`](https://docs.tsafe.dev/returntype).
 
 [**Documentation website**](https://docs.tsafe.dev)
 
