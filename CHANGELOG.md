@@ -1,3 +1,7 @@
+## **0.8.0** (2021-09-30)  
+  
+- Param0: Optional params gives their types    
+  
 ### **0.7.3** (2021-09-27)  
   
 - Remove with default from the core offering    
