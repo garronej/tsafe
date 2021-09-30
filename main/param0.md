@@ -20,11 +20,27 @@ import type { Param0 } from "tsafe";
 const props: Param0<typeof MyComponent>= ...;
 ```
 
-Instead of 
+It's kind of the same of doing:
 
 ```typescript
 const props: Parameters<typeof MyComponent>[0]= ...;
 ```
 
-Also if the function takes no parameter it evaluate to `void` instead of `undefined`.
+but
+
+```typescript
+declare fun(): number;
+
+type FunParams = Param0<typeof fun>; 
+//   ^void (instead of never)
+```
+
+and
+
+```typescript
+declare fun(params?: { foo: string; }): void;
+
+type FunParams = Param0<typeof fun>;
+//   ^ { foo: string; } ( instead of { foo: string; } | undefined )
+```
 
