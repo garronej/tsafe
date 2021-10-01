@@ -38,7 +38,7 @@ shape.radius;
 
 You aren't even allowed to do something like `assert(is<Circle>(shape) && shape.radius > 100 )` 
 
-For any other usecase you might be considering `is`, consider[`typeGuard`](typeguard.md) instead.
+For any other usecase consider[`typeGuard`](typeguard.md) instead.
 {% endhint %}
 
 {% hint style="warning" %}
