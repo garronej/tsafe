@@ -13,5 +13,5 @@ type B = Not<false>;// B is of type true
 
 Essentially though to use with:
 
-{% page-ref page="equals.md" %}
+{% page-ref page="../main/equals.md" %}
 

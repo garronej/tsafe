@@ -9,7 +9,6 @@
 * [id](main/id.md)
 * [is](main/is.md)
 * [Equals](main/equals.md)
-* [Not](main/not.md)
 * [exclude](main/exclude.md)
 * [symToStr](main/symtostr.md)
 * [typeGuard](main/typeguard.md)
@@ -21,6 +20,7 @@
 
 ## anégdotal
 
+* [Not](anegdotal/not.md)
 * [MethodNames](anegdotal/methodnames.md)
 * [isPromiseLike](anegdotal/ispromiselike.md)
 * [flip](anegdotal/flip.md)
