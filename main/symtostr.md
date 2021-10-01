@@ -30,6 +30,7 @@ If you happen to rename \`myFunctionX\` into something else it is easy to forget
 
 export const myFunctionX = ()=> {...};
 
-export const name = symToString({ myFunctionX });
+export const name = symToStr({ myFunctionX });
+//           ^name is of type "myFunctionX"
 ```
 
