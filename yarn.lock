@@ -1630,7 +1630,7 @@
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-"@mui/material@^5.0.3", "@mui/material@^5.0.4":
+"@mui/material@^5.0.4":
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.0.4.tgz#38b842a413aed61c3fe169a167e824319fc8f1b1"
   integrity sha512-075EXSBHoEYeFkE5WDtXyxfd+bNIQRvqlgiouukvMqLGta1EmLq9H6+ONYV4I0Luug8NvNyRocVyRwdjH0Ufmw==
@@ -5768,25 +5768,19 @@ github-buttons@^2.8.0:
   resolved "https://registry.yarnpkg.com/github-buttons/-/github-buttons-2.19.1.tgz#9703755a4da1c5b229d3f1d875c2f787efa59bd5"
   integrity sha512-us6ZC0bFYLfBq2CkZJJRpdPP5JlB6+kWFTdw8iK3E7yoMKdoLhDkqQHelJ+39UVR2zQbfXN5gNt3cVYp4fAuXA==
 
-gitlanding@^0.4.8:
-  version "0.4.8"
-  resolved "https://registry.yarnpkg.com/gitlanding/-/gitlanding-0.4.8.tgz#518bb4cda5272ebb247009c7733fe9888fc47592"
-  integrity sha512-3QHrIOQ1Der6cAqn7EweqjdcC5663S5NfSohR4Z9EL1jDne3l9dyF83IbtfE1etaSTpBuXayJbDsLEnOUFNxDw==
+gitlanding@^0.4.10:
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/gitlanding/-/gitlanding-0.4.10.tgz#3d69a76749a81848b99b9872c1ffe8838a3768ae"
+  integrity sha512-5O5Llde7egJBIMyUoDNBcl8YBrAsb6kRu9JOFEzfb2xsJlwV7KpQh3As3BsfzQiu3czAKiIiKp80iEK3ARfDMQ==
   dependencies:
-    "@emotion/react" "^11.4.1"
-    "@emotion/styled" "^11.3.0"
     "@mui/icons-material" "^5.0.3"
-    "@mui/material" "^5.0.3"
     embla-carousel "^4.1.5"
     framer-motion "^4.1.17"
-    onyxia-ui "^0.14.17"
-    powerhooks "^0.9.4"
     react-code-blocks "^0.0.8"
     react-github-btn "^1.2.0"
     react-markdown "^5.0.3"
     react-svg "^13.0.4"
     tsafe "^0.8.1"
-    tss-react "^1.0.3"
     typeface-work-sans "^1.1.13"
 
 glob-parent@^3.1.0:

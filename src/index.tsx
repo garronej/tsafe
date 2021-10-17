@@ -15,11 +15,6 @@ import assertMp4 from "./assets/videos/tsafeAssert.mp4";
 import {breakpointsValues} from "gitlanding/theme";
 import equalsMp4 from "./assets/videos/equals.mp4";
 import { GlSectionDivider } from "gitlanding/GlSectionDivider";
-import { GlCards } from "gitlanding/GlCards";
-import { GlLogoCard } from "gitlanding/GlCards/GlLogoCard";
-import gitlandingLogo from "./assets/img/gitlanding-logo.png";
-import tssLogo from "./assets/img/tss.png";
-import onyxiaLogo from "assets/svg/OnyxiaLogo.svg";
 
 
 const useStyles = makeStyles()(
@@ -30,7 +25,6 @@ const useStyles = makeStyles()(
 
 		"headerTitle": {
 			"paddingLeft": theme.spacing(3),
-			"color": theme.colors.palette.orangeWarning.main
 		},
 		"sectionIllustration": {
 			"maxWidth": theme.windowInnerWidth >= breakpointsValues.sm ? 500 : undefined,
@@ -99,6 +93,7 @@ const App = memo(() => {
 			enableDarkModeSwitch={true}
 			githubRepoUrl="https://github.com/garronej/tsafe"
 			githubButtonSize="large"
+			showGithubStarCount
 		/>}
 	>
 		<GlHero
@@ -163,39 +158,6 @@ const App = memo(() => {
 			animationVariant="secondary"
 		/>
 
-		<GlCards
-			title="A few projects using tsafe"
-		>
-			<GlLogoCard 
-				title="TSS React"
-				paragraph="A replacement for React jss and for Material UI's makeStyle. It's API is focused on providing maximum type safety and minimum verbosity."
-				buttonLabel="Documentation"
-				iconUrls={[tssLogo]}
-				link={{
-					"href": "https://github.com/garronej/tss-react"
-				}}
-			/>
-
-			<GlLogoCard 
-				title="Gitlanding"
-				paragraph="A Collection of React components for building a stylish landing page for github projects"
-				buttonLabel="Home page"
-				iconUrls={[gitlandingLogo]}
-				link={{
-					"href": "https://www.gitlanding.dev/"
-				}}
-			/>
-
-			<GlLogoCard 
-				title="Onyxia-UI"
-				paragraph="A powerful UI tool kit for React based on Material UI"
-				buttonLabel="Github"
-				iconUrls={[onyxiaLogo]}
-				link={{
-					"href": "https://github.com/InseeFrLab/onyxia-ui"
-				}}
-			/>
-		</GlCards>
 	</GlTemplate>
 
 
