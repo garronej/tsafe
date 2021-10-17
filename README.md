@@ -12,6 +12,7 @@
 </p>
 <p align="center">
   <a href="https://www.tsafe.dev">Home</a>
+   - 
   <a href="https://docs.tsafe.dev">Documentation</a>
 </p>
 
