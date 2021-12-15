@@ -1,5 +1,5 @@
 ---
-description: Like Object.fromEntries() but typed
+description: Like Object.fromEntries() but with a better return type
 ---
 
 # objectFromEntries
@@ -16,14 +16,12 @@ const entries = [
 const obj = objectFromEntries(entries);
 //    ^ obj is of type { a: "foo"; b: 33; c: boolean; }
 
-assert<
-    Equals<
-        typeof obj,
-        {
-            a: "foo";
-            b: 33;
-            c: boolean;
-        }
-    >
->();
+assert<Equals<
+    typeof obj,
+    {
+        a: "foo";
+        b: 33;
+        c: boolean;
+    }
+>>();
 ```
