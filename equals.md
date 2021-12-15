@@ -2,7 +2,7 @@
 description: Let you test if two types are the same
 ---
 
-# Equals
+# 🌟 Equals
 
 ```typescript
 import type { Equals, Not } from "tsafe";
@@ -64,4 +64,3 @@ function myFunction(
 
 }
 ```
-

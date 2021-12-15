@@ -2,7 +2,7 @@
 description: Like Object.keys() but typed
 ---
 
-# objectKeys
+# 🌟 objectKeys
 
 Functionally identical to `Object.keys()` except that the return type ain't just `string` but a typed array.
 

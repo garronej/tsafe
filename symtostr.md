@@ -2,7 +2,7 @@
 description: Get the name of a symbol as typed string string.
 ---
 
-# symToStr
+# 🌟 symToStr
 
 ```typescript
 import { symToStr } from "tsafe/symToStr";
@@ -33,4 +33,3 @@ export const myFunctionX = ()=> {...};
 export const name = symToStr({ myFunctionX });
 //           ^name is of type "myFunctionX"
 ```
-

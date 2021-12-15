@@ -1,4 +1,4 @@
-# assert
+# 🌟 assert
 
 ```typescript
 import { assert } from "tsafe/assert";
@@ -40,11 +40,15 @@ assert<A extends B ? true : false>();
 
 You can also test the equality of two types with:
 
-{% page-ref page="equals.md" %}
+{% content-ref url="equals.md" %}
+[equals.md](equals.md)
+{% endcontent-ref %}
 
 ## assert + is
 
-{% page-ref page="is.md" %}
+{% content-ref url="is.md" %}
+[is.md](is.md)
+{% endcontent-ref %}
 
 ## Error thrown
 
@@ -66,4 +70,3 @@ try{
     console.log(error.message); // foo bar baz
 }
 ```
-

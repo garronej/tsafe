@@ -1,4 +1,4 @@
-# typeGuard
+# 👍 typeGuard
 
 Aims at making the most of the [`value is T`](https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards) statement.
 
@@ -41,4 +41,3 @@ type Circle = { type: "CIRCLE"; radius: number; };
       );
   }
 ```
-

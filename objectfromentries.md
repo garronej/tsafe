@@ -2,7 +2,7 @@
 description: Like Object.fromEntries() but typed
 ---
 
-# objectFromEntries
+# 🌟 objectFromEntries
 
 Functionally identical to `Object.fromEntries()` but instead of returning but its return type more precise than just `{ [k: sting]: any; }`.
 
