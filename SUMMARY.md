@@ -11,7 +11,6 @@
 * [Equals](main/equals.md)
 * [objectKeys](main/objectkeys.md)
 * [objectFromEntries](main/objectfromentries.md)
-* [Page 1](main/page-1.md)
 * [symToStr](main/symtostr.md)
 * [exclude](main/exclude.md)
 * [typeGuard](main/typeguard.md)
