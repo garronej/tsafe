@@ -4,7 +4,7 @@ description: >-
   parameters wrapped in an object.
 ---
 
-# 🚧 withDefaults
+# withDefaults
 
 ## Quick example
 
@@ -87,5 +87,7 @@ const result = sumWd({
 }); // 33
 ```
 
-The type of `x` in `defaultsOverwrite` is `[number] | undefined` so that `undefined` cannot be assigned to `x` if that is not its type.&#x20;
+The type of `x` in `defaultsOverwrite` is `[number] | undefined` so that `undefined` cannot be assigned to `x` if that is not its type. 
+
+
 

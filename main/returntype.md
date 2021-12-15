@@ -2,7 +2,7 @@
 description: Like the builtin helper but more convenient to use.
 ---
 
-# 👍 ReturnType
+# ReturnType
 
 There is two major pain point with  [the default ReturnType](https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype):
 
@@ -53,3 +53,4 @@ import type { ReturnType } from "tsafe";
 
 const shape: ReturnType<Api["getShape"]> = ...
 ```
+

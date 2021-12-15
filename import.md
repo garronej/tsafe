@@ -2,7 +2,7 @@
 description: Recommended way to import tsafe
 ---
 
-# ⚙ How to import
+# How to import
 
 ## Browsers
 

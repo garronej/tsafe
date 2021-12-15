@@ -1,4 +1,4 @@
-# 🌟 is
+# is
 
 is is meant to be used in conjonction with assert and enable you to tell the compiler:
 
@@ -36,7 +36,7 @@ shape.radius;
 {% hint style="danger" %}
 `is` must **always** be used in conjunction with [`assert`](assert.md) as described in the example above.
 
-You aren't even allowed to do something like `assert(is<Circle>(shape) && shape.radius > 100 )`&#x20;
+You aren't even allowed to do something like `assert(is<Circle>(shape) && shape.radius > 100 )` 
 
 For any other usecase consider[`typeGuard`](typeguard.md) instead.
 {% endhint %}
@@ -44,4 +44,6 @@ For any other usecase consider[`typeGuard`](typeguard.md) instead.
 {% hint style="warning" %}
 It is important to understand that here that when you run the instruction `assert(typeGuard<Circle>(shape))` if the shape happens not to be a Circle you won't get an error at runtime.
 {% endhint %}
+
+
 
