@@ -9,8 +9,10 @@
 * [id](main/id.md)
 * [is](main/is.md)
 * [Equals](main/equals.md)
-* [exclude](main/exclude.md)
+* [objectFromEntries](main/objectfromentries.md)
+* [objectKeys](main/objectkeys.md)
 * [symToStr](main/symtostr.md)
+* [exclude](main/exclude.md)
 * [typeGuard](main/typeguard.md)
 * [ReturnType](main/returntype.md)
 * [Parameters](main/parameters.md)
@@ -26,4 +28,3 @@
 * [flip](anegdotal/flip.md)
 * [Untitled](anegdotal/untitled.md)
 * [withDefaults](anegdotal/withdefaults.md)
-
