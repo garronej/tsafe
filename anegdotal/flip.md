@@ -38,7 +38,6 @@ With the `flip` function, the task will be a bit less tedious.
 flip(obj.innerObj, "is_");
 ```
 
-The first argument is the object that contains the boolean value, and the second, is the key of the boolean property. Typescript will infer the key\(s\) of type boolean as illustrated below.
+The first argument is the object that contains the boolean value, and the second, is the key of the boolean property. Typescript will infer the key(s) of type boolean as illustrated below.
 
 ![](../.gitbook/assets/screenshot-2021-05-14-at-17.10.47.png)
-

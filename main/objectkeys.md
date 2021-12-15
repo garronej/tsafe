@@ -1,5 +1,5 @@
 ---
-description: Like Object.keys() but typed
+description: Like Object.keys() but with a better return type
 ---
 
 # 🌟 objectKeys

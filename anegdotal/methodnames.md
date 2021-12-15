@@ -35,4 +35,3 @@ type TMethodNames = MethodNames<T>;
 
 //resulting type is: "method1" | "method2"
 ```
-

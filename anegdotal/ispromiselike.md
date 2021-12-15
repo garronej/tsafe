@@ -30,5 +30,3 @@ const result = isPromiseLike(objPromiseLike);
 //result === true;
 ```
 
-
-

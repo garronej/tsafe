@@ -1,5 +1,5 @@
 ---
-description: Like Object.fromEntries() but typed
+description: Like Object.fromEntries() but with a better return type
 ---
 
 # 🌟 objectFromEntries

@@ -13,6 +13,6 @@ type B = Not<false>;// B is of type true
 
 Essentially though to use with:
 
-{% content-ref url="equals.md" %}
-[equals.md](equals.md)
+{% content-ref url="../main/equals.md" %}
+[equals.md](../main/equals.md)
 {% endcontent-ref %}
