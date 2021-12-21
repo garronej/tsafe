@@ -131,7 +131,7 @@ const App = memo(() => {
 				className={classes.sectionIllustration}
 				hasShadow={true}
 			/>}
-			animationVariant="secondary"
+			hasAnimation={true}
 
 		/>
 
@@ -155,7 +155,7 @@ const App = memo(() => {
 				hasShadow={true}
 				className={classes.sectionIllustration}
 			/>}
-			animationVariant="secondary"
+			hasAnimation={true}
 		/>
 
 	</GlTemplate>
