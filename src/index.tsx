@@ -75,7 +75,7 @@ const App = memo(() => {
 			]}
 		/>}
 		header={<GlHeader
-			title={<div className={classes.header}><GlLogo width={50} logoUrl={logoPng} /><h3 className={classes.headerTitle}>Tsafe</h3></div>}
+			title={<div className={classes.header}><GlLogo height={60} width={50} logoUrl={logoPng} /><h3 className={classes.headerTitle}>Tsafe</h3></div>}
 			links={[
 				{
 					"label": "GITHUB",
@@ -116,7 +116,6 @@ const App = memo(() => {
 			classes={{
 				"contentWrapper": classes.articleContent
 			}}
-			title="The Assert Function"
 			body="Assert things you know to be true, and get runtime errors when you are wrong about those assertions."
 			buttonLabel="Learn More"
 			buttonLink={
@@ -141,7 +140,6 @@ const App = memo(() => {
 			classes={{
 				"contentWrapper": classes.articleContent
 			}}
-			title="The Equals Utility Type"
 			body="Test the type definitions of your API's"
 			buttonLabel="Learn More"
 			buttonLink={
@@ -152,6 +150,29 @@ const App = memo(() => {
 			illustration={<GlIllustration
 				type="image"
 				url={equalsMp4}
+				hasShadow={true}
+				className={classes.sectionIllustration}
+			/>}
+			hasAnimation={true}
+		/>
+
+		<GlSectionDivider />
+
+		<GlArticle
+			classes={{
+				"contentWrapper": classes.articleContent
+			}}
+			body="Make typescript believe what ever you say"
+			buttonLabel="Learn More"
+			buttonLink={
+				{
+					"href": "https://docs.tsafe.dev/main/equals"
+				}
+			}
+			illustrationPosition="left"
+			illustration={<GlIllustration
+				type="image"
+				url={heroMp4}
 				hasShadow={true}
 				className={classes.sectionIllustration}
 			/>}
