@@ -6,14 +6,15 @@
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@mui/material": "^5.0.4",
-    "gitlanding": "^0.5.10",
-    "onyxia-ui": "^0.14.17",
+    "gitlanding": "^0.5.11",
+    "onyxia-ui": "^0.23.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "tsafe": "^0.8.1",
+    "tsafe": "^0.9.0",
     "tss-react": "^1.0.3",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "powerhooks": "^0.11.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
