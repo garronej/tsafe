@@ -1,3 +1,7 @@
+## **0.9.0** (2021-12-15)  
+  
+- Add ojectEntries and objectFromEntries    
+  
 ### **0.8.1** (2021-09-30)  
   
   
