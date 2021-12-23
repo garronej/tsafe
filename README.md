@@ -5,10 +5,18 @@
     <i>A collection of utilities for stepping up your TypeScript game</i>
     <br>
     <br>
-    <img src="https://github.com/garronej/tsafe/workflows/ci/badge.svg?branch=main">
-    <img src="https://img.shields.io/bundlephobia/minzip/tsafe">
-    <img src="https://img.shields.io/npm/dw/tsafe">
-    <img src="https://img.shields.io/npm/l/tsafe">
+    <a href="https://github.com/garronej/tsafe/actions">
+      <img src="https://github.com/garronej/tsafe/workflows/ci/badge.svg?branch=main">
+    </a>
+    <a href="https://bundlephobia.com/package/tsafe">
+      <img src="https://img.shields.io/bundlephobia/minzip/tsafe">
+    </a>
+    <a href="https://www.npmjs.com/package/tsafe">
+      <img src="https://img.shields.io/npm/dw/tsafe">
+    </a>
+    <a href="https://github.com/garronej/tsafe/blob/main/LICENSE">
+      <img src="https://img.shields.io/npm/l/tsafe">
+    </a>
 </p>
 <p align="center">
   <a href="https://www.tsafe.dev">Home</a>
