@@ -28,7 +28,7 @@
 
 <p align="center">
     <br>
-    <i>Assert things you know are true, get runtime errors where you were wrong::</i>
+    <i>Assert things you know are true, get runtime errors where you were wrong:</i>
     <br>
     <br>
     <img src="https://user-images.githubusercontent.com/6702424/134988258-9d3d4097-628b-4b8f-b00b-d256f7c2361c.gif">
