@@ -1,18 +1,18 @@
 import ReactDOM from "react-dom";
-import {memo} from "react";
+import { memo } from "react";
 import { GlTemplate } from "gitlanding/GlTemplate";
-import {ThemeProvider} from "./theme";
-import {GlHeader} from "gitlanding/GlHeader";
+import { ThemeProvider } from "./theme";
+import { GlHeader } from "gitlanding/GlHeader";
 import logoPng from "./assets/img/logo.png";
-import {GlLogo} from "gitlanding/utils/GlLogo";
+import { GlLogo } from "gitlanding/utils/GlLogo";
 import { GlHero } from "gitlanding/GlHero";
-import { makeStyles } from "gitlanding/theme";
+import { makeStyles } from "./theme";
 import { GlFooter } from "gitlanding/GlFooter";
 import heroMp4 from "./assets/videos/hero.mp4"
 import { GlArticle } from "gitlanding/GlArticle";
 import { GlIllustration } from "gitlanding/GlIllustration";
 import assertMp4 from "./assets/videos/tsafeAssert.mp4";
-import {breakpointsValues} from "gitlanding/theme";
+import { breakpointsValues } from "gitlanding/theme";
 import equalsMp4 from "./assets/videos/equals.mp4";
 import { GlSectionDivider } from "gitlanding/GlSectionDivider";
 
@@ -33,8 +33,8 @@ const useStyles = makeStyles()(
 			...(theme.windowInnerWidth < breakpointsValues.md &&
 				theme.windowInnerWidth >= breakpointsValues.sm
 				? {
-				"alignItems": "center"
-			} : {})
+					"alignItems": "center"
+				} : {})
 		},
 		"articlesTitle": {
 			"textAlign": "center",
@@ -108,7 +108,7 @@ const App = memo(() => {
 			A few examples to convince you of Tsafe's usefulness
 		</h3>
 
-		<GlSectionDivider 
+		<GlSectionDivider
 			className={classes.sectionDivider}
 		/>
 
@@ -116,7 +116,7 @@ const App = memo(() => {
 			classes={{
 				"contentWrapper": classes.articleContent
 			}}
-			body="Assert things you know to be true, and get runtime errors when you are wrong about those assertions."
+			title="Assert things you know to be true, and get runtime errors when you are wrong about those assertions."
 			buttonLabel="Learn More"
 			buttonLink={
 				{
@@ -140,7 +140,7 @@ const App = memo(() => {
 			classes={{
 				"contentWrapper": classes.articleContent
 			}}
-			body="Test the type definitions of your API's"
+			title="Test the type definitions of your API's"
 			buttonLabel="Learn More"
 			buttonLink={
 				{
@@ -162,7 +162,7 @@ const App = memo(() => {
 			classes={{
 				"contentWrapper": classes.articleContent
 			}}
-			body="Make typescript believe what ever you say"
+			title="Make typescript believe what ever you say"
 			buttonLabel="Learn More"
 			buttonLink={
 				{
@@ -188,6 +188,7 @@ const App = memo(() => {
 ReactDOM.render(
 	<ThemeProvider>
 		<App />
+
 	</ThemeProvider>,
 	document.getElementById("root")
 );
