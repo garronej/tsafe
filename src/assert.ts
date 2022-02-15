@@ -29,7 +29,8 @@ export class AssertionError extends Error {
 
 /** https://docs.tsafe.dev/assert */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function assert<_T extends true>(condition: any = true, msg?: string): asserts condition {
+export function assert<_T extends true>(condition: any, msg?: string): asserts condition {
+    if (arguments.length === 0) { condition = true; } // hack for backwards compat, see issue #6
     if (assertIsRefWrapper.ref !== undefined) {
         assertIsRefWrapper.ref = undefined;
         return;
