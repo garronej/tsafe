@@ -35,3 +35,21 @@ import type { Equals } from "../Equals";
 
     console.log("PASS");
 }
+
+scope: {
+
+    try{
+
+        assert(undefined);
+
+    }catch{
+
+        console.log("PASS");
+
+        break scope;
+
+    }
+
+    throw new Error("Fail");
+
+}

@@ -23,13 +23,16 @@ export class AssertionError extends Error {
                     .join("\n"),
             );
             // eslint-disable-next-line no-empty
-        } catch {}
+        } catch { }
     }
 }
 
 /** https://docs.tsafe.dev/assert */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function assert<_T extends true>(condition: any = true, msg?: string): asserts condition {
+export function assert<_T extends true>(condition?: any, msg?: string): asserts condition {
+    if (arguments.length === 0) {
+        condition = true;
+    }
     if (assertIsRefWrapper.ref !== undefined) {
         assertIsRefWrapper.ref = undefined;
         return;
