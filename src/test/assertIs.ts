@@ -37,19 +37,13 @@ import type { Equals } from "../Equals";
 }
 
 scope: {
-
-    try{
-
+    try {
         assert(undefined);
-
-    }catch{
-
+    } catch {
         console.log("PASS");
 
         break scope;
-
     }
 
     throw new Error("Fail");
-
 }
