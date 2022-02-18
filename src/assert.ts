@@ -23,7 +23,7 @@ export class AssertionError extends Error {
                     .join("\n"),
             );
             // eslint-disable-next-line no-empty
-        } catch { }
+        } catch {}
     }
 }
 
