@@ -1,3 +1,13 @@
+### **0.9.1** (2022-02-18)  
+  
+- fmt  
+- assert(undefined) should throw  
+- Merge pull request #7 from husseinhere/patch-1
+
+Do not default assert condition to true  
+- Do not default assert condition to true  
+- Show example of compile time unit testing    
+  
 ## **0.9.0** (2021-12-15)  
   
 - Add ojectEntries and objectFromEntries    
