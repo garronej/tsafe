@@ -1,3 +1,8 @@
+## **0.10.0** (2022-04-14)  
+  
+- Add noUndefined  
+- Update PickOptionals.ts    
+  
 ### **0.9.1** (2022-02-18)  
   
 - fmt  
