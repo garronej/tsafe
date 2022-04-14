@@ -6,7 +6,7 @@ type OptionalKeyof<T extends Record<string, unknown>> = Exclude<
 >;
 
 /**
- * Optional<{ p1: string; p2?: string; p3?: number; }>
+ * PickOptionals<{ p1: string; p2?: string; p3?: number; }>
  * is the type
  * { p2: string; p3: number; }
  */
