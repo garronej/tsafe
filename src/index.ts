@@ -16,3 +16,4 @@ export type { Equals } from "./Equals";
 export type { Not } from "./Not";
 export * from "./objectEntries";
 export * from "./objectFromEntries";
+export * from "./noUndefined";
