@@ -17,6 +17,9 @@
     <a href="https://github.com/garronej/tsafe/blob/main/LICENSE">
       <img src="https://img.shields.io/npm/l/tsafe">
     </a>
+    <a href="https://deno.land/x/tsafe">
+        <img src="https://img.shields.io/badge/deno-module-informational?logo=deno">
+    </a>
 </p>
 <p align="center">
   <a href="https://www.tsafe.dev">Home</a>
