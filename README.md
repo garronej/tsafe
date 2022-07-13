@@ -2,7 +2,7 @@
     <img src="https://user-images.githubusercontent.com/6702424/117557564-572a0a80-b074-11eb-9d54-4ecfb5fb208f.png">  
 </p>
 <p align="center">
-    <i>A collection of utilities for stepping up your TypeScript game</i>
+    <i>A collection of utilities to take your TypeScript development up a notch</i>
     <br>
     <br>
     <a href="https://github.com/garronej/tsafe/actions">
