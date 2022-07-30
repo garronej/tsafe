@@ -8,9 +8,6 @@
     <a href="https://github.com/garronej/tsafe/actions">
       <img src="https://github.com/garronej/tsafe/workflows/ci/badge.svg?branch=main">
     </a>
-    <a href="https://bundlephobia.com/package/tsafe">
-      <img src="https://img.shields.io/bundlephobia/minzip/tsafe">
-    </a>
     <a href="https://www.npmjs.com/package/tsafe">
       <img src="https://img.shields.io/npm/dw/tsafe">
     </a>
@@ -20,6 +17,11 @@
     <a href="https://deno.land/x/tsafe">
         <img src="https://img.shields.io/badge/deno-module-informational?logo=deno">
     </a>
+    <br/>
+    <a href="https://bundlephobia.com/package/tsafe">
+      <img src="https://img.shields.io/bundlephobia/minzip/tsafe">
+    </a>
+    <i>(you can cherrypick what you import)</i>
 </p>
 <p align="center">
   <a href="https://www.tsafe.dev">Home</a>
