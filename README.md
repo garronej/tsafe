@@ -37,10 +37,12 @@
     <img src="https://user-images.githubusercontent.com/6702424/134988258-9d3d4097-628b-4b8f-b00b-d256f7c2361c.gif">
 </p>
 <p align="center">
-    <i>Implement compile time unit testing (<a href="https://github.com/garronej/tsafe/blob/main/src/test/exclude.types.ts">example</a>):</i>
+    <i>Implement compile time unit testing</i>
     <br>
     <br>
-    <img src="https://user-images.githubusercontent.com/6702424/134994250-29f1b5c3-2193-49ba-ad75-e3c981723724.gif">
+    <img src="https://user-images.githubusercontent.com/6702424/134994250-29f1b5c3-2193-49ba-ad75-e3c981723724.gif">  
+    <img src="https://user-images.githubusercontent.com/6702424/181999960-f99bd947-c65f-49c2-ac64-db85aafb6976.png">
+    <i><a href="https://stackblitz.com/edit/typescript-rfpzav?file=index.ts">Playground</a></i>
 </p>
 <p align="center">
     <i>Make TypeScript believe whatever you say:</i>
