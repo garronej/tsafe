@@ -43,7 +43,7 @@
     <br>
     <br>
     <img src="https://user-images.githubusercontent.com/6702424/134994250-29f1b5c3-2193-49ba-ad75-e3c981723724.gif">  
-    <img src="https://user-images.githubusercontent.com/6702424/181999960-f99bd947-c65f-49c2-ac64-db85aafb6976.png">
+    <img src="https://user-images.githubusercontent.com/6702424/182005615-5d967945-0758-4457-8068-748bc01f9008.png">
     <i><a href="https://stackblitz.com/edit/typescript-rfpzav?file=index.ts">Playground</a></i>
 </p>
 <p align="center">
