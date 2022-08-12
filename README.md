@@ -11,8 +11,8 @@
     <a href="https://www.npmjs.com/package/tsafe">
       <img src="https://img.shields.io/npm/dw/tsafe">
     </a>
-    <a href="https://github.com/garronej/tsafe/blob/main/LICENSE">
-      <img src="https://img.shields.io/npm/l/tsafe">
+    <a href="https://www.npmjs.com/package/tsafe">
+      <img src="https://img.shields.io/npm/v/tsafe?logo=npm">
     </a>
     <a href="https://deno.land/x/tsafe">
         <img src="https://img.shields.io/badge/deno-module-informational?logo=deno">
