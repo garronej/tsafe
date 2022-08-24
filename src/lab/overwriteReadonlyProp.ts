@@ -31,7 +31,7 @@ export const overwriteReadonlyProp = <T extends { [key: string]: any }, K extend
     };
 
     if (!!propertyDescriptor.get) {
-        throw new Error(`Probably a wrong ides to overwrite ${propertyName} getter`);
+        throw new Error(`Probably a wrong ides to overwrite ${String(propertyName)} getter`);
     }
 
     try {
