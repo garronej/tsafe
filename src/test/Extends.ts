@@ -37,11 +37,11 @@ class A {
 
 {
     // never
-    assert<Equals<Extends<never, any>, never>>();
+    assert<Equals<Extends<never, any>, true>>();
     assert<Equals<Extends<any, never>, boolean>>();
-    assert<Equals<Extends<never, 1>, never>>();
+    assert<Equals<Extends<never, 1>, true>>();
     assert<Equals<Extends<1, never>, false>>();
-    assert<Equals<Extends<never, never>, never>>();
+    assert<Equals<Extends<never, never>, true>>();
 }
 
 {
