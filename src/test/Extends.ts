@@ -42,21 +42,35 @@ class A {
     assert<Equals<Extends<never, never>, true>>();
     assert<Equals<Extends<never, any>, true>>();
     assert<Equals<Extends<never, unknown>, true>>();
+    assert<Equals<Extends<never, 1>, true>>();
 
     // nothing but itself extends never
     assert<Equals<Extends<never, never>, true>>();
     assert<Equals<Extends<any, never>, false>>();
     assert<Equals<Extends<unknown, never>, false>>();
+    assert<Equals<Extends<1, never>, false>>();
 
-    // any extends nothing but itself
+    // any extends nothing but itself and unknown
     assert<Equals<Extends<any, any>, true>>();
     assert<Equals<Extends<any, never>, false>>();
-    assert<Equals<Extends<any, unknown>, false>>();
+    assert<Equals<Extends<any, unknown>, true>>();
+    assert<Equals<Extends<any, 1>, false>>();
+
+    // unknown extends nothing but itself and any
+    assert<Equals<Extends<unknown, unknown>, true>>();
+    assert<Equals<Extends<unknown, never>, false>>();
+    assert<Equals<Extends<unknown, any>, true>>();
+    assert<Equals<Extends<unknown, 1>, false>>();
 
     // everything extends any
-    assert<Equals<Extends<any, any>, true>>();
     assert<Equals<Extends<never, any>, true>>();
     assert<Equals<Extends<unknown, any>, true>>();
+    assert<Equals<Extends<1, any>, true>>();
+
+    // everything extends unknown
+    assert<Equals<Extends<any, unknown>, true>>();
+    assert<Equals<Extends<never, unknown>, true>>();
+    assert<Equals<Extends<1, unknown>, true>>();
 }
 
 {
