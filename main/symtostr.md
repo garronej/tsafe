@@ -1,5 +1,5 @@
 ---
-description: Get the name of a symbol as typed string string.
+description: Get the name of a symbol as typed string.
 ---
 
 # symToStr
@@ -26,11 +26,8 @@ If you happen to rename \`myFunctionX\` into something else it is easy to forget
 #### With `symToStr`
 
 ```typescript
-
-
 export const myFunctionX = ()=> {...};
 
 export const name = symToStr({ myFunctionX });
 //           ^name is of type "myFunctionX"
 ```
-
