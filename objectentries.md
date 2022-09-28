@@ -4,7 +4,7 @@ description: Like Object.entries() but with a better return type.
 
 # objectEntries
 
-Functionally equal to `Object.entries` but features a return type more precise than just instead of just `[string, T][].`
+Functionally equal to `Object.entries` but features a return type more precise than just  `[string, T][].`
 
 ```typescript
 //    v entries is of type ["a", string], ["b", number], ["c", boolean]
