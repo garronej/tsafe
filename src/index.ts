@@ -13,6 +13,7 @@ export * from "./typeGuard";
 export type { UnpackPromise } from "./UnpackPromise";
 export * from "./is";
 export type { Equals } from "./Equals";
+export type { Extends } from "./Extends";
 export type { Not } from "./Not";
 export * from "./objectEntries";
 export * from "./objectFromEntries";
