@@ -14,6 +14,44 @@ class A {
 }
 
 {
+    type MyObj = {
+        x: string;
+        y: { a: "x" | "y" };
+        z: number[];
+    };
+
+    {
+        type PickOfMyObj = Pick<MyObj, "y" | "z">;
+
+        assert<IsPick<PickOfMyObj, MyObj>>();
+
+        //@ts-expect-error: This isn't true
+        assert<IsPick<MyObj, PickOfMyObj>>();
+    }
+
+    {
+        type PickOfMyObjWithExtraProp = Pick<MyObj, "y" | "z"> & { u: string[] };
+
+        //@ts-expect-error: This isn't true
+        assert<IsPick<PickOfMyObjWithExtraProp, MyObj>>();
+    }
+
+    {
+        type PickOfMyObjWithExtraProp = { y: { a: "x" | "y" | "z" }; x: string };
+
+        //@ts-expect-error: there is an extra "z"
+        assert<IsPick<PickOfMyObjWithExtraProp, MyObj>>();
+    }
+
+    {
+        // eslint-disable-next-line @typescript-eslint/ban-types
+        type EmptyObject = {};
+
+        assert<IsPick<EmptyObject, MyObj>>();
+    }
+}
+
+{
     // identity
     assert<Equals<IsPick<any[], any[]>, true>>();
     assert<Equals<IsPick<Obj, Obj>, true>>();
