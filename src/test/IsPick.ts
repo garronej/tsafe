@@ -7,8 +7,6 @@ const emptyObj = {};
 
 type EmptyObj = typeof emptyObj;
 
-type Fn<A extends any[] = any[], R = any> = (...args: A) => R;
-
 type Obj = Record<string, unknown>;
 
 class A {
@@ -17,18 +15,7 @@ class A {
 
 {
     // identity
-    assert<Equals<IsPick<any, any>, true>>();
-    assert<Equals<IsPick<never, never>, true>>();
-    assert<Equals<IsPick<unknown, unknown>, true>>();
-    assert<Equals<IsPick<void, void>, true>>();
-    assert<Equals<IsPick<undefined, undefined>, true>>();
-    assert<Equals<IsPick<null, null>, true>>();
-    assert<Equals<IsPick<boolean, boolean>, true>>();
-    assert<Equals<IsPick<number, number>, true>>();
-    assert<Equals<IsPick<string, string>, true>>();
-    assert<Equals<IsPick<symbol, symbol>, true>>();
     assert<Equals<IsPick<any[], any[]>, true>>();
-    assert<Equals<IsPick<Fn, Fn>, true>>();
     assert<Equals<IsPick<Obj, Obj>, true>>();
     assert<Equals<IsPick<A, A>, true>>();
 }
@@ -72,20 +59,18 @@ class A {
     assert<Equals<IsPick<{ a: 1 }, { a: number }>, false>>();
     assert<Equals<IsPick<{ a: 1 }, { a: string }>, false>>();
 
-    assert<Equals<IsPick<{ a: string }, { a: string, b: string }>, true>>();
-    assert<Equals<IsPick<{ a?: string }, { a?: string, b: string }>, true>>();
+    assert<Equals<IsPick<{ a: string }, { a: string; b: string }>, true>>();
+    assert<Equals<IsPick<{ a?: string }, { a?: string; b: string }>, true>>();
     assert<Equals<IsPick<{ a: string }, { a?: string }>, false>>();
     assert<Equals<IsPick<{ a?: string }, { a: string }>, false>>();
-    assert<Equals<IsPick<Pick<{ a: string, b: string }, 'a'>, { a: string, b: string }>, true>>();
-    assert<Equals<IsPick<Pick<{ a: string, b: string }, 'a' | 'b'>, { a: string, b: string }>, true>>();
+    assert<Equals<IsPick<Pick<{ a: string; b: string }, "a">, { a: string; b: string }>, true>>();
+    assert<Equals<IsPick<Pick<{ a: string; b: string }, "a" | "b">, { a: string; b: string }>, true>>();
     assert<Equals<IsPick<{ a: { b: string } }, { a: { b: string } }>, true>>();
-    assert<Equals<IsPick<{ a: { b: string } }, { a: { b: string, c: string } }>, true>>();
 
-    assert<Equals<IsPick<{ a: 'a' | 'b' }, { a: 'a' | 'b' }>, true>>();
-    assert<Equals<IsPick<{ a: 'a' | 'b' | 'c' }, { a: 'a' | 'b' }>, false>>();
-    assert<Equals<IsPick<{ a: 'a' }, { a: 'a' | 'b' }>, false>>();
+    assert<Equals<IsPick<{ a: "a" | "b" }, { a: "a" | "b" }>, true>>();
+    assert<Equals<IsPick<{ a: "a" | "b" | "c" }, { a: "a" | "b" }>, false>>();
+    assert<Equals<IsPick<{ a: "a" }, { a: "a" | "b" }>, false>>();
 
-    assert<Equals<IsPick<Array<{ a: 'a' }>, Array<{ a: 'a' }>>, true>>();
-    assert<Equals<IsPick<Array<{ a: 'a' }>, Array<{ a: 'a', b: 'b' }>>, true>>();
-    assert<Equals<IsPick<Array<{ a: 'a' }>, Array<{ a: 'b' }>>, false>>();
+    assert<Equals<IsPick<Array<{ a: "a" }>, Array<{ a: "a" }>>, true>>();
+    assert<Equals<IsPick<Array<{ a: "a" }>, Array<{ a: "b" }>>, false>>();
 }
