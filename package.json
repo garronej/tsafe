@@ -54,6 +54,6 @@
         "lint-staged": "^10.5.4",
         "prettier": "^2.2.1",
         "typescript": "^4.2.3",
-        "denoify": "^0.15.0"
+        "denoify": "^1.2.1"
     }
 }
