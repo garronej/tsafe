@@ -21,7 +21,7 @@ By having the following unit tests, we would ensure that the `Fn` type does not 
 
 ```typescript
 import { assert } from "tsafe/assert";
-import { Extends } from "tsafe";
+import { Extends, Not } from "tsafe";
 
 function fn() { }
 
