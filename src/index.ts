@@ -12,6 +12,7 @@ export type { ReturnType } from "./ReturnType";
 export * from "./typeGuard";
 export type { UnpackPromise } from "./UnpackPromise";
 export * from "./is";
+export type { IsEmpty } from "./IsEmpty";
 export type { Equals } from "./Equals";
 export type { Extends } from "./Extends";
 export type { Not } from "./Not";
