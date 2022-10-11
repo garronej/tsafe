@@ -1,7 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { StrictEquals } from "./tools/StrictEquals";
 
-/** https://docs.tsafe.dev/main/extends */
+/** 
+ * @see <https://docs.tsafe.dev/main/extends> 
+ * 
+ * Usage example: assert<Extends<A, B>>();
+ **/
 export type Extends<A1, A2> = StrictEquals<A1, never> extends true
     ? true
     : StrictEquals<A2, never> extends true
