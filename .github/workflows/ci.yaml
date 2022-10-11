@@ -69,7 +69,7 @@ jobs:
            deno-${{ runner.os }}-${{ hashFiles('deno-lock.json') }}
            deno-${{ runner.os }}-
            deno-
-    - uses: denolib/setup-deno@master
+    - uses: denoland/setup-deno@v1
       with:
         deno-version: v1.x
     - run: deno --version
