@@ -61,7 +61,7 @@ jobs:
       with:
         node-version: '15'
     - name: Cache
-      uses: actions/cache@v1
+      uses: actions/cache@v3
       with:
         path: ~/.cache/deno
         key: deno-${{ runner.os }}-${{ hashFiles('deno-lock.json') }}
