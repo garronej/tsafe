@@ -14,6 +14,7 @@
 * [exclude](main/exclude.md)
 * [typeGuard](main/typeguard.md)
 * [capitalize](main/capitalize.md)
+* [Extends](extends.md)
 * [Not](anegdotal/not.md)
 * [MethodNames](anegdotal/methodnames.md)
 * [isPromiseLike](anegdotal/ispromiselike.md)
