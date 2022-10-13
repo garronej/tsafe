@@ -132,7 +132,6 @@ jobs:
         git checkout latest
     - uses: actions/setup-node@v3
       with:
-        node-version: '15'
         registry-url: https://registry.npmjs.org/
     - uses: bahmutov/npm-install@v1
     - run: |
