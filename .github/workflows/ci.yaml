@@ -140,7 +140,9 @@ jobs:
             PACKAGE_MANAGER=yarn
         fi
         $PACKAGE_MANAGER run build
-    - run: npx -y -p denoify@1.2.1 enable_short_npm_import_path
+    - run: |
+        npx -y -p denoify@1.2.4 enable_short_npm_import_path
+        npx -y -p denoify@1.2.4 remove_deno_dist_from_gitignore
       env:
         DRY_RUN: "0"
     - run: |
@@ -163,7 +165,7 @@ jobs:
         IS_PRE_RELEASE: ${{ needs.check_if_version_upgraded.outputs.is_pre_release }}
     - run: |
         git config --global user.name "actions"
-        git config --global user.email actions@example.com
+        git config --global user.email actions@github.com
         git add -A
         git commit -am "Enabling shorter import paths"
         git push origin latest
