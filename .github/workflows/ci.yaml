@@ -124,12 +124,9 @@ jobs:
         fetch-depth: 0
         ref: ${{ github.ref }}
     - run: rm -r .github
-    - run: |
-        git branch -d latest || true
-        git push origin :latest || true
-    - run: |
-        git branch latest
-        git checkout latest
+    - name: Remove tmp_branch if it exists
+      run: git push origin :tmp_branch || true
+    - run: git checkout -b tmp_branch
     - uses: actions/setup-node@v3
       with:
         registry-url: https://registry.npmjs.org/
@@ -168,15 +165,17 @@ jobs:
         git config --global user.email actions@github.com
         git add -A
         git commit -am "Enabling shorter import paths"
-        git push origin latest
+        git push origin tmp_branch
     - uses: softprops/action-gh-release@v1
       with:
         name: Release v${{ needs.check_if_version_upgraded.outputs.to_version }}
         tag_name: v${{ needs.check_if_version_upgraded.outputs.to_version }}
-        target_commitish: latest
+        target_commitish: tmp_branch
         generate_release_notes: false
         draft: false
         prerelease: ${{ needs.check_if_version_upgraded.outputs.is_pre_release == 'true' }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+    - name: Remove tmp_branch
+      run: git push origin :tmp_branch
 
