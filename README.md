@@ -15,8 +15,8 @@
       <img src="https://img.shields.io/npm/v/tsafe?logo=npm">
     </a>
     <a href="https://deno.land/x/tsafe">
-        <img src="https://img.shields.io/badge/deno-module-informational?logo=deno">
-    </a>
+        <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Ftsafe%2Fmod.ts">
+    </a>    
     <br/>
     <a href="https://bundlephobia.com/package/tsafe">
       <img src="https://img.shields.io/bundlephobia/minzip/tsafe">
