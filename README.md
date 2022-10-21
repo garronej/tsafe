@@ -37,6 +37,8 @@
     <img src="https://user-images.githubusercontent.com/6702424/134988258-9d3d4097-628b-4b8f-b00b-d256f7c2361c.gif">
 </p>
 <p align="center">
+    <br>
+    <br>
     <i>Implement compile time unit testing</i>
     <br>
     <br>
@@ -45,15 +47,18 @@
     <i><a href="https://stackblitz.com/edit/typescript-rfpzav?file=index.ts">Playground</a></i>
 </p>
 <p align="center">
-    <i>Make sure you never forget a cas in a switch</i>
+    <br>
+    <br>
+    <i>Make sure you never forget a case in a switch</i>
     <br>
     <br>
     <img src="https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe_switch.gif">  
     <br>
-    <i><a href="https://stackblitz.com/edit/typescript-rfpzav?file=index.ts">Playground</a></i>
+    <i><a href="https://stackblitz.com/edit/typescript-ryj2ba?file=index.ts">Playground</a></i> 
 </p>
-
 <p align="center">
+    <br>
+    <br>
     <i>Make TypeScript believe whatever you say:</i>
     <br>
     <br>
