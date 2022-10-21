@@ -27,7 +27,7 @@
   <a href="https://docs.tsafe.dev">Documentation</a>
 </p>
 
-## Three GIFs to convince you that you need `tsafe` in your life
+## A few GIFs to convince you that you need `tsafe` in your life
 
 <p align="center">
     <br>
@@ -68,6 +68,15 @@
     <br>
     <i><a href="https://stackblitz.com/edit/typescript-ryj2ba?file=index.ts&view=editor">Playground</a></i> 
 </p>
+
+<p align="center">
+    <br>
+    <br>
+    <i>Enjoy Zod without having to give up on declaring your types explicitly:<i> 
+    <br>
+    <img width="550" src="https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe_zod.gif">
+</p>
+
 <p align="center">
     <br>
     <br>
