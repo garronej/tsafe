@@ -34,7 +34,7 @@
     <i>Assert things you know are true, get runtime errors where you were wrong:</i>
     <br>
     <br>
-    <img src="https://user-images.githubusercontent.com/6702424/134988258-9d3d4097-628b-4b8f-b00b-d256f7c2361c.gif">
+    <img width="550" src="https://user-images.githubusercontent.com/6702424/134988258-9d3d4097-628b-4b8f-b00b-d256f7c2361c.gif">
 </p>
 <p align="center">
     <br>
@@ -42,7 +42,7 @@
     <i>Implement compile time unit testing</i>
     <br>
     <br>
-    <img src="https://user-images.githubusercontent.com/6702424/134994250-29f1b5c3-2193-49ba-ad75-e3c981723724.gif">  
+    <img width="550" src="https://user-images.githubusercontent.com/6702424/134994250-29f1b5c3-2193-49ba-ad75-e3c981723724.gif">  
     <br>
     <img width="550" src="https://user-images.githubusercontent.com/6702424/182005615-5d967945-0758-4457-8068-748bc01f9008.png">
     <br>
@@ -51,20 +51,32 @@
 <p align="center">
     <br>
     <br>
+    <i>Make sure all properties of an object are deconstructed</i>
+    <br>
+    <br>
+    <img width="550" src="https://github.com/garronej/tsafe/releases/download/v0.0.1/dont_forget_props.gif">  
+    <br>
+    <i><a href="https://stackblitz.com/edit/typescript-rryd73?file=index.ts&view=editor">Playground</a></i> 
+</p>
+<p align="center">
+    <br>
+    <br>
     <i>Make sure you never forget a case in a switch</i>
     <br>
     <br>
-    <img src="https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe_switch.gif">  
+    <img width="550" src="https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe_switch.gif">  
     <br>
     <i><a href="https://stackblitz.com/edit/typescript-ryj2ba?file=index.ts&view=editor">Playground</a></i> 
 </p>
 <p align="center">
     <br>
     <br>
-    <i>Make TypeScript believe whatever you say (without having to write <code>const obj2 = obj as Bar</code>):</i>
+    <i>Make TypeScript believe whatever you say without having to write <code>const obj2 = obj as Bar</code>.<i> 
+    <br>
+    <i>The more powerfully is to be able to tell TypeScript that <code>obj</code> ist <strong>not</strong> of type <code>Bar</code>:</i>
     <br>
     <br>
-    <img src="https://user-images.githubusercontent.com/6702424/134994590-f01b8aee-a94a-4b4c-8f43-ee5ce8911443.gif">
+    <img width="550" src="https://user-images.githubusercontent.com/6702424/134994590-f01b8aee-a94a-4b4c-8f43-ee5ce8911443.gif">
 </p>
 
 ## Motivations
