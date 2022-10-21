@@ -45,6 +45,15 @@
     <i><a href="https://stackblitz.com/edit/typescript-rfpzav?file=index.ts">Playground</a></i>
 </p>
 <p align="center">
+    <i>Make sure you never forget a cas in a switch</i>
+    <br>
+    <br>
+    <img src="https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe_switch.gif">  
+    <br>
+    <i><a href="https://stackblitz.com/edit/typescript-rfpzav?file=index.ts">Playground</a></i>
+</p>
+
+<p align="center">
     <i>Make TypeScript believe whatever you say:</i>
     <br>
     <br>
