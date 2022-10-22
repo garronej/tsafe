@@ -13,7 +13,7 @@
 * [objectKeys](main/objectkeys.md)
 * [exclude](main/exclude.md)
 * [typeGuard](main/typeguard.md)
-* [capitalize](main/capitalize.md)
+* [capitalize/uncapitalize](main/capitalize.md)
 * [Extends](extends.md)
 * [Not](anegdotal/not.md)
 * [MethodNames](anegdotal/methodnames.md)
