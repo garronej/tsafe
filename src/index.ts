@@ -19,3 +19,5 @@ export * from "./objectEntries";
 export * from "./objectFromEntries";
 export * from "./noUndefined";
 export * from "./Reflect";
+export * from "./capitalize";
+export * from "./uncapitalize";
