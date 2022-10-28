@@ -30,4 +30,4 @@ If you are writing test for your type, you definitely want to checkout [`//@ts-e
 
 <figure><img src="https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe_zod.gif" alt=""><figcaption></figcaption></figure>
 
-[Playground](https://user-images.githubusercontent.com/6702424/134994590-f01b8aee-a94a-4b4c-8f43-ee5ce8911443.gif)
+[Playground](https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe\_zod.gif)
