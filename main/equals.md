@@ -4,64 +4,30 @@ description: Let you test if two types are the same
 
 # Equals
 
-```typescript
-import type { Equals, Not } from "tsafe";
-import { assert } from "tsafe/assert";
+### Implement compile time unit testing
 
-type A = { foo: string; } | undefined;
-type B = undefined | { foo: string; };
+<figure><img src="https://user-images.githubusercontent.com/6702424/182005615-5d967945-0758-4457-8068-748bc01f9008.png" alt=""><figcaption></figcaption></figure>
 
-//You will get red squiggly line if A isn't the same type as B.
-assert<Equals<A, B>>();
-
-//You will get red squiggly line if A and B are the same type.
-assert<Not<Equals<A,B>>(); //<- red squiggly line here
-```
-
-### Example use-cases
-
-#### Testing the types definition of your API
-
-Here we test that the return type of our function is actually what we expect it to be.
-
-```typescript
-import type { Equals } from "tsafe";
-import { assert } from "tsafe/assert";
-
-
-declare function theTestedFunction<Key extends string>(): Record<Key, string>;
-
-const out = theTestedFunction<"foo" | "bar">();
-
-assert<Equals<typeof out, { foo: string; bar: string; }>>();
-```
+[Playground](https://stackblitz.com/edit/typescript-rfpzav?file=index.ts\&view=editor)
 
 {% hint style="info" %}
 If you are writing test for your type, you definitely want to checkout [`//@ts-expect-error`](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-9.html#-ts-expect-error-comments)
 {% endhint %}
 
-#### Making sure you have deconstructed all the params
+### Making sure all properties of an object are deconstructed
 
-```typescript
-import type { Equals } from "tsafe";
-import { assert } from "tsafe/assert";
+<figure><img src="https://github.com/garronej/tsafe/releases/download/v0.0.1/dont_forget_props.gif" alt=""><figcaption></figcaption></figure>
 
+[Playground](https://stackblitz.com/edit/typescript-rryd73?file=index.ts\&view=editor)
 
-function myFunction(
-	params: {
-		foo: string;
-		bar: string;
-		baz: string;
-	}
-) {
+### Making sure all cases of a switch are delt with
 
-	const { foo, bar, baz, ...rest } = params;
+<figure><img src="https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe_switch.gif" alt=""><figcaption></figcaption></figure>
 
-	//We check that whe have deconstructed all the parameters.
-	assert<Equals<typeof rest, {}>>();
+[Playground](https://stackblitz.com/edit/typescript-ryj2ba?file=index.ts\&view=editor)
 
-	//...
+### Guaranteeing that a validator matches a given type
 
-}
-```
+<figure><img src="https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe_zod.gif" alt=""><figcaption></figcaption></figure>
 
+[Playground](https://user-images.githubusercontent.com/6702424/134994590-f01b8aee-a94a-4b4c-8f43-ee5ce8911443.gif)
