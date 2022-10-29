@@ -21,5 +21,5 @@ assert<Equals<
 ```
 
 {% hint style="warning" %}
-WARNING: [See `objectKeys()`'s warning](main/objectkeys.md).
+WARNING: [See `objectKeys()`'s warning](objectkeys.md).
 {% endhint %}
