@@ -8,11 +8,114 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "module": "dist/esm/index.js",
+    "exports": {
+        ".": {
+            "import": "./dist/esm/index.js",
+            "require": "./dist/index.js"
+        },
+        "./Equals": {
+            "import": "./dist/esm/Equals.js",
+            "require": "./dist/Equals.js"
+        },
+        "./Param0": {
+            "import": "./dist/esm/Param0.js",
+            "require": "./dist/Param0.js"
+        },
+        "./Reflect": {
+            "import": "./dist/esm/Reflect.js",
+            "require": "./dist/Reflect.js"
+        },
+        "./capitalize": {
+            "import": "./dist/esm/capitalize.js",
+            "require": "./dist/capitalize.js"
+        },
+        "./noUndefined": {
+            "import": "./dist/esm/noUndefined.js",
+            "require": "./dist/noUndefined.js"
+        },
+        "./Extends": {
+            "import": "./dist/esm/Extends.js",
+            "require": "./dist/Extends.js"
+        },
+        "./Parameters": {
+            "import": "./dist/esm/Parameters.js",
+            "require": "./dist/Parameters.js"
+        },
+        "./ReturnType": {
+            "import": "./dist/esm/ReturnType.js",
+            "require": "./dist/ReturnType.js"
+        },
+        "./exclude": {
+            "import": "./dist/esm/exclude.js",
+            "require": "./dist/exclude.js"
+        },
+        "./is": {
+            "import": "./dist/esm/is.js",
+            "require": "./dist/is.js"
+        },
+        "./objectEntries": {
+            "import": "./dist/esm/objectEntries.js",
+            "require": "./dist/objectEntries.js"
+        },
+        "./symToStr": {
+            "import": "./dist/esm/symToStr.js",
+            "require": "./dist/symToStr.js"
+        },
+        "./uncapitalize": {
+            "import": "./dist/esm/uncapitalize.js",
+            "require": "./dist/uncapitalize.js"
+        },
+        "./MethodNames": {
+            "import": "./dist/esm/MethodNames.js",
+            "require": "./dist/MethodNames.js"
+        },
+        "./PickOptionals": {
+            "import": "./dist/esm/PickOptionals.js",
+            "require": "./dist/PickOptionals.js"
+        },
+        "./UnpackPromise": {
+            "import": "./dist/esm/UnpackPromise.js",
+            "require": "./dist/UnpackPromise.js"
+        },
+        "./flip": {
+            "import": "./dist/esm/flip.js",
+            "require": "./dist/flip.js"
+        },
+        "./isPromiseLike": {
+            "import": "./dist/esm/isPromiseLike.js",
+            "require": "./dist/isPromiseLike.js"
+        },
+        "./objectFromEntries": {
+            "import": "./dist/esm/objectFromEntries.js",
+            "require": "./dist/objectFromEntries.js"
+        },
+        "./Not": {
+            "import": "./dist/esm/Not.js",
+            "require": "./dist/Not.js"
+        },
+        "./PickRequired": {
+            "import": "./dist/esm/PickRequired.js",
+            "require": "./dist/PickRequired.js"
+        },
+        "./assert": {
+            "import": "./dist/esm/assert.js",
+            "require": "./dist/assert.js"
+        },
+        "./id": {
+            "import": "./dist/esm/id.js",
+            "require": "./dist/id.js"
+        },
+        "./objectKeys": {
+            "import": "./dist/esm/objectKeys.js",
+            "require": "./dist/objectKeys.js"
+        }
+    },
     "scripts": {
+        "build": "tsc && tsc -p tsconfig.esm.json && denoify",
         "test": "yarn test:node && yarn test:deno",
         "test:deno": "deno run --reload --unstable --no-check deno_dist/test/mod.ts",
         "test:node": "node dist/test/",
-        "build": "tsc && denoify",
         "lint:check": "eslint . --ext .ts,.tsx",
         "lint": "npm run lint:check -- --fix",
         "_format": "prettier '**/*.{ts,tsx,json,md}'",
@@ -39,7 +142,9 @@
         "!src/test/",
         "dist/",
         "!dist/test/",
-        "!dist/tsconfig.tsbuildinfo"
+        "!dist/tsconfig.tsbuildinfo",
+        "!dist/esm/test/",
+        "!dist/esm/tsconfig.tsbuildinfo"
     ],
     "keywords": [],
     "homepage": "https://github.com/garronej/tsafe",
