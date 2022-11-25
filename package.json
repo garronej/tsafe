@@ -10,105 +10,110 @@
     "types": "dist/index.d.ts",
     "module": "dist/esm/index.js",
     "exports": {
-        ".": {
-            "import": "./dist/esm/index.js",
-            "require": "./dist/index.js"
+        ".": "./dist/esm/index.js",
+        "./uncapitalize": {
+            "import": "./dist/uncapitalize.js",
+            "require": "./dist/esm/uncapitalize.js"
         },
-        "./Equals": {
-            "import": "./dist/esm/Equals.js",
-            "require": "./dist/Equals.js"
-        },
-        "./Param0": {
-            "import": "./dist/esm/Param0.js",
-            "require": "./dist/Param0.js"
-        },
-        "./Reflect": {
-            "import": "./dist/esm/Reflect.js",
-            "require": "./dist/Reflect.js"
-        },
-        "./capitalize": {
-            "import": "./dist/esm/capitalize.js",
-            "require": "./dist/capitalize.js"
-        },
-        "./noUndefined": {
-            "import": "./dist/esm/noUndefined.js",
-            "require": "./dist/noUndefined.js"
-        },
-        "./Extends": {
-            "import": "./dist/esm/Extends.js",
-            "require": "./dist/Extends.js"
-        },
-        "./Parameters": {
-            "import": "./dist/esm/Parameters.js",
-            "require": "./dist/Parameters.js"
-        },
-        "./ReturnType": {
-            "import": "./dist/esm/ReturnType.js",
-            "require": "./dist/ReturnType.js"
-        },
-        "./exclude": {
-            "import": "./dist/esm/exclude.js",
-            "require": "./dist/exclude.js"
-        },
-        "./is": {
-            "import": "./dist/esm/is.js",
-            "require": "./dist/is.js"
-        },
-        "./objectEntries": {
-            "import": "./dist/esm/objectEntries.js",
-            "require": "./dist/objectEntries.js"
+        "./typeGuard": {
+            "import": "./dist/typeGuard.js",
+            "require": "./dist/esm/typeGuard.js"
         },
         "./symToStr": {
-            "import": "./dist/esm/symToStr.js",
-            "require": "./dist/symToStr.js"
-        },
-        "./uncapitalize": {
-            "import": "./dist/esm/uncapitalize.js",
-            "require": "./dist/uncapitalize.js"
-        },
-        "./MethodNames": {
-            "import": "./dist/esm/MethodNames.js",
-            "require": "./dist/MethodNames.js"
-        },
-        "./PickOptionals": {
-            "import": "./dist/esm/PickOptionals.js",
-            "require": "./dist/PickOptionals.js"
-        },
-        "./UnpackPromise": {
-            "import": "./dist/esm/UnpackPromise.js",
-            "require": "./dist/UnpackPromise.js"
-        },
-        "./flip": {
-            "import": "./dist/esm/flip.js",
-            "require": "./dist/flip.js"
-        },
-        "./isPromiseLike": {
-            "import": "./dist/esm/isPromiseLike.js",
-            "require": "./dist/isPromiseLike.js"
-        },
-        "./objectFromEntries": {
-            "import": "./dist/esm/objectFromEntries.js",
-            "require": "./dist/objectFromEntries.js"
-        },
-        "./Not": {
-            "import": "./dist/esm/Not.js",
-            "require": "./dist/Not.js"
-        },
-        "./PickRequired": {
-            "import": "./dist/esm/PickRequired.js",
-            "require": "./dist/PickRequired.js"
-        },
-        "./assert": {
-            "import": "./dist/esm/assert.js",
-            "require": "./dist/assert.js"
-        },
-        "./id": {
-            "import": "./dist/esm/id.js",
-            "require": "./dist/id.js"
+            "import": "./dist/symToStr.js",
+            "require": "./dist/esm/symToStr.js"
         },
         "./objectKeys": {
-            "import": "./dist/esm/objectKeys.js",
-            "require": "./dist/objectKeys.js"
+            "import": "./dist/objectKeys.js",
+            "require": "./dist/esm/objectKeys.js"
+        },
+        "./objectFromEntries": {
+            "import": "./dist/objectFromEntries.js",
+            "require": "./dist/esm/objectFromEntries.js"
+        },
+        "./objectEntries": {
+            "import": "./dist/objectEntries.js",
+            "require": "./dist/esm/objectEntries.js"
+        },
+        "./noUndefined": {
+            "import": "./dist/noUndefined.js",
+            "require": "./dist/esm/noUndefined.js"
+        },
+        "./isPromiseLike": {
+            "import": "./dist/isPromiseLike.js",
+            "require": "./dist/esm/isPromiseLike.js"
+        },
+        "./is": {
+            "import": "./dist/is.js",
+            "require": "./dist/esm/is.js"
+        },
+        "./index": {
+            "import": "./dist/index.js",
+            "require": "./dist/esm/index.js"
+        },
+        "./id": {
+            "import": "./dist/id.js",
+            "require": "./dist/esm/id.js"
+        },
+        "./flip": {
+            "import": "./dist/flip.js",
+            "require": "./dist/esm/flip.js"
+        },
+        "./exclude": {
+            "import": "./dist/exclude.js",
+            "require": "./dist/esm/exclude.js"
+        },
+        "./capitalize": {
+            "import": "./dist/capitalize.js",
+            "require": "./dist/esm/capitalize.js"
+        },
+        "./assert": {
+            "import": "./dist/assert.js",
+            "require": "./dist/esm/assert.js"
+        },
+        "./UnpackPromise": {
+            "import": "./dist/UnpackPromise.js",
+            "require": "./dist/esm/UnpackPromise.js"
+        },
+        "./ReturnType": {
+            "import": "./dist/ReturnType.js",
+            "require": "./dist/esm/ReturnType.js"
+        },
+        "./Reflect": {
+            "import": "./dist/Reflect.js",
+            "require": "./dist/esm/Reflect.js"
+        },
+        "./PickRequired": {
+            "import": "./dist/PickRequired.js",
+            "require": "./dist/esm/PickRequired.js"
+        },
+        "./PickOptionals": {
+            "import": "./dist/PickOptionals.js",
+            "require": "./dist/esm/PickOptionals.js"
+        },
+        "./Parameters": {
+            "import": "./dist/Parameters.js",
+            "require": "./dist/esm/Parameters.js"
+        },
+        "./Param0": {
+            "import": "./dist/Param0.js",
+            "require": "./dist/esm/Param0.js"
+        },
+        "./Not": {
+            "import": "./dist/Not.js",
+            "require": "./dist/esm/Not.js"
+        },
+        "./MethodNames": {
+            "import": "./dist/MethodNames.js",
+            "require": "./dist/esm/MethodNames.js"
+        },
+        "./Extends": {
+            "import": "./dist/Extends.js",
+            "require": "./dist/esm/Extends.js"
+        },
+        "./Equals": {
+            "import": "./dist/Equals.js",
+            "require": "./dist/esm/Equals.js"
         }
     },
     "scripts": {
@@ -120,7 +125,8 @@
         "lint": "npm run lint:check -- --fix",
         "_format": "prettier '**/*.{ts,tsx,json,md}'",
         "format": "npm run _format -- --write",
-        "format:check": "npm run _format -- --list-different"
+        "format:check": "npm run _format -- --list-different",
+        "list-exports": "ts-node src/scripts/list-exports.ts && prettier --write package.json"
     },
     "lint-staged": {
         "*.{ts,tsx}": [
@@ -132,7 +138,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged -v"
+            "pre-commit": "yarn list-exports && git add package.json && lint-staged -v"
         }
     },
     "author": "u/garronej",
