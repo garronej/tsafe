@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import { join as pathJoin } from "path";
 import { getProjectRoot } from "../tools/getProjectRoot";
-import { exclude } from "tsafe/exclude";
+import { exclude } from "../exclude";
 import { execSync } from "child_process";
 import { same } from "evt/tools/inDepth/same";
 
