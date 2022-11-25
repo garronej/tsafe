@@ -10,110 +10,113 @@
     "types": "dist/index.d.ts",
     "module": "dist/esm/index.js",
     "exports": {
-        ".": "./dist/esm/index.js",
+        ".": {
+            "require": "./dist/esm/index.js",
+            "import": "./esm/dist/esm/index.js"
+        },
         "./uncapitalize": {
-            "import": "./dist/uncapitalize.js",
-            "require": "./dist/esm/uncapitalize.js"
+            "require": "./dist/uncapitalize.js",
+            "import": "./dist/esm/uncapitalize.js"
         },
         "./typeGuard": {
-            "import": "./dist/typeGuard.js",
-            "require": "./dist/esm/typeGuard.js"
+            "require": "./dist/typeGuard.js",
+            "import": "./dist/esm/typeGuard.js"
         },
         "./symToStr": {
-            "import": "./dist/symToStr.js",
-            "require": "./dist/esm/symToStr.js"
+            "require": "./dist/symToStr.js",
+            "import": "./dist/esm/symToStr.js"
         },
         "./objectKeys": {
-            "import": "./dist/objectKeys.js",
-            "require": "./dist/esm/objectKeys.js"
+            "require": "./dist/objectKeys.js",
+            "import": "./dist/esm/objectKeys.js"
         },
         "./objectFromEntries": {
-            "import": "./dist/objectFromEntries.js",
-            "require": "./dist/esm/objectFromEntries.js"
+            "require": "./dist/objectFromEntries.js",
+            "import": "./dist/esm/objectFromEntries.js"
         },
         "./objectEntries": {
-            "import": "./dist/objectEntries.js",
-            "require": "./dist/esm/objectEntries.js"
+            "require": "./dist/objectEntries.js",
+            "import": "./dist/esm/objectEntries.js"
         },
         "./noUndefined": {
-            "import": "./dist/noUndefined.js",
-            "require": "./dist/esm/noUndefined.js"
+            "require": "./dist/noUndefined.js",
+            "import": "./dist/esm/noUndefined.js"
         },
         "./isPromiseLike": {
-            "import": "./dist/isPromiseLike.js",
-            "require": "./dist/esm/isPromiseLike.js"
+            "require": "./dist/isPromiseLike.js",
+            "import": "./dist/esm/isPromiseLike.js"
         },
         "./is": {
-            "import": "./dist/is.js",
-            "require": "./dist/esm/is.js"
+            "require": "./dist/is.js",
+            "import": "./dist/esm/is.js"
         },
         "./index": {
-            "import": "./dist/index.js",
-            "require": "./dist/esm/index.js"
+            "require": "./dist/index.js",
+            "import": "./dist/esm/index.js"
         },
         "./id": {
-            "import": "./dist/id.js",
-            "require": "./dist/esm/id.js"
+            "require": "./dist/id.js",
+            "import": "./dist/esm/id.js"
         },
         "./flip": {
-            "import": "./dist/flip.js",
-            "require": "./dist/esm/flip.js"
+            "require": "./dist/flip.js",
+            "import": "./dist/esm/flip.js"
         },
         "./exclude": {
-            "import": "./dist/exclude.js",
-            "require": "./dist/esm/exclude.js"
+            "require": "./dist/exclude.js",
+            "import": "./dist/esm/exclude.js"
         },
         "./capitalize": {
-            "import": "./dist/capitalize.js",
-            "require": "./dist/esm/capitalize.js"
+            "require": "./dist/capitalize.js",
+            "import": "./dist/esm/capitalize.js"
         },
         "./assert": {
-            "import": "./dist/assert.js",
-            "require": "./dist/esm/assert.js"
+            "require": "./dist/assert.js",
+            "import": "./dist/esm/assert.js"
         },
         "./UnpackPromise": {
-            "import": "./dist/UnpackPromise.js",
-            "require": "./dist/esm/UnpackPromise.js"
+            "require": "./dist/UnpackPromise.js",
+            "import": "./dist/esm/UnpackPromise.js"
         },
         "./ReturnType": {
-            "import": "./dist/ReturnType.js",
-            "require": "./dist/esm/ReturnType.js"
+            "require": "./dist/ReturnType.js",
+            "import": "./dist/esm/ReturnType.js"
         },
         "./Reflect": {
-            "import": "./dist/Reflect.js",
-            "require": "./dist/esm/Reflect.js"
+            "require": "./dist/Reflect.js",
+            "import": "./dist/esm/Reflect.js"
         },
         "./PickRequired": {
-            "import": "./dist/PickRequired.js",
-            "require": "./dist/esm/PickRequired.js"
+            "require": "./dist/PickRequired.js",
+            "import": "./dist/esm/PickRequired.js"
         },
         "./PickOptionals": {
-            "import": "./dist/PickOptionals.js",
-            "require": "./dist/esm/PickOptionals.js"
+            "require": "./dist/PickOptionals.js",
+            "import": "./dist/esm/PickOptionals.js"
         },
         "./Parameters": {
-            "import": "./dist/Parameters.js",
-            "require": "./dist/esm/Parameters.js"
+            "require": "./dist/Parameters.js",
+            "import": "./dist/esm/Parameters.js"
         },
         "./Param0": {
-            "import": "./dist/Param0.js",
-            "require": "./dist/esm/Param0.js"
+            "require": "./dist/Param0.js",
+            "import": "./dist/esm/Param0.js"
         },
         "./Not": {
-            "import": "./dist/Not.js",
-            "require": "./dist/esm/Not.js"
+            "require": "./dist/Not.js",
+            "import": "./dist/esm/Not.js"
         },
         "./MethodNames": {
-            "import": "./dist/MethodNames.js",
-            "require": "./dist/esm/MethodNames.js"
+            "require": "./dist/MethodNames.js",
+            "import": "./dist/esm/MethodNames.js"
         },
         "./Extends": {
-            "import": "./dist/Extends.js",
-            "require": "./dist/esm/Extends.js"
+            "require": "./dist/Extends.js",
+            "import": "./dist/esm/Extends.js"
         },
         "./Equals": {
-            "import": "./dist/Equals.js",
-            "require": "./dist/esm/Equals.js"
+            "require": "./dist/Equals.js",
+            "import": "./dist/esm/Equals.js"
         }
     },
     "scripts": {

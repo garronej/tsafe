@@ -12,7 +12,10 @@ const packageJsonParsed = JSON.parse(fs.readFileSync(packageJsonFilePath).toStri
 const srcDirPath = pathJoin(getProjectRoot(), "src");
 
 const newExports = {
-    ".": `./${packageJsonParsed["module"]}`,
+    ".": {
+        "require": `./${packageJsonParsed["module"]}`,
+        "import": `./esm/${packageJsonParsed["module"]}`,
+    },
     ...Object.fromEntries(
         fs
             .readdirSync(srcDirPath)
@@ -41,7 +44,7 @@ const newExports = {
             .reverse()
             .map(name => [
                 `./${name}`,
-                { "import": `./dist/${name}.js`, "require": `./dist/esm/${name}.js` },
+                { "require": `./dist/${name}.js`, "import": `./dist/esm/${name}.js` },
             ]),
     ),
 };
