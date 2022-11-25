@@ -50,10 +50,6 @@
             "require": "./dist/is.js",
             "import": "./dist/esm/is.js"
         },
-        "./index": {
-            "require": "./dist/index.js",
-            "import": "./dist/esm/index.js"
-        },
         "./id": {
             "require": "./dist/id.js",
             "import": "./dist/esm/id.js"

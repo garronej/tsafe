@@ -40,6 +40,7 @@ const newExports = {
                 return match[1];
             })
             .filter(exclude(undefined))
+            .filter(exclude("index"))
             .sort()
             .reverse()
             .map(name => [
