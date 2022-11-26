@@ -15,8 +15,7 @@
         "lint": "npm run lint:check -- --fix",
         "_format": "prettier '**/*.{ts,tsx,json,md}'",
         "format": "npm run _format -- --write",
-        "format:check": "npm run _format -- --list-different",
-        "list-exports": "ts-node -T src/scripts/list-exports.ts && prettier --write package.json"
+        "format:check": "npm run _format -- --list-different"
     },
     "lint-staged": {
         "*.{ts,tsx}": [
@@ -28,7 +27,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn list-exports && git add package.json && lint-staged -v"
+            "pre-commit": "ts-node -T src/scripts/list-exports.ts && git add package.json && lint-staged -v"
         }
     },
     "author": "u/garronej",
