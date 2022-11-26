@@ -16,7 +16,7 @@
         "_format": "prettier '**/*.{ts,tsx,json,md}'",
         "format": "npm run _format -- --write",
         "format:check": "npm run _format -- --list-different",
-        "list-exports": "ts-node src/scripts/list-exports.ts && prettier --write package.json"
+        "list-exports": "ts-node -T src/scripts/list-exports.ts && prettier --write package.json"
     },
     "lint-staged": {
         "*.{ts,tsx}": [
