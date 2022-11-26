@@ -13,8 +13,8 @@ const srcDirPath = pathJoin(getProjectRoot(), "src");
 
 const newExports = {
     ".": {
-        "require": `./${packageJsonParsed["module"]}`,
-        "import": `./esm/${packageJsonParsed["module"]}`,
+        "require": `./${packageJsonParsed["main"]}`,
+        "import": `./${packageJsonParsed["module"]}`,
     },
     ...Object.fromEntries(
         fs

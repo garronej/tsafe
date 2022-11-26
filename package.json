@@ -61,8 +61,8 @@
     "module": "dist/esm/index.js",
     "exports": {
         ".": {
-            "require": "./dist/esm/index.js",
-            "import": "./esm/dist/esm/index.js"
+            "require": "./dist/index.js",
+            "import": "./dist/esm/index.js"
         },
         "./uncapitalize": {
             "require": "./dist/uncapitalize.js",
