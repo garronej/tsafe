@@ -6,17 +6,6 @@
         "type": "git",
         "url": "git://github.com/garronej/tsafe.git"
     },
-    "scripts": {
-        "build": "tsc && tsc -p tsconfig.esm.json && denoify",
-        "test": "yarn test:node && yarn test:deno",
-        "test:deno": "deno run --reload --unstable --no-check deno_dist/test/mod.ts",
-        "test:node": "node dist/test/",
-        "lint:check": "eslint . --ext .ts,.tsx",
-        "lint": "npm run lint:check -- --fix",
-        "_format": "prettier '**/*.{ts,tsx,json,md}'",
-        "format": "npm run _format -- --write",
-        "format:check": "npm run _format -- --list-different"
-    },
     "lint-staged": {
         "*.{ts,tsx}": [
             "eslint --fix"
@@ -33,13 +22,267 @@
     "author": "u/garronej",
     "license": "MIT",
     "files": [
-        "src/",
-        "!src/test/",
-        "dist/",
-        "!dist/test/",
-        "!dist/tsconfig.tsbuildinfo",
-        "!dist/esm/test/",
-        "!dist/esm/tsconfig.tsbuildinfo"
+        "src/Equals.ts",
+        "src/Extends.ts",
+        "src/MethodNames.ts",
+        "src/Not.ts",
+        "src/Param0.ts",
+        "src/Parameters.ts",
+        "src/PickOptionals.ts",
+        "src/PickRequired.ts",
+        "src/Reflect.ts",
+        "src/ReturnType.ts",
+        "src/UnpackPromise.ts",
+        "src/assert.ts",
+        "src/capitalize.ts",
+        "src/exclude.ts",
+        "src/flip.ts",
+        "src/id.ts",
+        "src/index.ts",
+        "src/is.ts",
+        "src/isPromiseLike.ts",
+        "src/lab/PromiseOrNot.ts",
+        "src/lab/UnpackTypeGuard.ts",
+        "src/lab/defineAccessors.ts",
+        "src/lab/overwriteReadonlyProp.ts",
+        "src/lab/withDefaults.ts",
+        "src/noUndefined.ts",
+        "src/objectEntries.ts",
+        "src/objectFromEntries.ts",
+        "src/objectKeys.ts",
+        "src/scripts/list-exports.ts",
+        "src/symToStr.ts",
+        "src/tools/Object.fromEntries.ts",
+        "src/tools/StrictEquals.ts",
+        "src/tools/Unite.ts",
+        "src/tools/getProjectRoot.ts",
+        "src/tools/toUpperCase.ts",
+        "src/typeGuard.ts",
+        "src/uncapitalize.ts",
+        "src/zz_internal/assertIsRefWrapper.ts",
+        "Equals.d.ts",
+        "Equals.js",
+        "Equals.js.map",
+        "Extends.d.ts",
+        "Extends.js",
+        "Extends.js.map",
+        "MethodNames.d.ts",
+        "MethodNames.js",
+        "MethodNames.js.map",
+        "Not.d.ts",
+        "Not.js",
+        "Not.js.map",
+        "Param0.d.ts",
+        "Param0.js",
+        "Param0.js.map",
+        "Parameters.d.ts",
+        "Parameters.js",
+        "Parameters.js.map",
+        "PickOptionals.d.ts",
+        "PickOptionals.js",
+        "PickOptionals.js.map",
+        "PickRequired.d.ts",
+        "PickRequired.js",
+        "PickRequired.js.map",
+        "Reflect.d.ts",
+        "Reflect.js",
+        "Reflect.js.map",
+        "ReturnType.d.ts",
+        "ReturnType.js",
+        "ReturnType.js.map",
+        "UnpackPromise.d.ts",
+        "UnpackPromise.js",
+        "UnpackPromise.js.map",
+        "assert.d.ts",
+        "assert.js",
+        "assert.js.map",
+        "capitalize.d.ts",
+        "capitalize.js",
+        "capitalize.js.map",
+        "esm/Equals.d.ts",
+        "esm/Equals.js",
+        "esm/Equals.js.map",
+        "esm/Extends.d.ts",
+        "esm/Extends.js",
+        "esm/Extends.js.map",
+        "esm/MethodNames.d.ts",
+        "esm/MethodNames.js",
+        "esm/MethodNames.js.map",
+        "esm/Not.d.ts",
+        "esm/Not.js",
+        "esm/Not.js.map",
+        "esm/Param0.d.ts",
+        "esm/Param0.js",
+        "esm/Param0.js.map",
+        "esm/Parameters.d.ts",
+        "esm/Parameters.js",
+        "esm/Parameters.js.map",
+        "esm/PickOptionals.d.ts",
+        "esm/PickOptionals.js",
+        "esm/PickOptionals.js.map",
+        "esm/PickRequired.d.ts",
+        "esm/PickRequired.js",
+        "esm/PickRequired.js.map",
+        "esm/Reflect.d.ts",
+        "esm/Reflect.js",
+        "esm/Reflect.js.map",
+        "esm/ReturnType.d.ts",
+        "esm/ReturnType.js",
+        "esm/ReturnType.js.map",
+        "esm/UnpackPromise.d.ts",
+        "esm/UnpackPromise.js",
+        "esm/UnpackPromise.js.map",
+        "esm/assert.d.ts",
+        "esm/assert.js",
+        "esm/assert.js.map",
+        "esm/capitalize.d.ts",
+        "esm/capitalize.js",
+        "esm/capitalize.js.map",
+        "esm/exclude.d.ts",
+        "esm/exclude.js",
+        "esm/exclude.js.map",
+        "esm/flip.d.ts",
+        "esm/flip.js",
+        "esm/flip.js.map",
+        "esm/id.d.ts",
+        "esm/id.js",
+        "esm/id.js.map",
+        "esm/index.d.ts",
+        "esm/index.js",
+        "esm/index.js.map",
+        "esm/is.d.ts",
+        "esm/is.js",
+        "esm/is.js.map",
+        "esm/isPromiseLike.d.ts",
+        "esm/isPromiseLike.js",
+        "esm/isPromiseLike.js.map",
+        "esm/lab/PromiseOrNot.d.ts",
+        "esm/lab/PromiseOrNot.js",
+        "esm/lab/PromiseOrNot.js.map",
+        "esm/lab/UnpackTypeGuard.d.ts",
+        "esm/lab/UnpackTypeGuard.js",
+        "esm/lab/UnpackTypeGuard.js.map",
+        "esm/lab/defineAccessors.d.ts",
+        "esm/lab/defineAccessors.js",
+        "esm/lab/defineAccessors.js.map",
+        "esm/lab/overwriteReadonlyProp.d.ts",
+        "esm/lab/overwriteReadonlyProp.js",
+        "esm/lab/overwriteReadonlyProp.js.map",
+        "esm/lab/withDefaults.d.ts",
+        "esm/lab/withDefaults.js",
+        "esm/lab/withDefaults.js.map",
+        "esm/noUndefined.d.ts",
+        "esm/noUndefined.js",
+        "esm/noUndefined.js.map",
+        "esm/objectEntries.d.ts",
+        "esm/objectEntries.js",
+        "esm/objectEntries.js.map",
+        "esm/objectFromEntries.d.ts",
+        "esm/objectFromEntries.js",
+        "esm/objectFromEntries.js.map",
+        "esm/objectKeys.d.ts",
+        "esm/objectKeys.js",
+        "esm/objectKeys.js.map",
+        "esm/symToStr.d.ts",
+        "esm/symToStr.js",
+        "esm/symToStr.js.map",
+        "esm/tools/Object.fromEntries.d.ts",
+        "esm/tools/Object.fromEntries.js",
+        "esm/tools/Object.fromEntries.js.map",
+        "esm/tools/StrictEquals.d.ts",
+        "esm/tools/StrictEquals.js",
+        "esm/tools/StrictEquals.js.map",
+        "esm/tools/Unite.d.ts",
+        "esm/tools/Unite.js",
+        "esm/tools/Unite.js.map",
+        "esm/tools/getProjectRoot.d.ts",
+        "esm/tools/getProjectRoot.js",
+        "esm/tools/getProjectRoot.js.map",
+        "esm/tools/toUpperCase.d.ts",
+        "esm/tools/toUpperCase.js",
+        "esm/tools/toUpperCase.js.map",
+        "esm/tsconfig.esm.tsbuildinfo",
+        "esm/typeGuard.d.ts",
+        "esm/typeGuard.js",
+        "esm/typeGuard.js.map",
+        "esm/uncapitalize.d.ts",
+        "esm/uncapitalize.js",
+        "esm/uncapitalize.js.map",
+        "esm/zz_internal/assertIsRefWrapper.d.ts",
+        "esm/zz_internal/assertIsRefWrapper.js",
+        "esm/zz_internal/assertIsRefWrapper.js.map",
+        "exclude.d.ts",
+        "exclude.js",
+        "exclude.js.map",
+        "flip.d.ts",
+        "flip.js",
+        "flip.js.map",
+        "id.d.ts",
+        "id.js",
+        "id.js.map",
+        "index.d.ts",
+        "index.js",
+        "index.js.map",
+        "is.d.ts",
+        "is.js",
+        "is.js.map",
+        "isPromiseLike.d.ts",
+        "isPromiseLike.js",
+        "isPromiseLike.js.map",
+        "lab/PromiseOrNot.d.ts",
+        "lab/PromiseOrNot.js",
+        "lab/PromiseOrNot.js.map",
+        "lab/UnpackTypeGuard.d.ts",
+        "lab/UnpackTypeGuard.js",
+        "lab/UnpackTypeGuard.js.map",
+        "lab/defineAccessors.d.ts",
+        "lab/defineAccessors.js",
+        "lab/defineAccessors.js.map",
+        "lab/overwriteReadonlyProp.d.ts",
+        "lab/overwriteReadonlyProp.js",
+        "lab/overwriteReadonlyProp.js.map",
+        "lab/withDefaults.d.ts",
+        "lab/withDefaults.js",
+        "lab/withDefaults.js.map",
+        "noUndefined.d.ts",
+        "noUndefined.js",
+        "noUndefined.js.map",
+        "objectEntries.d.ts",
+        "objectEntries.js",
+        "objectEntries.js.map",
+        "objectFromEntries.d.ts",
+        "objectFromEntries.js",
+        "objectFromEntries.js.map",
+        "objectKeys.d.ts",
+        "objectKeys.js",
+        "objectKeys.js.map",
+        "symToStr.d.ts",
+        "symToStr.js",
+        "symToStr.js.map",
+        "tools/Object.fromEntries.d.ts",
+        "tools/Object.fromEntries.js",
+        "tools/Object.fromEntries.js.map",
+        "tools/StrictEquals.d.ts",
+        "tools/StrictEquals.js",
+        "tools/StrictEquals.js.map",
+        "tools/Unite.d.ts",
+        "tools/Unite.js",
+        "tools/Unite.js.map",
+        "tools/getProjectRoot.d.ts",
+        "tools/getProjectRoot.js",
+        "tools/getProjectRoot.js.map",
+        "tools/toUpperCase.d.ts",
+        "tools/toUpperCase.js",
+        "tools/toUpperCase.js.map",
+        "typeGuard.d.ts",
+        "typeGuard.js",
+        "typeGuard.js.map",
+        "uncapitalize.d.ts",
+        "uncapitalize.js",
+        "uncapitalize.js.map",
+        "zz_internal/assertIsRefWrapper.d.ts",
+        "zz_internal/assertIsRefWrapper.js",
+        "zz_internal/assertIsRefWrapper.js.map"
     ],
     "keywords": [],
     "homepage": "https://github.com/garronej/tsafe",
@@ -56,133 +299,133 @@
         "typescript": "^4.2.3",
         "denoify": "^0.15.0"
     },
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "module": "dist/esm/index.js",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "module": "esm/index.js",
     "exports": {
         ".": {
-            "require": "./dist/index.js",
-            "import": "./dist/esm/index.js"
+            "require": "./index.js",
+            "import": "./esm/index.js"
         },
         "./uncapitalize": {
-            "require": "./dist/uncapitalize.js",
-            "import": "./dist/esm/uncapitalize.js"
+            "require": "./uncapitalize.js",
+            "import": "./esm/uncapitalize.js"
         },
         "./typeGuard": {
-            "require": "./dist/typeGuard.js",
-            "import": "./dist/esm/typeGuard.js"
+            "require": "./typeGuard.js",
+            "import": "./esm/typeGuard.js"
         },
         "./symToStr": {
-            "require": "./dist/symToStr.js",
-            "import": "./dist/esm/symToStr.js"
+            "require": "./symToStr.js",
+            "import": "./esm/symToStr.js"
         },
         "./objectKeys": {
-            "require": "./dist/objectKeys.js",
-            "import": "./dist/esm/objectKeys.js"
+            "require": "./objectKeys.js",
+            "import": "./esm/objectKeys.js"
         },
         "./objectFromEntries": {
-            "require": "./dist/objectFromEntries.js",
-            "import": "./dist/esm/objectFromEntries.js"
+            "require": "./objectFromEntries.js",
+            "import": "./esm/objectFromEntries.js"
         },
         "./objectEntries": {
-            "require": "./dist/objectEntries.js",
-            "import": "./dist/esm/objectEntries.js"
+            "require": "./objectEntries.js",
+            "import": "./esm/objectEntries.js"
         },
         "./noUndefined": {
-            "require": "./dist/noUndefined.js",
-            "import": "./dist/esm/noUndefined.js"
+            "require": "./noUndefined.js",
+            "import": "./esm/noUndefined.js"
         },
         "./isPromiseLike": {
-            "require": "./dist/isPromiseLike.js",
-            "import": "./dist/esm/isPromiseLike.js"
+            "require": "./isPromiseLike.js",
+            "import": "./esm/isPromiseLike.js"
         },
         "./is": {
-            "require": "./dist/is.js",
-            "import": "./dist/esm/is.js"
+            "require": "./is.js",
+            "import": "./esm/is.js"
         },
         "./id": {
-            "require": "./dist/id.js",
-            "import": "./dist/esm/id.js"
+            "require": "./id.js",
+            "import": "./esm/id.js"
         },
         "./flip": {
-            "require": "./dist/flip.js",
-            "import": "./dist/esm/flip.js"
+            "require": "./flip.js",
+            "import": "./esm/flip.js"
         },
         "./exclude": {
-            "require": "./dist/exclude.js",
-            "import": "./dist/esm/exclude.js"
+            "require": "./exclude.js",
+            "import": "./esm/exclude.js"
         },
         "./capitalize": {
-            "require": "./dist/capitalize.js",
-            "import": "./dist/esm/capitalize.js"
+            "require": "./capitalize.js",
+            "import": "./esm/capitalize.js"
         },
         "./assert": {
-            "require": "./dist/assert.js",
-            "import": "./dist/esm/assert.js"
+            "require": "./assert.js",
+            "import": "./esm/assert.js"
         },
         "./UnpackPromise": {
-            "require": "./dist/UnpackPromise.js",
-            "import": "./dist/esm/UnpackPromise.js"
+            "require": "./UnpackPromise.js",
+            "import": "./esm/UnpackPromise.js"
         },
         "./ReturnType": {
-            "require": "./dist/ReturnType.js",
-            "import": "./dist/esm/ReturnType.js"
+            "require": "./ReturnType.js",
+            "import": "./esm/ReturnType.js"
         },
         "./Reflect": {
-            "require": "./dist/Reflect.js",
-            "import": "./dist/esm/Reflect.js"
+            "require": "./Reflect.js",
+            "import": "./esm/Reflect.js"
         },
         "./PickRequired": {
-            "require": "./dist/PickRequired.js",
-            "import": "./dist/esm/PickRequired.js"
+            "require": "./PickRequired.js",
+            "import": "./esm/PickRequired.js"
         },
         "./PickOptionals": {
-            "require": "./dist/PickOptionals.js",
-            "import": "./dist/esm/PickOptionals.js"
+            "require": "./PickOptionals.js",
+            "import": "./esm/PickOptionals.js"
         },
         "./Parameters": {
-            "require": "./dist/Parameters.js",
-            "import": "./dist/esm/Parameters.js"
+            "require": "./Parameters.js",
+            "import": "./esm/Parameters.js"
         },
         "./Param0": {
-            "require": "./dist/Param0.js",
-            "import": "./dist/esm/Param0.js"
+            "require": "./Param0.js",
+            "import": "./esm/Param0.js"
         },
         "./Not": {
-            "require": "./dist/Not.js",
-            "import": "./dist/esm/Not.js"
+            "require": "./Not.js",
+            "import": "./esm/Not.js"
         },
         "./MethodNames": {
-            "require": "./dist/MethodNames.js",
-            "import": "./dist/esm/MethodNames.js"
+            "require": "./MethodNames.js",
+            "import": "./esm/MethodNames.js"
         },
         "./Extends": {
-            "require": "./dist/Extends.js",
-            "import": "./dist/esm/Extends.js"
+            "require": "./Extends.js",
+            "import": "./esm/Extends.js"
         },
         "./Equals": {
-            "require": "./dist/Equals.js",
-            "import": "./dist/esm/Equals.js"
+            "require": "./Equals.js",
+            "import": "./esm/Equals.js"
         },
         "./lab/withDefaults": {
-            "require": "./dist/lab/withDefaults.js",
-            "import": "./dist/esm/lab/withDefaults.js"
+            "require": "./lab/withDefaults.js",
+            "import": "./esm/lab/withDefaults.js"
         },
         "./lab/overwriteReadonlyProp": {
-            "require": "./dist/lab/overwriteReadonlyProp.js",
-            "import": "./dist/esm/lab/overwriteReadonlyProp.js"
+            "require": "./lab/overwriteReadonlyProp.js",
+            "import": "./esm/lab/overwriteReadonlyProp.js"
         },
         "./lab/defineAccessors": {
-            "require": "./dist/lab/defineAccessors.js",
-            "import": "./dist/esm/lab/defineAccessors.js"
+            "require": "./lab/defineAccessors.js",
+            "import": "./esm/lab/defineAccessors.js"
         },
         "./lab/UnpackTypeGuard": {
-            "require": "./dist/lab/UnpackTypeGuard.js",
-            "import": "./dist/esm/lab/UnpackTypeGuard.js"
+            "require": "./lab/UnpackTypeGuard.js",
+            "import": "./esm/lab/UnpackTypeGuard.js"
         },
         "./lab/PromiseOrNot": {
-            "require": "./dist/lab/PromiseOrNot.js",
-            "import": "./dist/esm/lab/PromiseOrNot.js"
+            "require": "./lab/PromiseOrNot.js",
+            "import": "./esm/lab/PromiseOrNot.js"
         }
     }
 }
