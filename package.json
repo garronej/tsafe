@@ -163,6 +163,26 @@
         "./Equals": {
             "require": "./dist/Equals.js",
             "import": "./dist/esm/Equals.js"
+        },
+        "./lab/withDefaults": {
+            "require": "./dist/lab/withDefaults.js",
+            "import": "./dist/esm/lab/withDefaults.js"
+        },
+        "./lab/overwriteReadonlyProp": {
+            "require": "./dist/lab/overwriteReadonlyProp.js",
+            "import": "./dist/esm/lab/overwriteReadonlyProp.js"
+        },
+        "./lab/defineAccessors": {
+            "require": "./dist/lab/defineAccessors.js",
+            "import": "./dist/esm/lab/defineAccessors.js"
+        },
+        "./lab/UnpackTypeGuard": {
+            "require": "./dist/lab/UnpackTypeGuard.js",
+            "import": "./dist/esm/lab/UnpackTypeGuard.js"
+        },
+        "./lab/PromiseOrNot": {
+            "require": "./dist/lab/PromiseOrNot.js",
+            "import": "./dist/esm/lab/PromiseOrNot.js"
         }
     }
 }
