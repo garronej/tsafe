@@ -72,14 +72,6 @@
 <p align="center">
     <br>
     <br>
-    <i>Enjoy Zod without having to give up on declaring your types explicitly:<i> 
-    <br>
-    <img width="550" src="https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe_zod.gif">
-</p>
-
-<p align="center">
-    <br>
-    <br>
     <i>Make TypeScript believe whatever you say without having to write <code>const obj2 = obj as Bar</code>.<i> 
     <br>
     <i>The more powerfully is to be able to tell TypeScript that <code>obj</code> ist <strong>not</strong> of type <code>Bar</code>:</i>
