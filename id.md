@@ -44,7 +44,7 @@ type Cat = typeof defaultCat;
 
 But this is less type safe because we do not validate that the value that we gives to gender is actually assignable to "male" | "female".
 
-This error for example slip through:
+This error for example slips through:
 
 !["MALE" is all caps, which should be a typing error](<.gitbook/assets/image (1).png>)
 
