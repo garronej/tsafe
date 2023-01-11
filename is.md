@@ -8,9 +8,9 @@ is is meant to be used in conjunction with assert and enable you to tell the com
 
 ```typescript
 import { assert } from "tsafe/assert";
-import { id } from "tsafe/is";
+import { is } from "tsafe/is";
 
-type Foo = { radius: number };
+type Circle = { radius: number };
 type Square = { sideLength: number };
 type Shape = Circle | Square;
 

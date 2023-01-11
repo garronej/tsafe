@@ -6,34 +6,34 @@ description: Runtime implementation of the Capitalize helper type.
 
 ### `capitalize()`
 
-<pre class="language-typescript"><code class="lang-typescript"><strong>import { assert, Equals } from "tsafe";
-</strong><strong>import { capitalize } from "tsafe/capitalize";
-</strong>
-const str= "foo";
+```typescript
+import { assert, Equals } from "tsafe";
+import { capitalize } from "tsafe/capitalize";
+
+const str = "foo";
 
 const capitalizedStr = capitalize(str);
 
-assert&#x3C;Equals&#x3C;typeof capitalizedStr, "Foo">>();
+assert<Equals<typeof capitalizedStr, "Foo">>();
 assert(capitalizedStr === "Foo");
 
 //NOTE: There is a 'Capitalize' builtin type in TypeScript such that:
-assert&#x3C;Equals&#x3C;
-    Capitalize&#x3C;"foo">, "Foo"
->>();</code></pre>
+assert<Equals<Capitalize<"foo">, "Foo">>();
+```
 
 ### `uncapitalize()`
 
-<pre class="language-typescript"><code class="lang-typescript"><strong>import { assert, Equals } from "tsafe";
-</strong><strong>import { uncapitalize } from "tsafe/uncapitalize";
-</strong>
-const capitalizedStr= "Foo";
+```typescript
+import { assert, Equals } from "tsafe";
+import { uncapitalize } from "tsafe/uncapitalize";
 
-const str = uncapitalize(str);
+const capitalizedStr = "Foo";
 
-assert&#x3C;Equals&#x3C;typeof str, "foo">>();
+const str = uncapitalize(capitalizedStr);
+
+assert<Equals<typeof str, "foo">>();
 assert(str === "foo");
 
 //NOTE: There is a 'Uncapitalize' builtin type in TypeScript such that:
-assert&#x3C;Equals&#x3C;
-    Uncapitalize&#x3C;"Foo">, "foo"
->>();</code></pre>
+assert<Equals<Uncapitalize<"Foo">, "foo">>();
+```

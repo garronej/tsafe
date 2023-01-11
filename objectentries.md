@@ -7,6 +7,8 @@ description: Like Object.entries() but with a better return type.
 Functionally equal to `Object.entries` but features a return type more precise than just `[string, T][].`
 
 ```typescript
+import { assert, Equals } from "tsafe";
+import { objectEntries } from "tsafe/objectEntries";
 //    v entries is of type ["a", string], ["b", number], ["c", boolean]
 const entries = objectEntries({
 	a: "foo",
@@ -15,7 +17,7 @@ const entries = objectEntries({
 });
 
 assert<
-	Equals<typeof entries, ["a", string] | ["b", number] | ["c", boolean]>
+	Equals<typeof entries, (["a", string] | ["b", number] | ["c", boolean])[]>
 >();
 ```
 

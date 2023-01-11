@@ -5,6 +5,8 @@ With this function we can check if its argument is like a `Promise`. In other wo
 ## Quick example
 
 ```typescript
+import { isPromiseLike } from "tsafe/isPromiseLike";
+
 const simulateNetworkDelay = new Promise<void>(resolve =>
 	setTimeout(resolve, 1000)
 );
@@ -19,6 +21,8 @@ const result = isPromiseLike(simulateNetworkDelay);
 If we have an object that has a method named `then`:
 
 ```typescript
+import { isPromiseLike } from "tsafe/isPromiseLike";
+
 const objPromiseLike = {
 	then: () => null,
 	x: 3,

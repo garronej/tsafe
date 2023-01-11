@@ -57,12 +57,12 @@ import { AssertionError } from "tsafe/assert";
 A specific error message can be passed as second argument to the assert function.
 
 ```typescript
-import { assert AssertionError } from "tsafe/assert";
+import { assert, AssertionError } from "tsafe/assert";
 
-try{
-    assert(false, "foo bar baz");
-}catch(error){
-    console.log(error instanceof AssertionError); // true
-    console.log(error.message); // foo bar baz
+try {
+	assert(false, "foo bar baz");
+} catch (error) {
+	console.log(error instanceof AssertionError); // true
+	console.log(error.message); // foo bar baz
 }
 ```

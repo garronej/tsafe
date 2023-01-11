@@ -13,6 +13,8 @@ export function typeGuard<T>(value: any, isMatched: boolean): value is T {
 ## Use case 1: Tell the compiler what assertion can be made on a given variable if a given test returns true.
 
 ```typescript
+import { typeGuard } from "tsafe/typeGuard";
+
 type Circle = { type: "CIRCLE"; radius: number };
 type Square = { type: "SQUARE"; sideLength: number };
 type Shape = Circle | Square;
@@ -31,6 +33,9 @@ if (typeGuard<Circle>(shape, shape.type.startsWith("C"))) {
 ## Use case 2: Helper for safely build other type guards
 
 ```typescript
+import { typeGuard } from "tsafe/typeGuard";
+type SetLike<T> = { values: () => {} };
+
 export function matchSetLike<T>(set: any): set is SetLike<T> {
 	return (
 		set instanceof Object &&

@@ -9,6 +9,8 @@ description: >-
 ## Example:
 
 ```typescript
+import type { MethodNames } from "tsafe";
+
 type T = {
 	x: number;
 	y: number;
@@ -24,6 +26,8 @@ type TMethodNames = MethodNames<T>;
 The result will be the same if one or more of the methods are optional.
 
 ```typescript
+import type { MethodNames } from "tsafe";
+
 type T = {
 	x: number;
 	y: number;

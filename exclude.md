@@ -9,6 +9,8 @@ description: >-
 ## Practical example
 
 ```typescript
+import { exclude } from "tsafe/exclude";
+
 type Circle = {
 	type: "circle";
 	radius: number;
@@ -25,7 +27,7 @@ declare const shapes: Shape[];
 
 //Assumes we want to do something for every Circle
 
-arr
+shapes
 	.map(shape => (shape.type === "circle" ? shape : null))
 	.filter(exclude(null))
 	.forEach(circle => {

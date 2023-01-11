@@ -53,7 +53,7 @@ This error for example slip through:
 Let's say you have this function:
 
 ```typescript
-function getArea(shape: Shape): number;
+declare function getArea(shape: Shape): number;
 ```
 
 And let's say a shape object is defined as follows:

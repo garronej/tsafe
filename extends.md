@@ -23,6 +23,8 @@ By having the following unit tests, we would ensure that the `Fn` type does not 
 import { assert } from "tsafe/assert";
 import { Extends, Not } from "tsafe";
 
+type Fn<A extends any[] = any[], R = any> = (...args: A) => R;
+
 function fn() {}
 
 class A {}

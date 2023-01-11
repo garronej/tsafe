@@ -17,7 +17,7 @@ function sum(params: { x: number; y: number; z: number }): number {
 }
 
 // sumWd is of type: (params: { y: number; z: number; })=> number
-const sumWd = withDefault(sum, { x: 10 });
+const sumWd = withDefaults(sum, { x: 10 });
 
 console.log(sumWd({ y: 1, z: 2 })); // Prints "13" ( 10 + 1 + 2 )
 

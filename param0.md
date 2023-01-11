@@ -15,21 +15,21 @@ function MyComponent(props: Props) {
 To extract `Props` you can use:
 
 ```typescript
-import type { Param0 } from "tsafe";
+import type { Param0 } from "tsafe";
 
-const props: Param0<typeof MyComponent>= ...;
+type props = Param0<typeof MyComponent>;
 ```
 
 It's kind of the same of doing:
 
 ```typescript
-const props: Parameters<typeof MyComponent>[0]= ...;
+type props = Parameters<typeof MyComponent>[0];
 ```
 
 but
 
 ```typescript
-declare fun(): number;
+declare function fun(): number;
 
 type FunParams = Param0<typeof fun>;
 //   ^void (instead of never)
@@ -38,7 +38,7 @@ type FunParams = Param0<typeof fun>;
 and
 
 ```typescript
-declare fun(params?: { foo: string; }): void;
+declare function fun(params?: { foo: string }): void;
 
 type FunParams = Param0<typeof fun>;
 //   ^ { foo: string; } ( instead of { foo: string; } | undefined )
