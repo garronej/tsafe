@@ -15,7 +15,7 @@ function MyComponent(props: Props) {
 To extract `Props` you can use:
 
 ```typescript
-import type { Param0 } from "tsafe";
+import type { Param0 } from "tsafe";
 
 const props: Param0<typeof MyComponent>= ...;
 ```

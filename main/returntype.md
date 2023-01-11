@@ -24,7 +24,7 @@ const shape: ReturnType<typeof getShape>= ...
 With `tsafe`'s ReturnType
 
 ```typescript
-import type { ReturnType } from "tsafe";
+import type { ReturnType } from "tsafe";
 
 const shape: ReturnType<typeof getShape>= ...
 //    ^ shape is of type Shape 😊

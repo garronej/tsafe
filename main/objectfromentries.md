@@ -14,7 +14,7 @@ const entries = [
 ] as const;
 
 const obj = objectFromEntries(entries);
-//    ^ obj is of type { a: "foo"; b: 33; c: boolean; }
+//    ^ obj is of type { a: "foo"; b: 33; c: boolean; }
 
 assert<
 	Equals<
