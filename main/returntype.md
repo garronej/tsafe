@@ -4,7 +4,7 @@ description: Like the builtin helper but more convenient to use.
 
 # ReturnType
 
-There is two major pain point with  [the default ReturnType](https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype):
+There is two major pain point with [the default ReturnType](https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype):
 
 ### Used with async function
 
@@ -36,7 +36,7 @@ Let's say we have an interface defined as such:
 
 ```typescript
 export type Api = {
-    getShape?: ()=> Shape;
+	getShape?: () => Shape;
 };
 ```
 
@@ -53,4 +53,3 @@ import type { ReturnType } from "tsafe";
 
 const shape: ReturnType<Api["getShape"]> = ...
 ```
-

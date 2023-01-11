@@ -7,4 +7,3 @@ import { Parameters } from "tsafe";
 
 const args: Parameters<typeof myFunction>= ...
 ```
-

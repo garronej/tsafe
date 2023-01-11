@@ -21,11 +21,11 @@ By having the following unit tests, we would ensure that the `Fn` type does not 
 
 ```typescript
 import { assert } from "tsafe/assert";
-import { Extends, Not } from "tsafe";
+import { Extends, Not } from "tsafe";
 
-function fn() { }
+function fn() {}
 
-class A { }
+class A {}
 
 assert<Extends<() => any, Fn>>();
 assert<Extends<() => void, Fn>>();
@@ -38,6 +38,5 @@ assert<Not<Extends<number, Fn>>>();
 assert<Not<Extends<string, Fn>>>();
 assert<Not<Extends<any[], Fn>>>();
 assert<Not<Extends<object, Fn>>>();
-assert<Not<Extends<A, Fn>>>(); 
+assert<Not<Extends<A, Fn>>>();
 ```
-

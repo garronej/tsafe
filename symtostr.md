@@ -5,12 +5,12 @@ description: Get the name of a symbol as typed string.
 # symToStr
 
 ```typescript
-import { symToStr } from "tsafe/symToStr";
+import { symToStr } from "tsafe/symToStr";
 
 declare const foo: any;
 
 //str is of type "foo" and str === "foo"
-const str= symToStr({ foo });
+const str = symToStr({ foo });
 ```
 
 #### Without `symToStr`
