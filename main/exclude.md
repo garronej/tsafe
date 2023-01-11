@@ -31,7 +31,7 @@ arr
 	.forEach(circle => {
 		//Here circle is of type Circle
 		//if we had used .filter(shape=> shape.type === "circle")
-		//it would be functionnaly the same but circle would be of type
+		//it would be functionally the same but circle would be of type
 		//Shape
 	});
 ```

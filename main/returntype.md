@@ -40,7 +40,7 @@ export type Api = {
 };
 ```
 
-And we want to extract the type `Shape`, using the defalt `ReturnType` we have to do:
+And we want to extract the type `Shape`, using the default `ReturnType` we have to do:
 
 ```typescript
 const shape: ReturnType<NonNullable<Api["getShape"]>> = ...

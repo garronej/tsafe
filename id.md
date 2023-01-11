@@ -31,7 +31,7 @@ If we don't use `id`, `Cat["gender"]` is of type `string`
 
 ![Cat["gender"] is string](<.gitbook/assets/image (3).png>)
 
-We could ave used `"male" as "male" | "female"`
+We could have used `"male" as "male" | "female"`
 
 ```typescript
 const defaultCat = {
@@ -42,7 +42,7 @@ const defaultCat = {
 type Cat = typeof defaultCat;
 ```
 
-But this is less type safe because we do not validate that the value that we gives to gender is acutally assignable to "male" | "female".
+But this is less type safe because we do not validate that the value that we gives to gender is actually assignable to "male" | "female".
 
 This error for example slip through:
 
@@ -81,7 +81,7 @@ The problem, however, is that this `Circle` was not as easy to instantiate becau
 
 ![Every possible properties are listed](<.gitbook/assets/image (2).png>)
 
-id let you declare that the shape you are instantiating is a `Circle`
+id lets you declare that the shape you are instantiating is a `Circle`
 
 ```typescript
 import { id } from "tsafe/id";

@@ -42,7 +42,7 @@ const defaultCat = {
 type Cat = typeof defaultCat;
 ```
 
-But this is less type safe because we do not validate that the value that we gives to gender is acutally assignable to "male" | "female".
+But this is less type safe because we do not validate that the value that we gives to gender is actually assignable to "male" | "female".
 
 This error for example slip through:
 

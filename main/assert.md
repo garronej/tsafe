@@ -34,7 +34,7 @@ import { assert } from "tsafe/assert";
 type A = "foo" | "bar";
 type B = "foo" | "bar" | "baz";
 
-//You will get red squigly lines if A do not extends B
+//You will get red squiggly lines if A does not extend B
 assert<A extends B ? true : false>();
 ```
 

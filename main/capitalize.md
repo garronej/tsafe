@@ -11,14 +11,14 @@ description: Runtime implementation of the Capitalize helper type.
 </strong>
 const str= "foo";
 
-const captializedStr = capitalize(str);
+const capitalizedStr = capitalize(str);
 
-assert&#x3C;Equals&#x3C;typeof captializedStr, "Foo">>();
-assert(captializedStr === "Foo");
+assert&#x3C;Equals&#x3C;typeof capitalizedStr, "Foo">>();
+assert(capitalizedStr === "Foo");
 
 //NOTE: There is a 'Capitalize' builtin type in TypeScript such that:
 assert&#x3C;Equals&#x3C;
-    Capizalize&#x3C;"foo">, "Foo"
+    Capitalize&#x3C;"foo">, "Foo"
 >>();</code></pre>
 
 ### `uncapitalize()`
@@ -26,7 +26,7 @@ assert&#x3C;Equals&#x3C;
 <pre class="language-typescript"><code class="lang-typescript"><strong>import { assert, Equals } from "tsafe";
 </strong><strong>import { uncapitalize } from "tsafe/uncapitalize";
 </strong>
-const captializedStr= "Foo";
+const capitalizedStr= "Foo";
 
 const str = uncapitalize(str);
 

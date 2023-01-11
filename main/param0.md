@@ -4,7 +4,7 @@ description: Get a function's first parameter
 
 # Param0
 
-Parameter of a function are often passed wraped into an object, React props is a notable example:
+Parameter of a function are often passed wrapped into an object, React props is a notable example:
 
 ```typescript
 function MyComponent(props: Props) {

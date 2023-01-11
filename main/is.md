@@ -1,8 +1,8 @@
 # is
 
-is is meant to be used in conjonction with assert and enable you to tell the compiler:
+is is meant to be used in conjunction with assert and enable you to tell the compiler:
 
-"_Trust me this `valule` is of type `T`"_ or "_Trust me this `value` is not of type `T`_"
+"_Trust me this `value` is of type `T`"_ or "_Trust me this `value` is not of type `T`_"
 
 ![](https://user-images.githubusercontent.com/6702424/118082020-c2e5dd80-b3bc-11eb-9ea9-71fa8206f704.gif)
 
@@ -38,7 +38,7 @@ shape.radius;
 
 You aren't even allowed to do something like `assert(is<Circle>(shape) && shape.radius > 100 )`
 
-For any other usecase consider[`typeGuard`](typeguard.md) instead.
+For any other Use case consider[`typeGuard`](typeguard.md) instead.
 {% endhint %}
 
 {% hint style="warning" %}

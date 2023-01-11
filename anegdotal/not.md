@@ -11,6 +11,6 @@ type A = Not<true>; // A is of type false
 type B = Not<false>; // B is of type true
 ```
 
-Essentially though to use with:
+Usually for use with:
 
 {% page-ref page="../main/equals.md" %}
