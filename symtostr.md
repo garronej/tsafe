@@ -5,18 +5,18 @@ description: Get the name of a symbol as typed string.
 # symToStr
 
 ```typescript
-import { symToStr } from "tsafe/symToStr";
+import { symToStr } from "tsafe/symToStr";
 
 declare const foo: any;
 
 //str is of type "foo" and str === "foo"
-const str= symToStr({ foo });
+const str = symToStr({ foo });
 ```
 
 #### Without `symToStr`
 
 ```typescript
-export const myFunctionX = ()=> { ... };
+export const myFunctionX = () => {};
 
 export const name = "myFunctionX";
 ```
@@ -26,7 +26,9 @@ If you happen to rename \`myFunctionX\` into something else it is easy to forget
 #### With `symToStr`
 
 ```typescript
-export const myFunctionX = ()=> {...};
+import { symToStr } from "tsafe/symToStr";
+
+export const myFunctionX = () => {};
 
 export const name = symToStr({ myFunctionX });
 //           ^name is of type "myFunctionX"

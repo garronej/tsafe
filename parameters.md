@@ -1,10 +1,12 @@
 # Parameters
 
-Same as [the builtin-type](https://www.typescriptlang.org/docs/handbook/utility-types.html#parameterstype) but works also with nullable function type. Analogus to [`ReturnType`](returntype.md#used-with-function-that-can-be-undefined).
+Same as [the builtin-type](https://www.typescriptlang.org/docs/handbook/utility-types.html#parameterstype) but works also with nullable function type. Analogous to [`ReturnType`](returntype.md#used-with-function-that-can-be-undefined).
 
 ```typescript
-import { Parameters } from "tsafe";
+import type { Parameters } from "tsafe/Parameters";
 
-const args: Parameters<typeof myFunction>= ...
+declare const myFunction: (a: string) => void | null;
+
+type args = Parameters<typeof myFunction>;
+// ^ args is [a: string]
 ```
-

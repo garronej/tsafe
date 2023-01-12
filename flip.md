@@ -8,7 +8,7 @@ description: Flip the value of a boolean without having to reference it twice.
 
 ```typescript
 const obj = {
-    "is_": false
+	is_: false,
 };
 
 flip(obj, "is_");
@@ -22,11 +22,11 @@ When you have an object that contains another object that contains a boolean, an
 
 ```typescript
 const obj = {
-    "innerObj": {
-        "is_": false,
-        "x": 44,
-        "y": 33
-    }
+	innerObj: {
+		is_: false,
+		x: 44,
+		y: 33,
+	},
 };
 
 obj.innerObj.is_ = !obj.innerObj.is_;

@@ -13,10 +13,10 @@ x.toLowerCase(); //<= Here TypeScript knows that x is a string
 The classic assert function, it takes a value as input, if the value is falsy it throws or else it does nothing. Functionally it can be summed up to this:
 
 ```typescript
-function assert(condition){
-    if(!condition){
-        throw new Error();
-    }
+function assert(condition) {
+	if (!condition) {
+		throw new Error();
+	}
 }
 ```
 
@@ -29,12 +29,12 @@ Assert can also be used to confirm assertion on types.
 You can for example test if a type extends another by doing:
 
 ```typescript
-import { assert } from "tsafe/assert";
+import { assert } from "tsafe/assert";
 
 type A = "foo" | "bar";
 type B = "foo" | "bar" | "baz";
 
-//You will get red squigly lines if A do not extends B
+//You will get red squiggly lines if A does not extend B
 assert<A extends B ? true : false>();
 ```
 
@@ -57,7 +57,7 @@ import { AssertionError } from "tsafe/assert";
 A specific error message can be passed as second argument to the assert function.
 
 ```typescript
-import { assert AssertionError } from "tsafe/assert"; 
+import { assert AssertionError } from "tsafe/assert";
 
 try{
     assert(false, "foo bar baz");
@@ -66,4 +66,3 @@ try{
     console.log(error.message); // foo bar baz
 }
 ```
-

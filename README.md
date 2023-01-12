@@ -17,4 +17,3 @@ This module provides _«the missing builtins»_ such as [the assert function](as
 {% hint style="info" %}
 `tsafe` is both an [NPM](https://www.npmjs.com/package/tsafe) and a [Deno](https://deno.land/x/tsafe) module. _(Achieved with_ [_denoify_](https://denoify.land)_)_
 {% endhint %}
-

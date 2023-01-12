@@ -8,20 +8,22 @@ Functionally identical to `Object.fromEntries()` but instead of returning but it
 
 ```typescript
 const entries = [
-    ["a", "foo"],
-    ["b", 33],
-    ["c", true as boolean],
+	["a", "foo"],
+	["b", 33],
+	["c", true as boolean],
 ] as const;
 
 const obj = objectFromEntries(entries);
-//    ^ obj is of type { a: "foo"; b: 33; c: boolean; }
+//    ^ obj is of type { a: "foo"; b: 33; c: boolean; }
 
-assert<Equals<
-    typeof obj,
-    {
-        a: "foo";
-        b: 33;
-        c: boolean;
-    }
->>();
+assert<
+	Equals<
+		typeof obj,
+		{
+			a: "foo";
+			b: 33;
+			c: boolean;
+		}
+	>
+>();
 ```
