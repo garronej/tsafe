@@ -7,7 +7,7 @@
         "url": "git://github.com/garronej/tsafe.git"
     },
     "scripts": {
-        "build": "rm -rf dist && tsc && tsc-esm -p tsconfig.esm.json && mv dist/esm/index.js dist/esm/index.mjs && denoify",
+        "build": "tsc && rm -rf dist/esm && tsc -p tsconfig.esm.json && js2mjs dist/esm && denoify",
         "test": "yarn test:node && yarn test:deno",
         "test:deno": "deno run --reload --unstable --no-check deno_dist/test/mod.ts",
         "test:node": "node dist/test/",
@@ -44,8 +44,7 @@
     "keywords": [],
     "homepage": "https://github.com/garronej/tsafe",
     "devDependencies": {
-        "@digitak/tsc-esm": "^3.1.4",
-        "@types/node": "^10.0.0",
+        "@types/node": "^18.11.18",
         "@typescript-eslint/eslint-plugin": "^4.15.1",
         "@typescript-eslint/parser": "^4.15.1",
         "denoify": "^0.15.0",
@@ -53,17 +52,18 @@
         "eslint-config-prettier": "^7.2.0",
         "evt": "^2.3.0",
         "husky": "^4.3.0",
+        "js2mjs": "^0.2.0",
         "lint-staged": "^10.5.4",
         "prettier": "^2.2.1",
         "typescript": "5.0.0-dev.20230109"
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "module": "dist/esm/index.js",
+    "module": "dist/esm/index.mjs",
     "exports": {
         ".": {
             "require": "./dist/index.js",
-            "import": "./dist/esm/index.js"
+            "import": "./dist/esm/index.mjs"
         },
         "./uncapitalize": {
             "require": "./dist/uncapitalize.js",
