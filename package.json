@@ -7,7 +7,7 @@
         "url": "git://github.com/garronej/tsafe.git"
     },
     "scripts": {
-        "build": "rm -rf dist && tsc && tsc-esm -p tsconfig.esm.json && mv dist/esm/index.{js,mjs} && denoify",
+        "build": "rm -rf dist && tsc && tsc-esm -p tsconfig.esm.json && mv dist/esm/index.js dist/esm/index.mjs && denoify",
         "test": "yarn test:node && yarn test:deno",
         "test:deno": "deno run --reload --unstable --no-check deno_dist/test/mod.ts",
         "test:node": "node dist/test/",
