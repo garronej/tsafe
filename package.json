@@ -7,7 +7,7 @@
         "url": "git://github.com/garronej/tsafe.git"
     },
     "scripts": {
-        "build": "tsc && tsc -p tsconfig.esm.json && denoify",
+        "build": "tsc && tsc-esm -p tsconfig.esm.json && mv dist/esm/index.{js,mjs} && denoify",
         "test": "yarn test:node && yarn test:deno",
         "test:deno": "deno run --reload --unstable --no-check deno_dist/test/mod.ts",
         "test:node": "node dist/test/",
@@ -44,17 +44,18 @@
     "keywords": [],
     "homepage": "https://github.com/garronej/tsafe",
     "devDependencies": {
+        "@digitak/tsc-esm": "^3.1.4",
         "@types/node": "^10.0.0",
         "@typescript-eslint/eslint-plugin": "^4.15.1",
         "@typescript-eslint/parser": "^4.15.1",
+        "denoify": "^0.15.0",
         "eslint": "^7.20.0",
         "eslint-config-prettier": "^7.2.0",
         "evt": "^2.3.0",
         "husky": "^4.3.0",
         "lint-staged": "^10.5.4",
         "prettier": "^2.2.1",
-        "typescript": "^4.2.3",
-        "denoify": "^0.15.0"
+        "typescript": "5.0.0-dev.20230109"
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
