@@ -1057,10 +1057,10 @@ js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-js2mjs@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/js2mjs/-/js2mjs-0.2.0.tgz#021e1a68bbbc92a5dfafab7daa1ddfc1b2a047cc"
-  integrity sha512-6G+Wy+DuXKYZSFPBG5Yi4xPRhoJV9Y7aNJ8HGPioHuyWD3HwgN6GPY6HkKQXs+3EmiZgBW0bO+zWxeXMrHWQfg==
+js2mjs@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/js2mjs/-/js2mjs-0.3.0.tgz#4db5f4e31dae63ee661f689e853308b138bbc58e"
+  integrity sha512-jiejhgZW09Y7m4IMQbsosFWHwPLeskSS5Ybd1lrf3RskjkHd6XaLtNFO+oy6G+tzHc6mmxHXcQLKbfgRrTRgrA==
   dependencies:
     commander "^4.1.1"
     tsafe "^1.4.1"
