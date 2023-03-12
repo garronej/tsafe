@@ -72,12 +72,20 @@
 <p align="center">
     <br>
     <br>
-    <i>Make TypeScript believe whatever you say without having to write <code>const obj2 = obj as Bar</code>.<i> 
+    <i>Make TypeScript believe whatever you say without having to write <code>const obj2 = obj as Bar</code>.</i> 
     <br>
     <i>The more powerfully is to be able to tell TypeScript that <code>obj</code> ist <strong>not</strong> of type <code>Bar</code>:</i>
     <br>
     <br>
     <img width="550" src="https://user-images.githubusercontent.com/6702424/134994590-f01b8aee-a94a-4b4c-8f43-ee5ce8911443.gif">
+</p>
+        
+<p align="center">
+    <br>
+    <br>
+    <i>Make sure your zod schema exactly matches a given type:</i> 
+    <br>
+    <img width="550" src="https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe_zod.gif">
 </p>
 
 ## Motivations
