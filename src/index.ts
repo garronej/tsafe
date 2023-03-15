@@ -15,6 +15,7 @@ export * from "./is";
 export type { Equals } from "./Equals";
 export type { Extends } from "./Extends";
 export type { Not } from "./Not";
+export type { UnionToIntersection } from "./UnionToIntersection";
 export * from "./objectEntries";
 export * from "./objectFromEntries";
 export * from "./noUndefined";
