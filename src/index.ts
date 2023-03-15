@@ -8,6 +8,7 @@ export * from "./objectKeys";
 export type { Parameters } from "./Parameters";
 export type { Param0 } from "./Param0";
 export type { PickOptionals } from "./PickOptionals";
+export type { PickRequired } from "./PickRequired";
 export type { ReturnType } from "./ReturnType";
 export * from "./typeGuard";
 export type { UnpackPromise } from "./UnpackPromise";
