@@ -12,8 +12,6 @@ import { id } from "../id";
 
     const obj = objectFromEntries(entries);
 
-    Object.entries;
-
     assert<
         Equals<
             typeof obj,
