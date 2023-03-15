@@ -2,6 +2,7 @@
 
 * [👋 What is tsafe?](README.md)
 * [⚙ How to import](import.md)
+* [UnionToIntersection](uniontointersection.md)
 * [assert](assert.md)
 * [id](id.md)
 * [is](is.md)
