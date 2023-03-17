@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { overwriteReadonlyProp } from "./lab/overwriteReadonlyProp";
 import { assertIsRefWrapper } from "./zz_internal/assertIsRefWrapper";
+export type { Equals } from "./Equals";
 
 /** @see <https://docs.tsafe.dev/assert#error-thrown> */
 export class AssertionError extends Error {
