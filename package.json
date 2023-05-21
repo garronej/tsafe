@@ -32,6 +32,14 @@
     },
     "author": "u/garronej",
     "license": "MIT",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": "./dist/index.js",
+        "./*": "./dist/*.js",
+        "./lab": "./dist/lab/index.js",
+        "./tools": "./dist/tools/index.js"
+    },
     "files": [
         "src/",
         "dist/",
@@ -53,7 +61,5 @@
         "prettier": "^2.2.1",
         "typescript": "^5.0.4",
         "ts-node": "^10.9.1"
-    },
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts"
+    }
 }
