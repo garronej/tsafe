@@ -1,7 +1,7 @@
-import type { Equals } from "../Equals";
-import { assert } from "../assert";
-import type { Unite } from "../tools/Unite";
-import type { StrictEquals } from "../tools/StrictEquals";
+import type { Equals } from "../src/Equals";
+import { assert } from "../src/assert";
+import type { Unite } from "../src/tools/Unite";
+import type { StrictEquals } from "../src/tools/StrictEquals";
 
 type Shape = Circle | Square;
 

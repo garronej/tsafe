@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { UnpackPromise } from "../UnpackPromise";
-import { assert } from "../assert";
-import type { Equals } from "../Equals";
+import type { UnpackPromise } from "../src/UnpackPromise";
+import { assert } from "../src/assert";
+import type { Equals } from "../src/Equals";
 
 //@ts-ignore
 function test<T>() {

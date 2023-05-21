@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { PickRequired } from "../PickRequired";
-import { assert } from "../assert";
-import type { Equals } from "../Equals";
+import type { PickOptionals } from "../src/PickOptionals";
+import { assert } from "../src/assert";
+import type { Equals } from "../src/Equals";
 
 {
     type A = {
@@ -13,11 +13,10 @@ import type { Equals } from "../Equals";
     };
 
     type Expected = {
-        a: number;
-        method1(param: string): number;
+        b: number;
+        method2(params: { a: string; b: number }): typeof params;
     };
-
-    type Got = PickRequired<A>;
+    type Got = PickOptionals<A>;
 
     assert<Equals<Got, Expected>>();
 }
@@ -29,10 +28,9 @@ import type { Equals } from "../Equals";
     };
 
     type Expected = {
-        a: number | undefined;
+        b: string;
     };
-
-    type Got = PickRequired<A>;
+    type Got = PickOptionals<A>;
 
     assert<Equals<Got, Expected>>();
 }
@@ -46,8 +44,8 @@ import type { Equals } from "../Equals";
     }
 
     //@ts-expect-error
-    type Got = PickRequired<A>;
+    type Got = PickOptionals<A>;
 }
 
 //@ts-expect-error
-type X = PickRequired<number>;
+type X = PickOptionals<number>;

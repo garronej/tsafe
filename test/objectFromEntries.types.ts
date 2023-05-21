@@ -1,7 +1,7 @@
 import type { Equals, ObjectFromEntries } from "..";
-import { objectFromEntries } from "../objectFromEntries";
-import { assert } from "../assert";
-import { id } from "../id";
+import { objectFromEntries } from "../src/objectFromEntries";
+import { assert } from "../src/assert";
+import { id } from "../src/id";
 
 {
     const entries = [

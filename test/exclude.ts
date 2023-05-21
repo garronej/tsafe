@@ -1,5 +1,5 @@
-import { exclude } from "../exclude";
-import { assert } from "../assert";
+import { exclude } from "../src/exclude";
+import { assert } from "../src/assert";
 import { same } from "evt/tools/inDepth/same";
 
 {

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { MethodNames } from "../MethodNames";
-import { assert } from "../assert";
-import type { Equals } from "../Equals";
+import type { MethodNames } from "../src/MethodNames";
+import { assert } from "../src/assert";
+import type { Equals } from "../src/Equals";
 
 {
     type A = {

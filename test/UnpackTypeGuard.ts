@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { UnpackTypeGuard } from "../lab/UnpackTypeGuard";
-import { assert } from "../assert";
-import type { Equals } from "../Equals";
+import type { UnpackTypeGuard } from "../src/lab/UnpackTypeGuard";
+import { assert } from "../src/assert";
+import type { Equals } from "../src/Equals";
 
 {
     const isFoo = (_o: any): _o is "foo" => {

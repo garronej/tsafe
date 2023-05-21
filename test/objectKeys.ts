@@ -1,5 +1,5 @@
-import { objectKeys } from "../objectKeys";
-import { assert } from "../assert";
+import { objectKeys } from "../src/objectKeys";
+import { assert } from "../src/assert";
 import { same } from "evt/tools/inDepth/same";
 
 {

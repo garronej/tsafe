@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { Parameters } from "../Parameters";
-import { assert } from "../assert";
-import type { Equals } from "../Equals";
+import type { Parameters } from "../src/Parameters";
+import { assert } from "../src/assert";
+import type { Equals } from "../src/Equals";
 
 {
     const myFunction = (arg1: unknown, arg2: string, extraParams: { a: number; b: number }) => {

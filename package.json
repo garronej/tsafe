@@ -9,8 +9,8 @@
     "scripts": {
         "build": "tsc && denoify",
         "test": "yarn test:node && yarn test:deno",
-        "test:deno": "deno run --reload --unstable --no-check deno_dist/test/mod.ts",
-        "test:node": "node dist/test/",
+        "test:deno": "deno run --reload --unstable --no-check deno_dist/mod.ts",
+        "test:node": "ts-node test/index.ts",
         "lint:check": "eslint . --ext .ts,.tsx",
         "lint": "npm run lint:check -- --fix",
         "_format": "prettier '**/*.{ts,tsx,json,md}'",
@@ -34,12 +34,8 @@
     "license": "MIT",
     "files": [
         "src/",
-        "!src/test/",
         "dist/",
-        "!dist/test/",
-        "!dist/tsconfig.tsbuildinfo",
-        "!dist/esm/test/",
-        "!dist/esm/tsconfig.tsbuildinfo"
+        "!dist/tsconfig.tsbuildinfo"
     ],
     "keywords": [],
     "homepage": "https://github.com/garronej/tsafe",
@@ -55,7 +51,8 @@
         "improved-garbanzo-easy": "^0.0.1",
         "lint-staged": "^10.5.4",
         "prettier": "^2.2.1",
-        "typescript": "^5.0.4"
+        "typescript": "^5.0.4",
+        "ts-node": "^10.9.1"
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts"

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { Equals } from "../Equals";
-import type { Extends } from "../Extends";
-import { assert } from "../assert";
+import type { Equals } from "../src/Equals";
+import type { Extends } from "../src/Extends";
+import { assert } from "../src/assert";
 
 const emptyObj = {};
 

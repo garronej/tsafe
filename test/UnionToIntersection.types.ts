@@ -1,6 +1,6 @@
-import type { UnionToIntersection } from "../UnionToIntersection";
+import type { UnionToIntersection } from "../src/UnionToIntersection";
 import type { Equals } from "..";
-import { assert } from "../assert";
+import { assert } from "../src/assert";
 
 {
     type A = { foo: string };

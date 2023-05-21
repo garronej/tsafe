@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { flip } from "../flip";
-import { assert } from "../assert";
+import { flip } from "../src/flip";
+import { assert } from "../src/assert";
 
 {
     const obj = {

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { flip } from "../flip";
+import { flip } from "../src/flip";
 
 {
     const obj = {

@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { ReturnType } from "../ReturnType";
-import { assert } from "../assert";
-import type { Equals } from "../Equals";
+import type { ReturnType } from "../src/ReturnType";
+import { assert } from "../src/assert";
+import type { Equals } from "../src/Equals";
 
 {
     const getStringAsync: () => Promise<string> = null as any;

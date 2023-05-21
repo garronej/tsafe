@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { withDefaults } from "../lab/withDefaults";
+import { withDefaults } from "../src/lab/withDefaults";
 import { same } from "evt/tools/inDepth/same";
-import { assert } from "../assert";
+import { assert } from "../src/assert";
 
 {
     const f = (params: { foo: string; bar: number }): string => {

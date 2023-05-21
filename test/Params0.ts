@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import type { Param0 } from "../Param0";
-import { assert } from "../assert";
-import type { Equals } from "../Equals";
+import type { Param0 } from "../src/Param0";
+import { assert } from "../src/assert";
+import type { Equals } from "../src/Equals";
 
 //@ts-ignore
 function test<T, U>() {

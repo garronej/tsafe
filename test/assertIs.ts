@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { assert } from "../assert";
-import { is } from "../is";
-import type { Equals } from "../Equals";
+import { assert } from "../src/assert";
+import { is } from "../src/is";
+import type { Equals } from "../src/Equals";
 
 {
     const x: string | number | boolean = null as any;

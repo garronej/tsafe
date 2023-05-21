@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { objectKeys } from "../objectKeys";
-import { assert } from "../assert";
-import type { Equals } from "../Equals";
+import { objectKeys } from "../src/objectKeys";
+import { assert } from "../src/assert";
+import type { Equals } from "../src/Equals";
 
 {
     const obj = {

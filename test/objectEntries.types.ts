@@ -1,7 +1,7 @@
 import type { Equals, ObjectEntries } from "..";
-import { objectEntries } from "../objectEntries";
-import { assert } from "../assert";
-import { Reflect } from "../Reflect";
+import { objectEntries } from "../src/objectEntries";
+import { assert } from "../src/assert";
+import { Reflect } from "../src/Reflect";
 
 {
     const input = Reflect<{

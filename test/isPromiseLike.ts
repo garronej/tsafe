@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { isPromiseLike } from "../isPromiseLike";
-import { assert } from "../assert";
+import { isPromiseLike } from "../src/isPromiseLike";
+import { assert } from "../src/assert";
 
 {
     const x = new Promise<void>(resolve => setTimeout(() => resolve, 1000));

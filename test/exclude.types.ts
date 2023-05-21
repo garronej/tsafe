@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { exclude } from "../exclude";
-import { assert } from "../assert";
-import type { Equals } from "../Equals";
+import { exclude } from "../src/exclude";
+import { assert } from "../src/assert";
+import type { Equals } from "../src/Equals";
 
 {
     const x = (["a", "b", "c"] as const).filter(exclude(["a"]));
