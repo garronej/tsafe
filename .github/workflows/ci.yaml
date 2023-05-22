@@ -105,8 +105,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
     - run: |
-        npx -y -p denoify@1.4.8 enable_short_npm_import_path
-        npx -y -p denoify@1.4.8 remove_deno_dist_from_gitignore
+        npx -y -p denoify@1.5.2 enable_short_npm_import_path
+        npx -y -p denoify@1.5.2 remove_deno_dist_from_gitignore
       env:
         DRY_RUN: "0"
     - run: |
