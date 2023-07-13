@@ -27,3 +27,9 @@ If you are writing tests for your type, you definitely want to checkout [`//@ts-
 <figure><img src="https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe_switch.gif" alt=""><figcaption></figcaption></figure>
 
 [Playground](https://stackblitz.com/edit/typescript-ryj2ba?file=index.ts&view=editor)
+
+### Guaranteeing that a zod schema matches a given type
+
+<figure><img src="https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe_zod.gif" alt=""><figcaption></figcaption></figure>
+
+[Playground](https://github.com/garronej/tsafe/releases/download/v0.0.1/tsafe\_zod.gif)
