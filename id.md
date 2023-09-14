@@ -25,11 +25,11 @@ const defaultCat = {
 type Cat = typeof defaultCat;
 ```
 
-![Cat["gender"] is "male" | "female"](<.gitbook/assets/image (5).png>)
+![Cat\["gender"\] is "male" | "female"](<.gitbook/assets/image (4).png>)
 
 If we don't use `id`, `Cat["gender"]` is of type `string`
 
-![Cat["gender"] is string](<.gitbook/assets/image (3).png>)
+![Cat\["gender"\] is string](<.gitbook/assets/image (5).png>)
 
 We could have used `"male" as "male" | "female"`
 
@@ -46,7 +46,7 @@ But this is less type safe because we do not validate that the value that we giv
 
 This error for example slips through:
 
-!["MALE" is all caps, which should be a typing error](<.gitbook/assets/image (1).png>)
+!["MALE" is all caps, which should be a typing error](.gitbook/assets/image.png)
 
 ## Example 2: Instantiating an object of type T
 
@@ -79,7 +79,7 @@ getArea({ type: "circle", radius: 33 });
 
 The problem, however, is that this `Circle` was not as easy to instantiate because TypeScript doesn’t know what kind of shape we are trying to instantiate:
 
-![Every possible properties are listed](<.gitbook/assets/image (2).png>)
+![Every possible properties are listed](<.gitbook/assets/image (1).png>)
 
 id lets you declare that the shape you are instantiating is a `Circle`
 
@@ -89,4 +89,4 @@ import { id } from "tsafe/id";
 getArea(id<Circle>({ type: "circle", radius: 33 }));
 ```
 
-![TypeScript knows we are instantiating a Circle](.gitbook/assets/image.png)
+![TypeScript knows we are instantiating a Circle](<.gitbook/assets/image (3).png>)

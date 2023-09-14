@@ -55,7 +55,7 @@ const sumWd = withDefaults(sum, { x: 33 });
 
 `sumWd` is a proxy to our original function with `x` set to `33`. `withDefaults` first argument is the original function, and the second is an object with the parameters of the original function as properties. Naturally, the properties are inferred by typescript as shown below.
 
-![](<.gitbook/assets/Screenshot 2021-05-13 at 17.36.40.png>)
+![](<.gitbook/assets/Screenshot 2021-05-13 at 17.36.40 (1).png>)
 
 Now we can call `sumWd` as many times as we want without having to set `x`. Its value will always be `33`.
 
@@ -65,7 +65,7 @@ const result = sumWd({ y: 10 }); //43
 
 The value of `result` will be `43`. Typescript infers the remaining value to be set:
 
-![](<.gitbook/assets/Screenshot 2021-05-13 at 17.37.35.png>)
+![](<.gitbook/assets/Screenshot 2021-05-13 at 17.37.35 (1).png>)
 
 ### Overwriting the injected value:
 
@@ -76,4 +76,4 @@ const result = sumWd({
 }); // 33
 ```
 
-The type of `x` in `defaultsOverwrite` is `[number] | undefined` so that `undefined` cannot be assigned to `x` if that is not its type.&#x20;
+The type of `x` in `defaultsOverwrite` is `[number] | undefined` so that `undefined` cannot be assigned to `x` if that is not its type.
