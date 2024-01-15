@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-types */
 
+
 import { Reflect } from "tsafe/Reflect";
 import { assert } from "tsafe/assert";
 import type { Equals } from "tsafe";
@@ -14,17 +15,19 @@ type Entries<T> = {
 declare function objectEntries<T extends object>(object: T): Entries<T>;
 
 declare function objectFromEntries<K extends string | number | symbol, V>(
-    entries: ReadonlyArray<readonly [K, V]>,
+    entries: ReadonlyArray<readonly [K, V]>
 ): { [P in K]: V };
 // ...This test compiles successfully
 {
+
     const originalObject = Reflect<{
         a: string;
         b: string;
     }>();
 
     const modifiedObject = objectFromEntries(
-        objectEntries(originalObject).map(([key, value]) => [`${key}Foo`, value.length]),
+        objectEntries(originalObject)
+            .map(([key, value]) => [`${key}Foo`, value.length])
     );
 
     type ExpectedTypeOfModifiedObject = {
@@ -33,21 +36,24 @@ declare function objectFromEntries<K extends string | number | symbol, V>(
     };
 
     assert<Equals<typeof modifiedObject, ExpectedTypeOfModifiedObject>>();
+
 }
 
 {
+
     const s = {
-        a: 1,
+        a: 1, 
         b: 2,
-        c: "wesh",
+        c: "wesh"
     };
 
     const out = objectFromEntries(
         objectEntries(s)
-            .map(([key, value]) => (key === "b" ? undefined : ([key, value] as const)))
+            .map(([key, value]) => key === "b" ? undefined : [key, value] as const)
             .filter(exclude(undefined))
-            .map(([key, value]) => [`${key}Foo`, value]),
+            .map(([key, value]) => [`${key}Foo`, value] as const)
     );
+
 }
 
 /*
