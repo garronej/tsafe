@@ -605,26 +605,25 @@ deep-is@^0.1.3:
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.4.tgz#a6f2dce612fadd2ef1f519b73551f17e85199831"
   integrity sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==
 
-denoify@^1.5.3:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/denoify/-/denoify-1.5.3.tgz#8f912721968063354e1e75e403b20fa8c446c997"
-  integrity sha512-CFXRRBeTfggSdPuhUmfrjnzmrvfY3Cn5YHFt7abTHfYoVBq7gV51k/V2dwwiIMsqplW/xfwPX3wO2TNej/4o+g==
+denoify@^1.6.8:
+  version "1.6.8"
+  resolved "https://registry.yarnpkg.com/denoify/-/denoify-1.6.8.tgz#c6182e19fe8c9f9f8bb9f5437e8d38892a903729"
+  integrity sha512-vxPPz07RpsKcU60qqtfI5BSih4NkRpYgWcFoHEwxOcoleHxwXRAYIDH3QrTmwY14T5LfvO3nVTmQqa9lbbnjSw==
   dependencies:
     "@octokit/rest" "^18.0.0"
     "@types/comment-json" "^1.1.1"
     commander "^4.1.1"
     comment-json "^3.0.2"
     cosmiconfig "^7.0.1"
-    evt "^2.4.18"
-    get-github-default-branch-name "^0.0.4"
+    evt "2.5.6"
+    get-github-default-branch-name "^1.0.0"
     gitignore-parser "0.0.2"
     glob "^7.1.6"
-    minimal-polyfills "^2.2.2"
+    minimal-polyfills "^2.2.3"
     node-fetch "^2.6.7"
-    parse-dont-validate "^4.0.1"
     path-depth "^1.0.0"
     scripting-tools "^0.19.14"
-    tsafe "^1.6.0"
+    tsafe "^1.6.5"
     url-join "^4.0.1"
 
 deprecation@^2.0.0, deprecation@^2.3.1:
@@ -813,6 +812,15 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
+evt@2.5.6:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/evt/-/evt-2.5.6.tgz#292a99d00d81fa04f659f72d8e24ebe7818f1cdb"
+  integrity sha512-8wxqQ5HQWn+C2RghLL07Q4mPqOqixNnKl3lEajx7hRth+/OqyZ7wfr9smASgG3yB7UUOqcpTKYBCEXzBa/1hPw==
+  dependencies:
+    minimal-polyfills "^2.2.3"
+    run-exclusive "^2.2.19"
+    tsafe "^1.6.5"
+
 evt@^2.4.18:
   version "2.4.18"
   resolved "https://registry.yarnpkg.com/evt/-/evt-2.4.18.tgz#931012610dcd3bc7c0877d61018a704e9e5511db"
@@ -922,10 +930,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-get-github-default-branch-name@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/get-github-default-branch-name/-/get-github-default-branch-name-0.0.4.tgz#9c0c6606ba606edb136d2fd26e4d515b69f2de90"
-  integrity sha512-ltOGC9Jk0k8boe48Gk7SkJErwxt7MhwXtbNrBUyNCZcwcXSmGRdkKb2u0YO250PGvPsUtdqRjg7lVuIk1VtpCg==
+get-github-default-branch-name@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/get-github-default-branch-name/-/get-github-default-branch-name-1.0.0.tgz#ff91c0e95f4124de66b35590c95508af696ee410"
+  integrity sha512-BqOokYoLjPIgkehneFPUZW9nNtU0LCXVMJ87YKaHGMWgCSZkTBHWGa76xsyVeXg+nQzRJBi9KDwQbTH3HLntwQ==
   dependencies:
     "@octokit/rest" "^18.0.0"
     scripting-tools "^0.19.12"
@@ -1289,6 +1297,11 @@ minimal-polyfills@^2.2.2:
   resolved "https://registry.yarnpkg.com/minimal-polyfills/-/minimal-polyfills-2.2.2.tgz#6b06a004acce420eb91cf94698f5e6e7f2518378"
   integrity sha512-eEOUq/LH/DbLWihrxUP050Wi7H/N/I2dQT98Ep6SqOpmIbk4sXOI4wqalve66QoZa+6oljbZWU6I6T4dehQGmw==
 
+minimal-polyfills@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/minimal-polyfills/-/minimal-polyfills-2.2.3.tgz#22af58de16807b325f29b83ca38ffb83e75ec3f4"
+  integrity sha512-oxdmJ9cL+xV72h0xYxp4tP2d5/fTBpP45H8DIOn9pASuF8a3IYTf+25fMGDYGiWW+MFsuog6KD6nfmhZJQ+uUw==
+
 minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
@@ -1390,11 +1403,6 @@ parent-module@^1.0.0:
   integrity sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==
   dependencies:
     callsites "^3.0.0"
-
-parse-dont-validate@^4.0.1:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/parse-dont-validate/-/parse-dont-validate-4.1.0.tgz#4119ded7079547ee3a5719fa5be9b23c60a32239"
-  integrity sha512-MrrhzYT4A6Ft3vf6W5DaGt/i8/p3/YgISC2FQxJ+cENp7C08sln8hcP2eU9fsTf9VG3m0AE/VH/x7R/4nuWafQ==
 
 parse-json@^5.0.0:
   version "5.2.0"
@@ -1529,6 +1537,13 @@ run-exclusive@^2.2.18:
   integrity sha512-TXr1Gkl1iEAOCCpBTRm/2m0+1KGjORcWpZZ+VGGTe7dYX8E4y8/fMvrHk0zf+kclec2R//tpvdBxgG0bDgaJfw==
   dependencies:
     minimal-polyfills "^2.2.1"
+
+run-exclusive@^2.2.19:
+  version "2.2.19"
+  resolved "https://registry.yarnpkg.com/run-exclusive/-/run-exclusive-2.2.19.tgz#37a2fb6e3671f8ae0d63521ebd1865fc796cf307"
+  integrity sha512-K3mdoAi7tjJ/qT7Flj90L7QyPozwUaAG+CVhkdDje4HLKXUYC3N/Jzkau3flHVDLQVhiHBtcimVodMjN9egYbA==
+  dependencies:
+    minimal-polyfills "^2.2.3"
 
 run-parallel@^1.1.9:
   version "1.2.0"
@@ -1727,6 +1742,11 @@ tsafe@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.6.0.tgz#48a9bd0a4c43df43d289bdfc1d89f0d7fffbd612"
   integrity sha512-wlUeRBnyN3EN2chXznpLm7vBEvJLEOziDU+MN6NRlD99AkwmXgtChNQhp+V97VyRa3Bp05IaL4Cocsc7JlyEUg==
+
+tsafe@^1.6.5:
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.6.5.tgz#74943b69190069168a53d2accd6d07891cf1cce8"
+  integrity sha512-895zss8xqqHKTc28sHGIfZKnt3C5jrstB1DyPr/h3/flK0zojsZUMQL1/W4ytdDW6KI4Oth62nb9rrxmA3s3Iw==
 
 tslib@^1.8.1, tslib@^1.9.0:
   version "1.14.1"
