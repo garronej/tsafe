@@ -13,7 +13,7 @@ export function exclude<T extends string | number | null | undefined | boolean>(
             ? element => target.indexOf(element) < 0
             : element => element !== target;
 
-    return function <U>(str: U): str is Exclude<U, T> {
-        return test(str);
+    return function <U>(elemnt: U): elemnt is Exclude<U, T> {
+        return test(elemnt);
     };
 }
