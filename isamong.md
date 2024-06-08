@@ -16,10 +16,11 @@ isAmong enables to test if a given values is one of the names
 import { isAmong } from "tsafe/isAmong";
 import { names, type Names } from "./Names";
 
-declare value: string;
+declare value: "foo" | "bar" | "something else";
 
 if( isAmong(value, names) ){
-   // Here typescript knows that value is of type Name
+  // Here value is of type "foo" | "bar"
+  // (the intesection of the type of value before the test and Name)
 }
 ```
 
@@ -30,12 +31,13 @@ import { isAmong } from "tsafe/isAmong";
 import { assert, type Equals } from "tsafe/assert";
 import type { Names } from "./Names";
 
+const names = ["foo", "bar", "baz"] as const;
+
+assert<Equals<typeof names, Names>>;
+
 declare value: string;
 
-if( isAmong(value, ["foo", "bar", "baz"]) ){
-   assert<Equals<typeof value, Names>>();
-   // Here typescript knows that value is of type Name
-   // And we'll get an error in the type assertion line if 
-   // we forgot to list one of the values of the union type.  
+if( isAmong(value, names) ){
+   // Here value is of type Names
 }
 ```
