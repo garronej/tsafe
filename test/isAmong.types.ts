@@ -8,7 +8,7 @@ import { assert, type Equals } from "../src/assert";
 
     const value = Reflect<unknown>();
 
-    if (isAmong(value, names)) {
+    if (isAmong(names, value)) {
         assert<Equals<typeof value, Name>>();
     }
 }
@@ -18,7 +18,7 @@ import { assert, type Equals } from "../src/assert";
 
     const value = Reflect<"a" | "b" | "d">();
 
-    if (isAmong(value, names)) {
+    if (isAmong(names, value)) {
         assert<Equals<typeof value, "a" | "b">>();
     }
 }
@@ -26,7 +26,7 @@ import { assert, type Equals } from "../src/assert";
 {
     const value = Reflect<unknown>();
 
-    if (isAmong(value, ["a", 33, null, undefined])) {
+    if (isAmong(["a", 33, null, undefined], value)) {
         assert<Equals<typeof value, "a" | 33 | null | undefined>>();
     }
 }
@@ -40,7 +40,7 @@ import { assert, type Equals } from "../src/assert";
 
     const value = Reflect<unknown>();
 
-    if (isAmong(value, names)) {
+    if (isAmong(names, value)) {
         assert<Equals<typeof value, Name>>();
     }
 }
