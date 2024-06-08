@@ -14,9 +14,11 @@ import { assert, type Equals } from "../src/assert";
 }
 
 {
-    const value = Reflect<unknown>();
+    const names = ["a", "b", "c"] as const;
 
-    if (isAmong(value, ["a", "b"])) {
+    const value = Reflect<"a" | "b" | "d">();
+
+    if (isAmong(value, names)) {
         assert<Equals<typeof value, "a" | "b">>();
     }
 }
@@ -26,5 +28,19 @@ import { assert, type Equals } from "../src/assert";
 
     if (isAmong(value, ["a", 33, null, undefined])) {
         assert<Equals<typeof value, "a" | 33 | null | undefined>>();
+    }
+}
+
+{
+    type Name = "a" | "b" | "c";
+
+    const names = ["a", "b", "c"] as const;
+
+    assert<Equals<(typeof names)[number], Name>>();
+
+    const value = Reflect<unknown>();
+
+    if (isAmong(value, names)) {
+        assert<Equals<typeof value, Name>>();
     }
 }
