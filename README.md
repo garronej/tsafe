@@ -6,13 +6,9 @@ description: >-
 
 # 👋 What is tsafe?
 
-Powerful features like [assertion functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions) or [user-defined type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards) are only useful if paired with utility functions.
+Powerfull features like [assertion functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#assertion-functions) or [user-defined type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html#user-defined-type-guards) are only useful if paired with utility functions.
 
-TypeScript, however, only exports type helpers (e.g. `Record`, `ReturnType`, etc.).
-
-This module provides _«the missing builtins»_ such as [the assert function](assert.md).
-
-`tsafe` also corrects frustrating aspect of default utility type see [`ReturnType`](returntype.md) for example.
+This project provides thoes utilities. &#x20;
 
 {% hint style="info" %}
 `tsafe` is both an [NPM](https://www.npmjs.com/package/tsafe) and a [Deno](https://deno.land/x/tsafe) module. _(Achieved with_ [_denoify_](https://denoify.land)_)_
