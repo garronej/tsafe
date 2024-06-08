@@ -18,7 +18,7 @@ import { names, type Names } from "./Names";
 
 declare value: "foo" | "bar" | "something else";
 
-if( isAmong(value, names) ){
+if( isAmong(names, value) ){
   // Here value is of type "foo" | "bar"
   // (the intesection of the type of value before the test and Name)
 }
@@ -37,7 +37,7 @@ assert<Equals<typeof names, Names>>;
 
 declare value: string;
 
-if( isAmong(value, names) ){
+if( isAmong(names, value) ){
    // Here value is of type Names
 }
 ```
