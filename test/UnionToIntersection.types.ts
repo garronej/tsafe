@@ -19,7 +19,7 @@ import { assert } from "../src/assert";
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const o2: UnionToIntersection<typeof o1[keyof typeof o1]> = {} as any;
+    const o2: UnionToIntersection<(typeof o1)[keyof typeof o1]> = {} as any;
 
     type Expected = { a: string; b: string; c: string };
 

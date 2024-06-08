@@ -10,5 +10,5 @@ export type Param0<T extends ((...args: any[]) => unknown) | null | undefined | 
 ] extends [never]
     ? never
     : Parameters<T> extends []
-    ? void
-    : NonUndefined<Parameters<T>[0]>;
+      ? void
+      : NonUndefined<Parameters<T>[0]>;
