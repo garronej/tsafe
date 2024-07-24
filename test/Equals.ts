@@ -40,3 +40,31 @@ type Square = {
 
     assert<Equals<A, B>>();
 }
+
+// NOTE: This example shows why we can't use `type Equals<T, U> = T extends U ? (U extends T ? true : false) : false;`
+{
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    type A = any[];
+    type B = [number][];
+
+    //@ts-expect-error: They are not equal
+    assert<Equals<A, B>>();
+}
+
+{
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    type A = unknown[];
+    type B = [unknown][];
+
+    //@ts-expect-error: They are not equal
+    assert<Equals<A, B>>();
+}
+
+{
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    type A = any;
+    type B = number;
+
+    //@ts-expect-error: They are not equal
+    assert<Equals<A, B>>();
+}
