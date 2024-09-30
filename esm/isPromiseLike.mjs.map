@@ -1,0 +1,1 @@
+{"version":3,"file":"isPromiseLike.mjs","sourceRoot":"","sources":["../src/isPromiseLike.ts"],"names":[],"mappings":"AAAA,8DAA8D;AAC9D,MAAM,UAAU,aAAa,CAAW,CAAM;IAC1C,OAAO,OAAO,CAAC,KAAK,QAAQ,IAAI,CAAC,KAAK,IAAI,IAAI,MAAM,IAAI,CAAC,IAAI,OAAO,CAAC,CAAC,IAAI,KAAK,UAAU,CAAC;AAC9F,CAAC"}
