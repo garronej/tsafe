@@ -1145,6 +1145,14 @@ js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+js2mjs@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/js2mjs/-/js2mjs-0.3.0.tgz#4db5f4e31dae63ee661f689e853308b138bbc58e"
+  integrity sha512-jiejhgZW09Y7m4IMQbsosFWHwPLeskSS5Ybd1lrf3RskjkHd6XaLtNFO+oy6G+tzHc6mmxHXcQLKbfgRrTRgrA==
+  dependencies:
+    commander "^4.1.1"
+    tsafe "^1.4.1"
+
 json-parse-even-better-errors@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.1.tgz#7c47805a94319928e05777405dc12e1f7a4ee02d"
@@ -1737,6 +1745,11 @@ ts-node@^10.9.1:
     make-error "^1.1.1"
     v8-compile-cache-lib "^3.0.1"
     yn "3.1.1"
+
+tsafe@^1.4.1:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.7.2.tgz#0f63d414876287ad01b135f832722f93e22da374"
+  integrity sha512-dAPfQLhCfCRre5qs+Z5Q2a7s2CV7RxffZUmvj7puGaePYjECzWREJFd3w4XSFe/T5tbxgowfItA/JSSZ6Ma3dA==
 
 tsafe@^1.6.0:
   version "1.6.0"

@@ -7,7 +7,10 @@
         "url": "git://github.com/garronej/tsafe.git"
     },
     "scripts": {
-        "build": "tsc && denoify",
+        "build": "yarn build:cjs && yarn build:esm && yarn build:deno",
+        "build:cjs": "tsc",
+        "build:esm": "rm -rf dist/esm && tsc -p tsconfig.esm.json && js2mjs dist/esm",
+        "build:deno": "denoify",
         "test": "yarn test:node && yarn test:deno",
         "test:deno": "deno run --reload --unstable --no-check deno_dist/mod.ts",
         "test:node": "ts-node test/index.ts",
@@ -34,11 +37,28 @@
     "license": "MIT",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "module": "dist/esm/index.mjs",
     "exports": {
-        ".": "./dist/index.js",
-        "./*": "./dist/*.js",
-        "./lab": "./dist/lab/index.js",
-        "./tools": "./dist/tools/index.js"
+        ".": {
+            "require": "./dist/index.js",
+            "import": "./dist/esm/index.mjs",
+            "types": "./dist/index.d.ts"
+        },
+        "./*": {
+            "require": "./dist/*.js",
+            "import": "./dist/esm/*.mjs",
+            "types": "./dist/*.d.ts"
+        },
+        "./lab": {
+            "require": "./dist/lab/index.js",
+            "import": "./dist/lab/index.mjs",
+            "types": "./dist/lab/index.d.ts"
+        },
+        "./tools": {
+            "require": "./dist/tools/index.js",
+            "import": "./dist/tools/index.mjs",
+            "types": "./dist/tools/index.d.ts"
+        }
     },
     "files": [
         "src/",
@@ -60,6 +80,7 @@
         "lint-staged": "^10.5.4",
         "prettier": "^3.3.1",
         "typescript": "^5.0.4",
-        "ts-node": "^10.9.1"
+        "ts-node": "^10.9.1",
+        "js2mjs": "^0.3.0"
     }
 }
