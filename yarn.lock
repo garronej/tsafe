@@ -605,17 +605,17 @@ deep-is@^0.1.3:
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.4.tgz#a6f2dce612fadd2ef1f519b73551f17e85199831"
   integrity sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==
 
-denoify@^1.6.8:
-  version "1.6.8"
-  resolved "https://registry.yarnpkg.com/denoify/-/denoify-1.6.8.tgz#c6182e19fe8c9f9f8bb9f5437e8d38892a903729"
-  integrity sha512-vxPPz07RpsKcU60qqtfI5BSih4NkRpYgWcFoHEwxOcoleHxwXRAYIDH3QrTmwY14T5LfvO3nVTmQqa9lbbnjSw==
+denoify@^1.6.13:
+  version "1.6.13"
+  resolved "https://registry.yarnpkg.com/denoify/-/denoify-1.6.13.tgz#f003467de3937b10bafc6205c6880bb69a482959"
+  integrity sha512-WbsfLvUdmIDokhn/Zve2UdaDxihu5HQAm2SY/H/2eSP5zK7QBwmZgTSEK2/nRvO83eu9B5NMB2fRELtD4OuKZA==
   dependencies:
     "@octokit/rest" "^18.0.0"
     "@types/comment-json" "^1.1.1"
     commander "^4.1.1"
     comment-json "^3.0.2"
     cosmiconfig "^7.0.1"
-    evt "2.5.6"
+    evt "2.5.7"
     get-github-default-branch-name "^1.0.0"
     gitignore-parser "0.0.2"
     glob "^7.1.6"
@@ -623,7 +623,7 @@ denoify@^1.6.8:
     node-fetch "^2.6.7"
     path-depth "^1.0.0"
     scripting-tools "^0.19.14"
-    tsafe "^1.6.5"
+    tsafe "^1.7.2"
     url-join "^4.0.1"
 
 deprecation@^2.0.0, deprecation@^2.3.1:
@@ -812,14 +812,14 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
-evt@2.5.6:
-  version "2.5.6"
-  resolved "https://registry.yarnpkg.com/evt/-/evt-2.5.6.tgz#292a99d00d81fa04f659f72d8e24ebe7818f1cdb"
-  integrity sha512-8wxqQ5HQWn+C2RghLL07Q4mPqOqixNnKl3lEajx7hRth+/OqyZ7wfr9smASgG3yB7UUOqcpTKYBCEXzBa/1hPw==
+evt@2.5.7:
+  version "2.5.7"
+  resolved "https://registry.yarnpkg.com/evt/-/evt-2.5.7.tgz#55c5f8ff910f4b7531bfac91e963d4cb3231f253"
+  integrity sha512-dr7Wd16ry5F8WNU1xXLKpFpO3HsoAGg8zC48e08vDdzMzGWCP9/QFGt1PQptEEDh8SwYP3EL8M+d/Gb0kgUp6g==
   dependencies:
     minimal-polyfills "^2.2.3"
     run-exclusive "^2.2.19"
-    tsafe "^1.6.5"
+    tsafe "^1.6.6"
 
 evt@^2.4.18:
   version "2.4.18"
@@ -1746,7 +1746,7 @@ ts-node@^10.9.1:
     v8-compile-cache-lib "^3.0.1"
     yn "3.1.1"
 
-tsafe@^1.4.1:
+tsafe@^1.4.1, tsafe@^1.6.6, tsafe@^1.7.2:
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.7.2.tgz#0f63d414876287ad01b135f832722f93e22da374"
   integrity sha512-dAPfQLhCfCRre5qs+Z5Q2a7s2CV7RxffZUmvj7puGaePYjECzWREJFd3w4XSFe/T5tbxgowfItA/JSSZ6Ma3dA==
@@ -1755,11 +1755,6 @@ tsafe@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.6.0.tgz#48a9bd0a4c43df43d289bdfc1d89f0d7fffbd612"
   integrity sha512-wlUeRBnyN3EN2chXznpLm7vBEvJLEOziDU+MN6NRlD99AkwmXgtChNQhp+V97VyRa3Bp05IaL4Cocsc7JlyEUg==
-
-tsafe@^1.6.5:
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.6.5.tgz#74943b69190069168a53d2accd6d07891cf1cce8"
-  integrity sha512-895zss8xqqHKTc28sHGIfZKnt3C5jrstB1DyPr/h3/flK0zojsZUMQL1/W4ytdDW6KI4Oth62nb9rrxmA3s3Iw==
 
 tslib@^1.8.1, tslib@^1.9.0:
   version "1.14.1"

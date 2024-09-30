@@ -51,12 +51,12 @@
         },
         "./lab": {
             "require": "./dist/lab/index.js",
-            "import": "./dist/lab/index.mjs",
+            "import": "./dist/esm/lab/index.mjs",
             "types": "./dist/lab/index.d.ts"
         },
         "./tools": {
             "require": "./dist/tools/index.js",
-            "import": "./dist/tools/index.mjs",
+            "import": "./dist/esm/tools/index.mjs",
             "types": "./dist/tools/index.d.ts"
         }
     },
@@ -71,7 +71,7 @@
         "@types/node": "^18.11.18",
         "@typescript-eslint/eslint-plugin": "^4.15.1",
         "@typescript-eslint/parser": "^4.15.1",
-        "denoify": "^1.6.8",
+        "denoify": "^1.6.13",
         "eslint": "^7.20.0",
         "eslint-config-prettier": "^7.2.0",
         "evt": "^2.4.18",
