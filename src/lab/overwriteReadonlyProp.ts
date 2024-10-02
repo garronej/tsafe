@@ -1,7 +1,5 @@
 /* eslint-disable no-empty */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { assert } from "../assert";
-import { is } from "../is";
 
 /**
  * Assign a value to a property even if the object is freezed or if the property is not writable
@@ -40,8 +38,7 @@ export const overwriteReadonlyProp = <T extends { [key: string]: any }, K extend
             value,
         });
     } catch (error) {
-        assert(is<Error>(error));
-        errorDefineProperty = error;
+        errorDefineProperty = error as Error;
     }
 
     if (obj[propertyName] !== value) {
