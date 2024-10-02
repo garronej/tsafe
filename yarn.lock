@@ -1145,13 +1145,10 @@ js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-js2mjs@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/js2mjs/-/js2mjs-0.3.0.tgz#4db5f4e31dae63ee661f689e853308b138bbc58e"
-  integrity sha512-jiejhgZW09Y7m4IMQbsosFWHwPLeskSS5Ybd1lrf3RskjkHd6XaLtNFO+oy6G+tzHc6mmxHXcQLKbfgRrTRgrA==
-  dependencies:
-    commander "^4.1.1"
-    tsafe "^1.4.1"
+js2mjs@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/js2mjs/-/js2mjs-1.0.1.tgz#685a5e98c0767cb77dafdc0841188a36b5037988"
+  integrity sha512-Z6lmRudC9sSnq2XEozP41Arq7DGk6RKzPeA9zF648Zvx1hLI6AfEIYqqDHxI2qTnCP0doksJnL2jVHY/DyeyBA==
 
 json-parse-even-better-errors@^2.3.0:
   version "2.3.1"
@@ -1746,15 +1743,15 @@ ts-node@^10.9.1:
     v8-compile-cache-lib "^3.0.1"
     yn "3.1.1"
 
-tsafe@^1.4.1, tsafe@^1.6.6, tsafe@^1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.7.2.tgz#0f63d414876287ad01b135f832722f93e22da374"
-  integrity sha512-dAPfQLhCfCRre5qs+Z5Q2a7s2CV7RxffZUmvj7puGaePYjECzWREJFd3w4XSFe/T5tbxgowfItA/JSSZ6Ma3dA==
-
 tsafe@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.6.0.tgz#48a9bd0a4c43df43d289bdfc1d89f0d7fffbd612"
   integrity sha512-wlUeRBnyN3EN2chXznpLm7vBEvJLEOziDU+MN6NRlD99AkwmXgtChNQhp+V97VyRa3Bp05IaL4Cocsc7JlyEUg==
+
+tsafe@^1.6.6, tsafe@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/tsafe/-/tsafe-1.7.2.tgz#0f63d414876287ad01b135f832722f93e22da374"
+  integrity sha512-dAPfQLhCfCRre5qs+Z5Q2a7s2CV7RxffZUmvj7puGaePYjECzWREJFd3w4XSFe/T5tbxgowfItA/JSSZ6Ma3dA==
 
 tslib@^1.8.1, tslib@^1.9.0:
   version "1.14.1"
