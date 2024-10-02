@@ -13,17 +13,8 @@
         "incremental": true,
         "strict": true,
         "downlevelIteration": true,
-        "jsx": "react-jsx",
         "noFallthroughCasesInSwitch": true
     },
     "include": ["src"],
-    "exclude": [
-        "node_modules",
-        "src/scripts/",
-        "dist/",
-        "deno_dist/",
-        "src/**/*.deno.ts",
-        "src/**/*.deno.tsx",
-        "res/"
-    ]
+    "exclude": ["node_modules", "dist/", "deno_dist/", "src/**/*.deno.ts", "src/**/*.deno.tsx"]
 }
