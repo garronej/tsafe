@@ -3,3 +3,4 @@
 /deno_dist/
 /.eslintrc.js
 /CHANGELOG.md
+/rollup.config.js

@@ -9,14 +9,14 @@
     "scripts": {
         "build": "yarn build:cjs && yarn build:esm && yarn build:deno",
         "build:cjs": "tsc",
-        "build:esm": "rm -rf dist/esm && tsc -p tsconfig.esm.json && js2mjs dist/esm",
+        "build:esm": "rm -rf dist/esm && npx rollup -c",
         "build:deno": "denoify",
         "test": "yarn test:node && yarn test:deno",
         "test:deno": "deno run --reload --unstable --no-check deno_dist/mod.ts",
         "test:node": "ts-node test/index.ts",
         "lint:check": "eslint . --ext .ts,.tsx",
         "lint": "npm run lint:check -- --fix",
-        "_format": "prettier '**/*.{ts,tsx,json,md}'",
+        "_format": "prettier '**/*.{ts,tsx,json,md,js}'",
         "format": "npm run _format -- --write",
         "format:check": "npm run _format -- --list-different"
     },
@@ -68,6 +68,8 @@
     "keywords": [],
     "homepage": "https://github.com/garronej/tsafe",
     "devDependencies": {
+        "@rollup/plugin-commonjs": "^28.0.0",
+        "@rollup/plugin-node-resolve": "^15.3.0",
         "@types/node": "^18.11.18",
         "@typescript-eslint/eslint-plugin": "^4.15.1",
         "@typescript-eslint/parser": "^4.15.1",
@@ -75,12 +77,15 @@
         "eslint": "^7.20.0",
         "eslint-config-prettier": "^7.2.0",
         "evt": "^2.4.18",
+        "glob": "^11.0.0",
         "husky": "^4.3.0",
         "improved-garbanzo-easy": "^0.0.1",
         "lint-staged": "^10.5.4",
         "prettier": "^3.3.1",
-        "typescript": "^5.0.4",
+        "rollup": "^4.23.0",
+        "rollup-plugin-typescript2": "^0.36.0",
         "ts-node": "^10.9.1",
-        "js2mjs": "^1.0.1"
+        "tslib": "^2.7.0",
+        "typescript": "^5.0.4"
     }
 }
