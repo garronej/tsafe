@@ -1,0 +1,1 @@
+{"version":3,"file":"assertIsRefWrapper.mjs","sources":["../../dist/src/zz_internal/assertIsRefWrapper.ts"],"sourcesContent":["import { id } from \"../id\";\n\nexport const assertIsRefWrapper = {\n    \"ref\": id<undefined | Record<string, never>>(undefined),\n};\n"],"names":[],"mappings":";;AAEa,MAAA,kBAAkB,GAAG;AAC9B,IAAA,KAAK,EAAE,EAAE,CAAoC,SAAS,CAAC;;;;;"}
