@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { StrictEquals } from "./tools/StrictEquals";
+import type { StrictEquals } from "./tools/StrictEquals";
 
 /**
  * @see <https://docs.tsafe.dev/main/extends>
