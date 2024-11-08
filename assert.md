@@ -66,3 +66,26 @@ try {
 	console.log(error.message); // foo bar baz
 }
 ```
+
+The message can be a string or callback that returns a string. This is useful when the message is costly to create.
+
+```typescript
+import { assert, AssertionError } from "tsafe/assert";
+
+let called = false;
+const getMessage = () => {
+	// Do some expensive logic
+	called = true;
+	return "foo bar baz"
+}
+
+try {
+	assert(true, getMessage)
+	console.log(called) // false, getMessage has not been called yet
+	assert(false, getMessage);
+} catch (error) {
+	console.log(called) // true, getMessage has been called
+	console.log(error instanceof AssertionError); // true
+	console.log(error.message); // Wrong assertion encountered: "foo bar baz"
+}
+```
