@@ -29,8 +29,11 @@ export class AssertionError extends Error {
 }
 
 /** https://docs.tsafe.dev/assert */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function assert<_T extends true>(condition?: any, msg?: string): asserts condition {
+export function assert<_T extends true>(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    condition?: any,
+    msg?: string | (() => string),
+): asserts condition {
     if (arguments.length === 0) {
         condition = true;
     }
@@ -40,6 +43,6 @@ export function assert<_T extends true>(condition?: any, msg?: string): asserts 
     }
 
     if (!condition) {
-        throw new AssertionError(msg);
+        throw new AssertionError(typeof msg === "function" ? msg() : msg);
     }
 }
