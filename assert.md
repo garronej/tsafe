@@ -63,7 +63,9 @@ try {
 	assert(false, "foo bar baz");
 } catch (error) {
 	console.log(error instanceof AssertionError); // true
-	console.log(error.message); // foo bar baz
+	console.log(error.message); // Wrong assertion encountered: "foo bar baz"
+	// Access the original message
+	console.log(error.originalMessage); // foo bar baz
 }
 ```
 
