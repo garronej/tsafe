@@ -122,3 +122,12 @@ scope: {
         console.log("PASS");
     }
 }
+
+/**
+ * `AssertionError` should store the original message in the `originalMessage` property.
+ */
+{
+    const error = new AssertionError("message");
+    assert(error.originalMessage === "message");
+    console.log("PASS");
+}
