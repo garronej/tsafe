@@ -5,8 +5,12 @@ export type { Equals } from "./Equals";
 
 /** @see <https://docs.tsafe.dev/assert#error-thrown> */
 export class AssertionError extends Error {
+    originalMessage?: string;
+
     constructor(msg: string | undefined) {
         super(`Wrong assertion encountered` + (!msg ? "" : `: "${msg}"`));
+
+        this.originalMessage = msg;
 
         Object.setPrototypeOf(this, new.target.prototype);
 
