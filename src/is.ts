@@ -8,6 +8,7 @@ const errorMessage = [
     `https://docs.tsafe.dev/${is.name.toLowerCase()}`,
 ].join(" ");
 
+/** https://docs.tsafe.dev/is */
 export function is<T>(value: any): value is T {
     const ref = {};
 
