@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-namespace */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { assertIsRefWrapper } from "./zz_internal/assertIsRefWrapper";
 
 const errorMessage = [

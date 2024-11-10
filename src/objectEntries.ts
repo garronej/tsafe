@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 /** https://docs.tsafe.dev/objectentries */
 export function objectEntries<O extends Record<string, any>>(
     o: O,

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { overwriteReadonlyProp } from "./lab/overwriteReadonlyProp";
 import { assertIsRefWrapper } from "./zz_internal/assertIsRefWrapper";
 export type { Equals } from "./Equals";
@@ -27,14 +26,12 @@ export class AssertionError extends Error {
                     .filter((...[, i]) => i !== 1 && i !== 2)
                     .join("\n"),
             );
-            // eslint-disable-next-line no-empty
         } catch {}
     }
 }
 
 /** https://docs.tsafe.dev/assert */
 export function assert<_T extends true>(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     condition?: any,
     msg?: string | (() => string),
 ): asserts condition {

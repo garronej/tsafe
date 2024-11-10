@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 /** https://docs.tsafe.dev/objectFromEntries */
 export function objectFromEntries<Entry extends readonly [string, any]>(
     entries: readonly Entry[],

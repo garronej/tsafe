@@ -1,6 +1,3 @@
-/* eslint-disable no-empty */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 /**
  * Assign a value to a property even if the object is freezed or if the property is not writable
  * Throw if the assignation fail ( for example if the property is non configurable write: false )

@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import type { Parameters } from "./Parameters";
 
 type NonUndefined<T> = T extends undefined ? never : T;

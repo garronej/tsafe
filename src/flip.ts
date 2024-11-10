@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 type KeyOfType<T extends Record<string, unknown>, U> = NonNullable<
     {
         [Key in keyof T]: T[Key] extends U | undefined ? Key : never;

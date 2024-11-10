@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 if (!(Object as any).fromEntries) {
     Object.defineProperty(Object, "fromEntries", {
         "value": function (entries: any) {

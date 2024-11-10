@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Unite } from "./tools/Unite";
 import type { StrictEquals } from "./tools/StrictEquals";
 

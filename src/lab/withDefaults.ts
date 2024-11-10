@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import "../tools/Object.fromEntries";
 /**
  * Like Function.prototype.bind() but for a function that
