@@ -9,7 +9,7 @@ description: >-
 ## Practical example
 
 ```typescript
-import { exclude } from "tsafe/exclude";
+import { exclude } from "tsafe";
 
 type Circle = {
 	type: "circle";
@@ -41,7 +41,7 @@ shapes
 ## Basic examples
 
 ```typescript
-import { exclude } from "tsafe/exclude";
+import { exclude } from "tsafe";
 
 const arr = ["a", "b", "c", "d"] as const;
 const newArr = arr.filter(exclude("a"));

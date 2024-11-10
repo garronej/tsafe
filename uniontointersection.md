@@ -1,19 +1,20 @@
 # UnionToIntersection
 
-<pre class="language-typescript"><code class="lang-typescript"><strong>
-</strong>type A = { foo: string; };
+```typescript
+
+type A = { foo: string; };
 type B = { bar: number; };
 
-type Got = UnionToIntersection&#x3C;A | B>;
-type Expected = A &#x26; B;
+type Got = UnionToIntersection<A | B>;
+type Expected = A & B;
 
-assert&#x3C;Equals&#x3C;Got,Expected>>();
-</code></pre>
+assert<Equals<Got,Expected>>();
+```
 
 Example:
 
 ```typescript
-import type { UnionToIntersection } from "tsafe/UnionToIntersection";
+import type { UnionToIntersection } from "tsafe";
 
 const o1= {
   "p1": { "a": "foo" },
@@ -26,7 +27,5 @@ objectKeys(o1).forEach(key=> Object.assign(o2, o1[key]));
 
 //o2 is of type { a: string; b: string; c: string; }
 ```
-
-
 
 _Credit goes to_ [_jcalz_](https://stackoverflow.com/users/2887218/jcalz) _for this type,_ [_see SO answer_](https://stackoverflow.com/a/50375286/3731798)_._

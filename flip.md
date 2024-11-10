@@ -7,6 +7,8 @@ description: Flip the value of a boolean without having to reference it twice.
 ## Quick Example:
 
 ```typescript
+import { flip } from "tsafe/flip";
+
 const obj = {
 	is_: false,
 };

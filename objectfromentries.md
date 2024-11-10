@@ -7,8 +7,7 @@ description: Like Object.fromEntries() but with a better return type
 Functionally identical to `Object.fromEntries()` but instead of returning but its return type more precise than just `{ [k: sting]: any; }`.
 
 ```typescript
-import { assert, Equals } from "tsafe";
-import { objectFromEntries } from "tsafe/objectFromEntries";
+import { assert, type Equals, objectFromEntries } from "tsafe";
 
 const entries = [
 	["a", "foo"],
@@ -28,5 +27,5 @@ assert<
 			c: boolean;
 		}
 	>
->();
+>;
 ```

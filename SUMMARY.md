@@ -15,7 +15,6 @@
 * [Param0](param0.md)
 * [typeGuard](typeguard.md)
 * [capitalize/uncapitalize](capitalize.md)
-* [Not](not.md)
 * [MethodNames](methodnames.md)
 * [isPromiseLike](ispromiselike.md)
 * [flip](flip.md)

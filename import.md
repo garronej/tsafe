@@ -2,28 +2,15 @@
 description: Recommended way to import tsafe
 ---
 
-# ⚙ How to import
+# ⚙️ How to import
 
-## Browsers
-
-On the browser bundle size must be kept in check, it is best to only import what you'll use.
+### Node / Browser
 
 ```typescript
-import { assert } from "tsafe/assert";
-import { typeGuard } from "tsafe/typeGuard";
-//Type can be imported from the index
-import type { ReturnType } from "tsafe";
-```
+import { assert, type Equals } from "tsafe";
+// NOTE: You can also cherry pick imports, example: 
+// import { assert } from "tsafe/assert";
 
-## CLI Runtime
-
-If you are in Node or on Deno, bundle size is irrelevant, you should use a single import.
-
-### Node
-
-```typescript
-import { assert, typeGuard } from "tsafe";
-import type { ReturnType } from "tsafe";
 ```
 
 ### Deno
@@ -31,11 +18,9 @@ import type { ReturnType } from "tsafe";
 `/deps.ts`
 
 ```typescript
-export { assert, typeGuard } from "https://deno.land/x/tsafe@v0.7.3/mod.ts";
-export type { ReturnType } from "https://deno.land/x/tsafe@v0.7.3/mod.ts";
+export { assert, type Equals } from "https://deno.land/x/tsafe@v0.7.3/mod.ts";
 ```
 
 ```typescript
-import { assert, typeGuard } from "./deps.ts";
-import type { ReturnType } from "./deps.ts";
+import { assert, type Equals } from "./deps.ts";
 ```

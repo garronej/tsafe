@@ -7,8 +7,7 @@ description: Runtime implementation of the Capitalize helper type.
 ### `capitalize()`
 
 ```typescript
-import { assert, Equals } from "tsafe";
-import { capitalize } from "tsafe/capitalize";
+import { assert, type Equals, capitalize } from "tsafe";
 
 const str = "foo";
 
@@ -18,14 +17,13 @@ assert<Equals<typeof capitalizedStr, "Foo">>();
 assert(capitalizedStr === "Foo");
 
 //NOTE: There is a 'Capitalize' builtin type in TypeScript such that:
-assert<Equals<Capitalize<"foo">, "Foo">>();
+assert<Equals<Capitalize<"foo">, "Foo">>;
 ```
 
 ### `uncapitalize()`
 
 ```typescript
-import { assert, Equals } from "tsafe";
-import { uncapitalize } from "tsafe/uncapitalize";
+import { assert, type Equals, uncapitalize } from "tsafe";
 
 const capitalizedStr = "Foo";
 
@@ -35,5 +33,5 @@ assert<Equals<typeof str, "foo">>();
 assert(str === "foo");
 
 //NOTE: There is a 'Uncapitalize' builtin type in TypeScript such that:
-assert<Equals<Uncapitalize<"Foo">, "foo">>();
+assert<Equals<Uncapitalize<"Foo">, "foo">>;
 ```

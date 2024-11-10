@@ -22,6 +22,26 @@ If you are writing tests for your type, you definitely want to checkout [`//@ts-
 
 [Playground](https://stackblitz.com/edit/typescript-eheop6?file=index.ts\&view=editor)
 
+```typescript
+
+import { z } from "zod";
+import { assert, id, type Equals } from "tsafe";
+
+const z... = (()=>{
+
+   type TagetType = ...;
+   
+   const zTargetType = z....;
+   
+   type InferredType = z.infer<typeof zTargetType>;
+   
+   assert<Equals<TargetType, InferredType>>;
+   
+   return id<z.ZodType<TargetType>>(zTargetType);   
+
+})();
+```
+
 ### Making sure all cases of a switch are dealt with
 
 <figure><img src=".gitbook/assets/asser-equals-switch.gif" alt=""><figcaption></figcaption></figure>

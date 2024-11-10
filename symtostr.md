@@ -5,7 +5,7 @@ description: Get the name of a symbol as typed string.
 # symToStr
 
 ```typescript
-import { symToStr } from "tsafe/symToStr";
+import { symToStr } from "tsafe";
 
 declare const foo: any;
 
@@ -26,7 +26,7 @@ If you happen to rename \`myFunctionX\` into something else it is easy to forget
 #### With `symToStr`
 
 ```typescript
-import { symToStr } from "tsafe/symToStr";
+import { symToStr } from "tsafe";
 
 export const myFunctionX = () => {};
 
