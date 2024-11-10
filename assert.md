@@ -35,16 +35,20 @@ type A = "foo" | "bar";
 type B = "foo" | "bar" | "baz";
 
 //You will get red squiggly lines if A does not extend B
-assert<A extends B ? true : false>();
+assert<A extends B ? true : false>;
 ```
 
 You can also test the equality of two types with:
 
-{% page-ref page="equals.md" %}
+{% content-ref url="equals.md" %}
+[equals.md](equals.md)
+{% endcontent-ref %}
 
 ## assert + is
 
-{% page-ref page="is.md" %}
+{% content-ref url="is.md" %}
+[is.md](is.md)
+{% endcontent-ref %}
 
 ## Error thrown
 
