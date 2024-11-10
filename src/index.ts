@@ -24,3 +24,4 @@ export * from "./noUndefined";
 export * from "./Reflect";
 export * from "./capitalize";
 export * from "./uncapitalize";
+export * from "./symToStr";
