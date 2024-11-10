@@ -7,8 +7,7 @@ is is meant to be used in conjunction with assert and enable you to tell the com
 ![](https://user-images.githubusercontent.com/6702424/118082020-c2e5dd80-b3bc-11eb-9ea9-71fa8206f704.gif)
 
 ```typescript
-import { assert } from "tsafe/assert";
-import { is } from "tsafe/is";
+import { assert, is } from "tsafe/assert";
 
 type Circle = { radius: number };
 type Square = { sideLength: number };
