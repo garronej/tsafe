@@ -9,7 +9,7 @@
         "sourceMap": true,
         "newLine": "LF",
         "noUnusedLocals": true,
-        "noUnusedParameters": true,
+        "noUnusedParameters": false,
         "incremental": true,
         "strict": true,
         "downlevelIteration": true,

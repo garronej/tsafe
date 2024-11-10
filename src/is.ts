@@ -8,7 +8,7 @@ const errorMessage = [
     `https://docs.tsafe.dev/${is.name.toLowerCase()}`,
 ].join(" ");
 
-export function is<T>(_value: any): _value is T {
+export function is<T>(value: any): value is T {
     const ref = {};
 
     if (assertIsRefWrapper.ref !== undefined) {
