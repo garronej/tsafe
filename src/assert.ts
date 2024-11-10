@@ -1,6 +1,7 @@
 import { overwriteReadonlyProp } from "./lab/overwriteReadonlyProp";
 import { assertIsRefWrapper } from "./zz_internal/assertIsRefWrapper";
 export type { Equals } from "./Equals";
+export { is } from "./is";
 
 /** @see <https://docs.tsafe.dev/assert#error-thrown> */
 export class AssertionError extends Error {
