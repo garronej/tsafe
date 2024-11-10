@@ -1,4 +1,4 @@
 /** https://docs.tsafe.dev/typeguard */
-export function typeGuard<T>(_value: any, isMatched: boolean): _value is T {
+export function typeGuard<T>(value: any, isMatched: boolean): value is T {
     return isMatched;
 }
