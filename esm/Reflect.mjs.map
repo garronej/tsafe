@@ -1,0 +1,1 @@
+{"version":3,"file":"Reflect.mjs","sources":["../dist/src/Reflect.ts"],"sourcesContent":["/** Always return null but pretends it returns an object of type T */\nexport function Reflect<T>(): T {\n    return null as any;\n}\n"],"names":[],"mappings":"AAAA;SACgB,OAAO,GAAA;AACnB,IAAA,OAAO,IAAW,CAAC;AACvB;;;;"}

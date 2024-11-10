@@ -1,0 +1,1 @@
+{"version":3,"file":"toUpperCase.mjs","sources":["../../dist/src/tools/toUpperCase.ts"],"sourcesContent":["export function toUpperCase(str: string): string {\n    return str.toUpperCase();\n}\n"],"names":[],"mappings":"AAAM,SAAU,WAAW,CAAC,GAAW,EAAA;AACnC,IAAA,OAAO,GAAG,CAAC,WAAW,EAAE,CAAC;AAC7B;;;;"}
