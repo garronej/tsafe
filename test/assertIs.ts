@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { assert, AssertionError } from "../src/assert";
-import { is } from "../src/is";
+import { assert, is, AssertionError } from "../src/assert";
 import type { Equals } from "../src/Equals";
 
 {
