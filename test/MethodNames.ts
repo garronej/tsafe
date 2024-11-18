@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { MethodNames } from "../src/MethodNames";
 import { assert } from "../src/assert";
 import type { Equals } from "../src/Equals";
@@ -32,7 +31,6 @@ class Car {
         a: unknown;
         b: unknown;
         method1?(): void;
-        // eslint-disable-next-line @typescript-eslint/ban-types
         method2: Function;
         method3?: (args: { a: unknown }) => unknown;
         Car: typeof Car;

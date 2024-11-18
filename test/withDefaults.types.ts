@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { assert } from "../src/assert";
 import { withDefaults } from "../src/lab/withDefaults";
 import type { Equals } from "../src/Equals";
@@ -64,7 +60,6 @@ function test<T, U, V>() {
 
 //@ts-ignore
 function test<T>() {
-    // eslint-disable-next-line @typescript-eslint/ban-types
     const f: (params: {}) => T = null as any;
 
     //@ts-expect-error
@@ -73,7 +68,6 @@ function test<T>() {
 
 //@ts-ignore
 function test<T>() {
-    // eslint-disable-next-line @typescript-eslint/ban-types
     const f: (params: { bar: number }) => T = null as any;
 
     //@ts-expect-error
@@ -82,7 +76,6 @@ function test<T>() {
 
 //@ts-ignore
 function test<T>() {
-    // eslint-disable-next-line @typescript-eslint/ban-types
     const f: (params: {}) => T = null as any;
 
     withDefaults(f, {});
@@ -90,7 +83,6 @@ function test<T>() {
 
 //@ts-ignore
 function test<T>() {
-    // eslint-disable-next-line @typescript-eslint/ban-types
     const f: (params: { foo: number; bar: string }) => T = null as any;
 
     //@ts-expect-error

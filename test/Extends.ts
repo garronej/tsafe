@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Equals } from "../src/Equals";
 import type { Extends } from "../src/Extends";
 import { assert } from "../src/assert";

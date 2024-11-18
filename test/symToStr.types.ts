@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { symToStr } from "../src/symToStr";
 import { Reflect } from "../src/Reflect";
 import { assert } from "../src/assert";

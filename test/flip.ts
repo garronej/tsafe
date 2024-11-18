@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { flip } from "../src/flip";
 import { assert } from "../src/assert";
 

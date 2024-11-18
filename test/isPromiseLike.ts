@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { isPromiseLike } from "../src/isPromiseLike";
 import { assert } from "../src/assert";
 

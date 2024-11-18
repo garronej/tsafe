@@ -43,7 +43,6 @@ type Square = {
 
 // NOTE: This example shows why we can't use `type Equals<T, U> = T extends U ? (U extends T ? true : false) : false;`
 {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     type A = any[];
     type B = [number][];
 
@@ -52,7 +51,6 @@ type Square = {
 }
 
 {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     type A = unknown[];
     type B = [unknown][];
 
@@ -61,7 +59,6 @@ type Square = {
 }
 
 {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     type A = any;
     type B = number;
 

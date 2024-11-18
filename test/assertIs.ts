@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { assert, is, AssertionError } from "../src/assert";
 import type { Equals } from "../src/Equals";
 
@@ -29,7 +27,6 @@ import type { Equals } from "../src/Equals";
     try {
         is<unknown>(null);
         throw new Error("FAIL");
-        // eslint-disable-next-line no-empty
     } catch {}
 
     console.log("PASS");

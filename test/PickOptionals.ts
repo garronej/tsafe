@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { PickOptionals } from "../src/PickOptionals";
 import { assert } from "../src/assert";
 import type { Equals } from "../src/Equals";
