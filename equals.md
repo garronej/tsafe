@@ -25,13 +25,16 @@ If you are writing tests for your type, you definitely want to checkout [`//@ts-
 ```typescript
 
 import { z } from "zod";
-import { assert, id, type Equals } from "tsafe";
+import { assert, type Equals } from "tsafe/assert";
+import { id } from "tsafe/id";
 
-const z... = (()=>{
+type Xyz= // ...
 
-   type TagetType = ...;
+const zXyz = (()=>{
+
+   type TagetType = Xyz;
    
-   const zTargetType = z....;
+   const zTargetType = z.;
    
    type InferredType = z.infer<typeof zTargetType>;
    

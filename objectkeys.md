@@ -7,7 +7,8 @@ description: Like Object.keys() but with a better return type
 Functionally identical to `Object.keys()` except that the return type ain't just `string` but a typed array.
 
 ```typescript
-import { assert, type Equals, objectKeys } from "tsafe";
+import { assert, type Equals } from "tsafe/assert";
+import { objectKeys } from "tsafe/objectKeys";
 
 const obj = {
 	a: 1,

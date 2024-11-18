@@ -7,10 +7,10 @@ description: Recommended way to import tsafe
 ### Node / Browser
 
 ```typescript
-import { assert, type Equals } from "tsafe";
+import { assert, type Equals, typeGuard } from "tsafe";
 // NOTE: You can also cherry pick imports, example: 
-// import { assert } from "tsafe/assert";
-
+// import { assert, is, type Equals } from "tsafe/assert";
+// import { typeGuard } from "tsafe/typeGuard";
 ```
 
 ### Deno

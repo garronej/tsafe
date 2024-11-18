@@ -13,7 +13,7 @@ export function typeGuard<T>(value: any, isMatched: boolean): value is T {
 ## Use case 1: Tell the compiler what assertion can be made on a given variable if a given test returns true.
 
 ```typescript
-import { typeGuard } from "tsafe";
+import { typeGuard } from "tsafe/typeGuard";
 
 type Circle = { type: "CIRCLE"; radius: number };
 type Square = { type: "SQUARE"; sideLength: number };
@@ -34,7 +34,8 @@ Usage in conjonction with assert:
 
 ```typescript
 import * as fs from "fs";
-import { assert, type Equals, typeGuard } from "tsafe/assert";
+import { assert, type Equals } from "tsafe/assert";
+import { typeGuard } from "tsafe/typeGuard";
 import { z } from "zod";
 
 type Person = {

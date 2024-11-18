@@ -7,7 +7,8 @@ description: Runtime implementation of the Capitalize helper type.
 ### `capitalize()`
 
 ```typescript
-import { assert, type Equals, capitalize } from "tsafe";
+import { assert, type Equals } from "tsafe/assert";
+import { capitalize } from "tsafe/capitalize";
 
 const str = "foo";
 
@@ -23,7 +24,8 @@ assert<Equals<Capitalize<"foo">, "Foo">>;
 ### `uncapitalize()`
 
 ```typescript
-import { assert, type Equals, uncapitalize } from "tsafe";
+import { assert, type Equals } from "tsafe/assert";
+import { uncapitalize } from "tsafe/uncapitalize";
 
 const capitalizedStr = "Foo";
 

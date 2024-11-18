@@ -13,7 +13,7 @@ export type Name = typeof names[number];
 isAmong enables to test if a given values is one of the names
 
 ```typescript
-import { isAmong } from "tsafe";
+import { isAmong } from "tsafe/isAmong";
 import { names, type Names } from "./Names";
 
 declare value: "foo" | "bar" | "something else";
@@ -27,7 +27,8 @@ if( isAmong(names, value) ){
 If we just have the type and not the exhausive array:
 
 ```typescript
-import { assert, type Equals, isAmong } from "tsafe";
+import { assert, type Equals } from "tsafe/assert";
+import { isAmong } from "tsafe/isAmong";
 import type { Names } from "./Names";
 
 const names = ["foo", "bar", "baz"] as const;

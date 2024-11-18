@@ -1,7 +1,7 @@
 # assert
 
 ```typescript
-import { assert } from "tsafe";
+import { assert } from "tsafe/assert";
 
 declare const x: number | string;
 
@@ -29,7 +29,7 @@ Assert can also be used to confirm assertion on types.
 You can for example test if a type extends another by doing:
 
 ```typescript
-import { assert } from "tsafe";
+import { assert } from "tsafe/assert";
 
 type A = "foo" | "bar";
 type B = "foo" | "bar" | "baz";
