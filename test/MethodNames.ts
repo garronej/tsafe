@@ -18,15 +18,15 @@ import type { Equals } from "../src/Equals";
     assert<Equals<Got, Expected>>();
 }
 
-class Car {
-    public readonly foo: string;
-
-    constructor() {
-        this.foo = "caca";
-    }
-}
-
 {
+    class Car {
+        public readonly foo: string;
+
+        constructor() {
+            this.foo = "value of foo";
+        }
+    }
+
     type A = {
         a: unknown;
         b: unknown;
