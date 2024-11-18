@@ -18,6 +18,10 @@
         <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2Ftsafe%2Fmod.ts">
     </a>    
     <br/>
+    <a href="https://bundlephobia.com/package/tsafe">
+      <img src="https://img.shields.io/bundlephobia/minzip/tsafe">
+    </a>
+    <i>You can <a href="https://docs.tsafe.dev/import">cherry-pick what you import</a></i>
 </p>
 <p align="center">
   <a href="https://docs.tsafe.dev">Documentation</a>
@@ -78,8 +82,7 @@ Powerful TypeScript features like [assertion functions](https://www.typescriptla
 
 TypeScript, however, only exports type helpers \(e.g. `Record`, `ReturnType`, etc.\).
 
-This module provides _«the missing builtins»_ such as [the assert function](https://docs.tsafe.dev/assert)
-and corrects frustrating aspects of default utility types such as [`ReturnType`](https://docs.tsafe.dev/returntype).
+This module provides _«the missing builtins»_ such as [the assert function](https://docs.tsafe.dev/assert) and other utilities that cannot be just type helpers.
 
 [**Documentation website**](https://docs.tsafe.dev)
 
@@ -91,13 +94,11 @@ and corrects frustrating aspects of default utility types such as [`ReturnType`]
 ## Import in deno:
 
 ```typescript
-import { assert, typeGuard, ... } from "https://deno.land/x/tsafe/mod.ts";
+import { assert, type Equals, ... } from "https://deno.land/x/tsafe/mod.ts";
 ```
 
 ## Install elsewhere:
 
 ```bash
 $ npm install --save tsafe
-#OR
-$ yarn add tsafe
 ```
