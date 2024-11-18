@@ -1,0 +1,1 @@
+{"version":3,"file":"typeGuard.mjs","sources":["../dist/src/typeGuard.ts"],"sourcesContent":["/** https://docs.tsafe.dev/typeguard */\nexport function typeGuard<T>(value: any, isMatched: boolean): value is T {\n    return isMatched;\n}\n"],"names":[],"mappings":"AAAA;AACgB,SAAA,SAAS,CAAI,KAAU,EAAE,SAAkB,EAAA;AACvD,IAAA,OAAO,SAAS,CAAC;AACrB;;;;"}
