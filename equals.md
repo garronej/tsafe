@@ -32,7 +32,7 @@ type Xyz= // ...
 
 const zXyz = (()=>{
 
-   type TagetType = Xyz;
+   type TargetType = Xyz;
    
    const zTargetType = z.;
    
