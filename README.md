@@ -21,7 +21,7 @@
     <a href="https://bundlephobia.com/package/tsafe">
       <img src="https://img.shields.io/bundlephobia/minzip/tsafe">
     </a>
-    <i>You can <a href="https://docs.tsafe.dev/import">cherry-pick what you import</a></i>
+    <i> This module is <a href="https://docs.tsafe.dev/import">tree shakable</a></i>
 </p>
 <p align="center">
   <a href="https://docs.tsafe.dev">Documentation</a>
