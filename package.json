@@ -7,7 +7,7 @@
         "url": "git://github.com/garronej/tsafe.git"
     },
     "scripts": {
-        "build": "yarn build:cjs && yarn build:esm && yarn build:deno",
+        "build": "ts-node scripts/build.ts && yarn build:deno",
         "build:cjs": "tsc",
         "build:esm": "rm -rf dist/esm && npx rollup -c",
         "build:deno": "denoify",
@@ -30,36 +30,7 @@
     },
     "author": "u/garronej",
     "license": "MIT",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "module": "dist/esm/index.mjs",
-    "exports": {
-        ".": {
-            "require": "./dist/index.js",
-            "import": "./dist/esm/index.mjs",
-            "types": "./dist/index.d.ts"
-        },
-        "./*": {
-            "require": "./dist/*.js",
-            "import": "./dist/esm/*.mjs",
-            "types": "./dist/*.d.ts"
-        },
-        "./lab": {
-            "require": "./dist/lab/index.js",
-            "import": "./dist/esm/lab/index.mjs",
-            "types": "./dist/lab/index.d.ts"
-        },
-        "./tools": {
-            "require": "./dist/tools/index.js",
-            "import": "./dist/esm/tools/index.mjs",
-            "types": "./dist/tools/index.d.ts"
-        }
-    },
-    "files": [
-        "src/",
-        "dist/",
-        "!dist/tsconfig.tsbuildinfo"
-    ],
+    "sideEffects": false,
     "keywords": [],
     "homepage": "https://github.com/garronej/tsafe",
     "devDependencies": {

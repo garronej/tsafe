@@ -106,11 +106,12 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
     - run: |
-        npx -y -p denoify@1.4.8 enable_short_npm_import_path
         npx -y -p denoify@1.6.13 remove_deno_dist_from_gitignore
       env:
         DRY_RUN: "0"
     - run: |
+        cd dist
+
         if [ "$(npm show . version)" = "$VERSION" ]; then
           echo "This version is already published"
           exit 0
