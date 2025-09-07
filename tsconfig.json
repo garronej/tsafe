@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
-        "module": "CommonJS",
-        "target": "es5",
-        "lib": ["es2015", "DOM", "ES2019.Object"],
+        "target": "es2019",
+        "moduleResolution": "node",
+        "lib": ["es2019"],
         "esModuleInterop": true,
         "declaration": true,
         "outDir": "./dist",
@@ -13,7 +13,9 @@
         "incremental": true,
         "strict": true,
         "downlevelIteration": true,
-        "noFallthroughCasesInSwitch": true
+        "noFallthroughCasesInSwitch": true,
+        // Will be overwritten, only for dev
+        "module": "CommonJS"
     },
     "include": ["src"],
     "exclude": ["node_modules", "dist/", "deno_dist/", "src/**/*.deno.ts", "src/**/*.deno.tsx"]
