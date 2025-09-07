@@ -1,6 +1,6 @@
 {
     "name": "tsafe",
-    "version": "1.8.9-rc.1",
+    "version": "1.8.9",
     "description": "A collection of utilities to step up your TypeScript game",
     "repository": {
         "type": "git",
