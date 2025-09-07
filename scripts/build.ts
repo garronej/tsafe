@@ -137,7 +137,7 @@ transformCodebase({
     srcDirPath: distDirPath_root,
     destDirPath: distDirPath_root,
     transformSourceCode: ({ filePath, sourceCode }) => {
-        if (filePath.endsWith(".js.map")) {
+        if (filePath.endsWith(".js.map") || filePath.endsWith(".mjs.map")) {
             const sourceMapObj = JSON.parse(sourceCode.toString("utf8"));
 
             sourceMapObj.sources = sourceMapObj.sources.map((source: string) =>
