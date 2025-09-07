@@ -1,6 +1,6 @@
 {
     "name": "tsafe",
-    "version": "1.8.8",
+    "version": "1.8.9-rc.1",
     "description": "A collection of utilities to step up your TypeScript game",
     "repository": {
         "type": "git",
@@ -8,8 +8,8 @@
     },
     "scripts": {
         "build": "ts-node scripts/build.ts && yarn build:deno",
-        "build:cjs": "tsc",
-        "build:esm": "rm -rf dist/esm && npx rollup -c",
+        "build:cjs": "tsc --module CommonJS --outDir ./dist",
+        "build:esm": "tsc --module es2020 --outDir ./dist/esm && js2mjs dist/esm && ts-add-js-extension --dir=dist/esm",
         "build:deno": "denoify",
         "test": "yarn test:node && yarn test:deno",
         "test:deno": "deno run --reload --unstable --no-check deno_dist/mod.ts",
@@ -34,8 +34,6 @@
     "keywords": [],
     "homepage": "https://github.com/garronej/tsafe",
     "devDependencies": {
-        "@rollup/plugin-commonjs": "^28.0.0",
-        "@rollup/plugin-node-resolve": "^15.3.0",
         "@types/node": "^22.9.0",
         "denoify": "^1.6.16",
         "evt": "^2.4.18",
@@ -43,10 +41,9 @@
         "husky": "^4.3.0",
         "lint-staged": "^10.5.4",
         "prettier": "^3.3.1",
-        "rollup": "^4.23.0",
-        "rollup-plugin-typescript2": "^0.36.0",
         "ts-node": "^10.9.1",
-        "tslib": "^2.7.0",
-        "typescript": "^5.6.3"
+        "typescript": "^5.6.3",
+        "js2mjs": "^1.0.1",
+        "ts-add-js-extension": "^1.6.6"
     }
 }
