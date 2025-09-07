@@ -6,7 +6,7 @@
     <br>
     <br>
     <a href="https://github.com/garronej/tsafe/actions">
-      <img src="https://github.com/garronej/tsafe/workflows/ci/badge.svg?branch=main">
+      <img src="https://github.com/garronej/tsafe/actions/workflows/ci.yaml/badge.svg">
     </a>
     <a href="https://www.npmjs.com/package/tsafe">
       <img src="https://img.shields.io/npm/dw/tsafe">
