@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "es2019",
         "moduleResolution": "node",
-        "lib": ["es2015", "DOM", "ES2019.Object"],
+        "lib": ["es2019"],
         "esModuleInterop": true,
         "declaration": true,
         "outDir": "./dist",
