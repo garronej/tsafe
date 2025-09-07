@@ -2,6 +2,7 @@ import * as child_process from "child_process";
 import * as fs from "fs";
 import { join as pathJoin } from "path";
 import { assert } from "tsafe/assert";
+import { transformCodebase } from "./tools/transformCodebase";
 
 const startTime = Date.now();
 
@@ -126,6 +127,37 @@ fs.rmSync(pathJoin(distDirPath_root, "tsconfig.tsbuildinfo"));
         fs.cpSync(pathJoin(projectDirPath, basename), pathJoin(distDirPath_root, basename));
     }
 }
+
+transformCodebase({
+    srcDirPath: pathJoin(projectDirPath, "src"),
+    destDirPath: pathJoin(distDirPath_root, "src"),
+});
+
+transformCodebase({
+    srcDirPath: distDirPath_root,
+    destDirPath: distDirPath_root,
+    transformSourceCode: ({ filePath, sourceCode }) => {
+        if (filePath.endsWith(".js.map")) {
+            const sourceMapObj = JSON.parse(sourceCode.toString("utf8"));
+
+            sourceMapObj.sources = sourceMapObj.sources.map((source: string) =>
+                source.startsWith("../src/")
+                    ? source.replace("..", ".")
+                    : source.replace("../src", "src"),
+            );
+
+            const modifiedSourceCode = Buffer.from(JSON.stringify(sourceMapObj), "utf8");
+
+            return {
+                modifiedSourceCode,
+            };
+        }
+
+        return {
+            modifiedSourceCode: sourceCode,
+        };
+    },
+});
 
 console.log(`✓ built in ${((Date.now() - startTime) / 1000).toFixed(2)}s`);
 
