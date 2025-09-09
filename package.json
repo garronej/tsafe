@@ -8,8 +8,8 @@
     },
     "scripts": {
         "build": "ts-node scripts/build.ts && yarn build:deno",
-        "build:cjs": "tsc --module CommonJS --outDir ./dist",
-        "build:esm": "tsc --module es2020 --outDir ./dist/esm && js2mjs dist/esm && ts-add-js-extension --dir=dist/esm",
+        "build:cjs": "tsc --outDir ./dist",
+        "build:esm": "tsc --module es2020 --target es2019 --outDir ./dist/esm && js2mjs dist/esm && ts-add-js-extension --dir=dist/esm",
         "build:deno": "denoify",
         "test": "yarn test:node && yarn test:deno",
         "test:deno": "deno run --reload --unstable --no-check deno_dist/mod.ts",
