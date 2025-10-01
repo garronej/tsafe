@@ -10,10 +10,6 @@ export class AssertionError extends Error {
         this.originalMessage = msg;
 
         Object.setPrototypeOf(this, new.target.prototype);
-
-        if (!this.stack) {
-            return;
-        }
     }
 }
 
