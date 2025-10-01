@@ -1,4 +1,3 @@
-import { overwriteReadonlyProp } from "./lab/overwriteReadonlyProp";
 export type { Equals } from "./Equals";
 
 /** https://docs.tsafe.dev/assert#error-thrown */
@@ -15,17 +14,6 @@ export class AssertionError extends Error {
         if (!this.stack) {
             return;
         }
-
-        try {
-            overwriteReadonlyProp(
-                this,
-                "stack",
-                this.stack
-                    .split("\n")
-                    .filter((...[, i]) => i !== 1 && i !== 2)
-                    .join("\n"),
-            );
-        } catch {}
     }
 }
 
@@ -45,7 +33,13 @@ export function assert<_T extends true>(
     }
 
     if (!condition) {
-        throw new AssertionError(typeof msg === "function" ? msg() : msg);
+        const error = new AssertionError(typeof msg === "function" ? msg() : msg);
+
+        if (Error.captureStackTrace) {
+            Error.captureStackTrace(error, assert);
+        }
+
+        throw error;
     }
 }
 
