@@ -39,3 +39,19 @@ import { same } from "evt/tools/inDepth/same";
 
     console.log("PASS TEST 2");
 }
+
+{
+    type A = {
+        [key: string]: boolean;
+    };
+
+    const a: A = { isNormalUser: false, isAdmin: true };
+
+    const got = objectKeys(a);
+
+    const expected = ["isNormalUser", "isAdmin"];
+
+    assert(same(got, expected));
+
+    console.log("PASS TEST 3");
+}
